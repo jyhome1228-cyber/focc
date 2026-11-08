@@ -61,9 +61,36 @@
 .story-band b{font-size:clamp(17px,1.5vw,25px)}
 @media(max-width:960px){.story-grid,.story-band{grid-template-columns:repeat(2,minmax(0,1fr))}.story-cell,.story-cell.story-photo{min-height:295px}.hero-symbol{width:125px;max-height:150px}.story-cell p{font-size:16px}}
 @media(max-width:600px){.hero{padding-top:36px}.hero-word{margin-bottom:26px}.story-cell{padding:16px 13px;min-height:230px}.story-cell.story-photo{min-height:250px}.hero-symbol{width:95px;max-height:115px;margin:15px auto 0}.story-cell p{font-size:13px;line-height:1.35}.story-mark{padding-left:13px!important}.story-band>div{min-height:60px}}
+
+/* Full-width editorial rules and page-wide layout */
+html,body{width:100%;min-width:320px;overflow-x:clip}
+.wrap{max-width:none;width:100%;margin:0}
+.topbar,.nav-row.header-main{width:100%}
+.hero{width:100%}
+.story-grid,.story-band{position:relative;border-top:0;border-bottom:0}
+.story-grid:before,.story-grid:after,.story-band:after{content:"";position:absolute;left:calc(-1 * var(--pad));right:calc(-1 * var(--pad));height:1px;background:var(--line);pointer-events:none;z-index:1}
+.story-grid:before{top:0}
+.story-grid:after{bottom:0}
+.story-band:after{bottom:0}
+.footer{width:100%;border-top:1px solid var(--line)}
+.footer-wrap,.copyright{max-width:1800px;margin-left:auto;margin-right:auto}
+@media(min-width:1920px){.hero-top,.story-grid,.story-band{max-width:1800px;margin-left:auto;margin-right:auto}.story-grid:before,.story-grid:after,.story-band:after{left:calc((1800px - 100vw)/2);right:calc((1800px - 100vw)/2)}}
+@media(max-width:960px){.story-grid:before,.story-grid:after,.story-band:after{left:calc(-1 * var(--pad));right:calc(-1 * var(--pad))}}
+/* Intro: first visit to the current tab. Remove overlay after reveal. */
+.intro-screen{position:fixed;inset:0;z-index:9999;background:#090909;display:grid;place-items:center;opacity:1;visibility:visible;transition:opacity .65s ease,visibility .65s ease}
+.intro-screen.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
+.intro-mark{width:clamp(115px,18vw,225px);height:auto;filter:invert(1);opacity:0;transform:scale(.88);animation:intro-mark-reveal 1.65s cubic-bezier(.2,.7,.25,1) .12s forwards}
+.intro-skip{position:absolute;right:clamp(18px,3vw,48px);bottom:clamp(18px,3vw,48px);background:transparent;border:1px solid #666;color:#eee;padding:9px 15px;cursor:pointer;font-size:12px;letter-spacing:.03em}
+.intro-skip:hover{border-color:#fff}
+@keyframes intro-mark-reveal{0%{opacity:0;transform:scale(.88)}35%{opacity:1;transform:scale(1)}78%{opacity:1;transform:scale(1)}100%{opacity:1;transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){.intro-screen{display:none!important}.intro-mark{animation:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
+<div id="intro-screen" class="intro-screen" aria-label="Heroes of Korea 브랜드 오프닝" role="status">
+  <img class="intro-mark" src="assets/heroes-of-korea-symbol.svg" alt="Heroes of Korea">
+  <button type="button" class="intro-skip" id="intro-skip" aria-label="인트로 건너뛰기">SKIP ↗</button>
+</div>
 <div class="wrap">
 <header class="header" id="top">
 <div class="topbar"><span>한국어 ▾ &nbsp;&nbsp; 적립금 0원 &nbsp; 쿠폰 0개 &nbsp; 장바구니 0개 (0원)</span><div class="toplinks"><a href="#footer">내정보수정</a><a href="#footer">로그아웃</a><a href="#footer">주문조회</a><a href="#footer">마이페이지</a><a href="#journal">최근본상품</a><a href="#footer">고객센터</a></div></div>
@@ -83,4 +110,19 @@
 <footer class="footer" id="footer"><div class="footer-wrap"><div class="footer-business"><h4>쇼핑몰 기본정보</h4><p>상호명 주식회사에프오씨씨　대표자명 김덕영<br>사업장 주소 22009 인천 연수구 인천타워대로 185 송도 센트럴비즈 한라 제812호<br>대표 전화 01027887263　사업자 등록번호 161-87-02570<br>통신판매업 신고번호 2024-서울중구-2038<br>개인정보보호책임자 주식회사에프오씨씨</p></div><div><div class="foot-links"><a href="#footer">회사소개</a><a href="#footer">이용약관</a><a href="#footer">개인정보처리방침</a><a href="#footer">이용안내</a><a href="#footer">자주묻는질문(FAQ)</a></div><h4>고객센터 정보</h4><p>상담/주문전화　010-9551-7263<br>상담/주문 이메일<br><a href="mailto:ceo@focc.company">ceo@focc.company</a></p><h4>CS운영시간</h4><p>11:00 ~ 18:00 점심시간 12:00 ~ 13:00</p></div><div><h4>결제 정보</h4><p>무통장 계좌정보<br><span class="placeholder">실제 계좌 정보 확인 후 표기</span></p></div><div><h4>SNS</h4><p>instagram<br>youtube</p><p class="placeholder">공식 URL 연결 예정</p></div></div><div class="copyright">Copyright © Heroes of Korea. All Rights Reserved. Hosting by Cafe24 Corp.</div></footer>
 </div>
 <script>const toggle=document.getElementById('menu-toggle'),nav=document.getElementById('mobile-nav');toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'×':'☰'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}));</script>
+<script>
+(function(){
+  const screen=document.getElementById('intro-screen');
+  if(!screen)return;
+  let seen=false;
+  try{seen=sessionStorage.getItem('hok-intro-seen')==='1'}catch(e){}
+  const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const close=()=>{if(screen.classList.contains('is-hidden'))return;screen.classList.add('is-hidden');try{sessionStorage.setItem('hok-intro-seen','1')}catch(e){};window.setTimeout(()=>screen.remove(),750)};
+  if(seen||reduce){screen.remove();return}
+  document.getElementById('intro-skip').addEventListener('click',close);
+  const mark=screen.querySelector('.intro-mark');
+  mark.addEventListener('animationend',()=>window.setTimeout(close,250),{once:true});
+  window.setTimeout(close,3200);
+})();
+</script>
 </body></html>
