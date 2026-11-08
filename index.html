@@ -182,6 +182,48 @@ html,body{overflow-x:clip}
 }
 @media(max-width:390px){.story-cell,.story-cell.story-photo{height:260px}.hero-copy p{font-size:12px!important}.hero-copy .hero-copy-sub{font-size:10px!important}}
 
+
+/* V4 — edge-to-edge hero and footer, 80% wordmark scale */
+:root{--edge-pad:clamp(18px,2.25vw,48px)}
+.hero{width:100%!important;max-width:none!important;margin:0!important;padding:0!important}
+.hero-top{width:100%!important;max-width:none!important;padding:clamp(42px,4vw,72px) var(--edge-pad) clamp(40px,4vw,72px)!important;min-height:clamp(250px,19vw,385px)!important;grid-template-columns:minmax(0,1fr) minmax(170px,23%)!important}
+.hero-word{font-size:clamp(95px,14vw,296px)!important;line-height:.88!important;letter-spacing:-.092em!important}
+.hero-emblem{align-self:start;margin-top:12px!important}
+.hero-emblem img{width:clamp(155px,14.5vw,290px)!important}
+.story-grid,.story-band{width:100%!important;max-width:none!important;margin:0!important;left:auto!important;right:auto!important;padding:0!important}
+.story-grid{grid-template-columns:minmax(0,1.28fr) minmax(0,.81fr) minmax(0,.83fr) minmax(0,1.22fr)!important}
+.story-band{grid-template-columns:minmax(0,1.28fr) minmax(0,.81fr) minmax(0,.83fr) minmax(0,1.22fr)!important}
+.story-cell{height:clamp(340px,26vw,485px)!important}
+.story-cell.story-photo{height:clamp(340px,26vw,485px)!important}
+.hero-symbol{align-self:flex-start!important;margin-left:0!important}
+.footer{width:100%!important;max-width:none!important;margin:0!important;padding:65px var(--edge-pad) 32px!important;border-top:1px solid var(--line)!important}
+.footer-wrap{width:100%!important;max-width:none!important;grid-template-columns:minmax(330px,1.55fr) minmax(260px,1.15fr) minmax(125px,.6fr) minmax(100px,.4fr)!important;gap:clamp(18px,2.8vw,62px)!important;margin:0!important}
+.footer-brand{display:inline-flex!important;align-items:center;margin:0 0 42px!important}
+.footer-brand img{display:block;width:clamp(145px,12.5vw,235px);max-width:100%;height:auto}
+.footer .footer-business{grid-column:auto}
+.footer .copyright{width:100%!important;max-width:none!important;margin:60px 0 0!important}
+@media(max-width:1100px){
+.hero-top{grid-template-columns:minmax(0,1fr) minmax(155px,23%)!important}
+.story-grid,.story-band{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.story-cell,.story-cell.story-photo{height:330px!important}
+.footer-wrap{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)!important;gap:38px!important}
+.footer .footer-business{grid-column:auto}
+}
+@media(max-width:700px){
+.hero-top{display:flex!important;flex-direction:column;gap:14px!important;padding:34px var(--edge-pad) 32px!important;min-height:0!important}
+.hero-word{font-size:20vw!important}
+.hero-emblem{align-self:flex-end;margin:0!important}
+.hero-emblem img{width:clamp(145px,37vw,215px)!important}
+.story-grid,.story-band{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.story-cell,.story-cell.story-photo{height:255px!important}
+.footer{padding:48px var(--edge-pad) 26px!important}
+.footer-wrap{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:26px 18px!important}
+.footer .footer-business{grid-column:1/-1!important}
+.footer-wrap>div:nth-child(2){grid-column:1/-1}
+.footer-brand{margin-bottom:28px!important}
+.footer-brand img{width:165px}
+.footer .copyright{margin-top:38px!important}
+}
 </style>
 </head>
 <body>
@@ -247,7 +289,7 @@ html,body{overflow-x:clip}
 </section>
 <section class="section" id="journal"><div class="section-head"><span class="dash"></span><h2>Journal & News</h2><p>브랜드의 새로운 기록</p></div><div class="journal"><article class="journal-card"><small>01 / NEWS</small><h3>시향지 배송 서비스</h3><p class="placeholder">공지 상세 및 이미지 연동 예정</p></article><article class="journal-card"><small>02 / STORIES</small><h3>향으로 기록하는 한국의 인물</h3><p class="placeholder">콘텐츠 연동 예정</p></article><article class="journal-card"><small>03 / PRESS</small><h3>Heroes of Korea Journal</h3><p class="placeholder">콘텐츠 연동 예정</p></article></div></section>
 </main>
-<footer class="footer" id="footer"><div class="footer-wrap"><div class="footer-business"><h4>쇼핑몰 기본정보</h4><p>상호명 주식회사에프오씨씨　대표자명 김덕영<br>사업장 주소 22009 인천 연수구 인천타워대로 185 송도 센트럴비즈 한라 제812호<br>대표 전화 01027887263　사업자 등록번호 161-87-02570<br>통신판매업 신고번호 2024-서울중구-2038<br>개인정보보호책임자 주식회사에프오씨씨</p></div><div><div class="foot-links"><a href="#footer">회사소개</a><a href="#footer">이용약관</a><a href="#footer">개인정보처리방침</a><a href="#footer">이용안내</a><a href="#footer">자주묻는질문(FAQ)</a></div><h4>고객센터 정보</h4><p>상담/주문전화　010-9551-7263<br>상담/주문 이메일<br><a href="mailto:ceo@focc.company">ceo@focc.company</a></p><h4>CS운영시간</h4><p>11:00 ~ 18:00 점심시간 12:00 ~ 13:00</p></div><div><h4>결제 정보</h4><p>무통장 계좌정보<br><span class="placeholder">실제 계좌 정보 확인 후 표기</span></p></div><div><h4>SNS</h4><p>instagram<br>youtube</p><p class="placeholder">공식 URL 연결 예정</p></div></div><div class="copyright">Copyright © Heroes of Korea. All Rights Reserved. Hosting by Cafe24 Corp.</div></footer>
+<footer class="footer" id="footer"><div class="footer-wrap"><div class="footer-business"><a class="footer-brand" href="#top" aria-label="Heroes of Korea 홈"><img src="assets/heroes-of-korea-logo.svg" alt="HEROES of KOREA"></a><h4>쇼핑몰 기본정보</h4><p>상호명 주식회사에프오씨씨　대표자명 김덕영<br>사업장 주소 22009 인천 연수구 인천타워대로 185 송도 센트럴비즈 한라 제812호<br>대표 전화 01027887263　사업자 등록번호 161-87-02570<br>통신판매업 신고번호 2024-서울중구-2038<br>개인정보보호책임자 주식회사에프오씨씨</p></div><div><div class="foot-links"><a href="#footer">회사소개</a><a href="#footer">이용약관</a><a href="#footer">개인정보처리방침</a><a href="#footer">이용안내</a><a href="#footer">자주묻는질문(FAQ)</a></div><h4>고객센터 정보</h4><p>상담/주문전화　010-9551-7263<br>상담/주문 이메일<br><a href="mailto:ceo@focc.company">ceo@focc.company</a></p><h4>CS운영시간</h4><p>11:00 ~ 18:00 점심시간 12:00 ~ 13:00</p></div><div><h4>결제 정보</h4><p>무통장 계좌정보<br><span class="placeholder">실제 계좌 정보 확인 후 표기</span></p></div><div><h4>SNS</h4><p>instagram<br>youtube</p><p class="placeholder">공식 URL 연결 예정</p></div></div><div class="copyright">Copyright © Heroes of Korea. All Rights Reserved. Hosting by Cafe24 Corp.</div></footer>
 </div>
 <script>const toggle=document.getElementById('menu-toggle'),nav=document.getElementById('mobile-nav');toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'×':'☰'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}));</script>
 <script>
