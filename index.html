@@ -84,6 +84,104 @@ html,body{width:100%;min-width:320px;overflow-x:clip}
 .intro-skip:hover{border-color:#fff}
 @keyframes intro-mark-reveal{0%{opacity:0;transform:scale(.88)}35%{opacity:1;transform:scale(1)}78%{opacity:1;transform:scale(1)}100%{opacity:1;transform:scale(1)}}
 @media(prefers-reduced-motion:reduce){.intro-screen{display:none!important}.intro-mark{animation:none}html{scroll-behavior:auto}}
+
+/* EDITORIAL REFINEMENT V3 — full bleed horizontal rhythm and balanced typography */
+:root{--editorial-pad:clamp(20px,3.1vw,68px)}
+html,body{overflow-x:clip}
+.wrap{max-width:none!important;width:100%}
+.header,.topbar,.nav-row.header-main{width:100%}
+.nav-row.header-main{padding-inline:var(--editorial-pad)}
+.topbar{padding-inline:var(--editorial-pad)}
+.hero{padding:0!important;width:100%;max-width:none}
+.hero-top{box-sizing:border-box;width:100%;max-width:none!important;margin:0!important;padding:clamp(52px,4.5vw,88px) var(--editorial-pad) clamp(48px,4.3vw,84px);min-height:clamp(310px,23vw,490px);display:grid;grid-template-columns:minmax(0,1fr) minmax(190px,22%);align-items:start;gap:30px}
+.hero-word{font-size:clamp(118px,17.5vw,370px);line-height:.83;letter-spacing:-.095em;margin:0!important;font-weight:400}
+.hero-emblem{margin:8px 0 0!important;display:flex;justify-content:flex-end}
+.hero-emblem img{width:clamp(180px,17vw,330px);height:auto}
+.story-grid,.story-band{width:100%!important;max-width:none!important;margin:0!important;display:grid;grid-template-columns:1.28fr .81fr .83fr 1.22fr;position:relative}
+.story-grid{border-top:1px solid var(--line)!important;border-bottom:1px solid var(--line)!important}
+.story-grid:before,.story-grid:after,.story-band:after{display:none!important}
+.story-cell{height:clamp(380px,30vw,540px);min-height:0!important;padding:clamp(20px,2.2vw,42px);border-right:1px solid var(--line);border-bottom:0;position:relative}
+.story-cell:last-child{border-right:none}
+.hero-identity{display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between}
+.hero-identity small{font-size:clamp(12px,.84vw,15px);line-height:1.25;letter-spacing:-.025em;font-weight:700;margin:0}
+.hero-symbol{width:clamp(125px,11vw,220px);max-height:240px;object-fit:contain;align-self:flex-start!important;margin:0 0 0 clamp(0px,.9vw,18px)!important}
+.hero-cell-index{font-size:10px;letter-spacing:.075em;color:#7f7f7f}
+.hero-copy{display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;gap:clamp(27px,3vw,56px)}
+.hero-copy p{font-size:clamp(15px,1.42vw,25px)!important;line-height:1.22;letter-spacing:-.045em;margin:0}
+.hero-copy .hero-copy-sub{font-size:clamp(13px,1vw,17px)!important;line-height:1.55;color:#555;letter-spacing:-.027em}
+.hero-story-link{margin-top:auto;font-size:11px;letter-spacing:.025em;text-decoration:underline;text-underline-offset:4px}
+.story-cell.story-photo{height:clamp(380px,30vw,540px);padding:0;overflow:hidden}
+.story-photo img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center center}
+.photo-story{position:absolute;bottom:clamp(18px,2vw,32px);left:clamp(18px,2vw,32px);background:#f8f8f8e8;padding:9px 12px;font-size:11px;letter-spacing:.04em}
+.story-band{border-bottom:1px solid var(--line)!important}
+.story-band>div{min-height:94px;padding:21px clamp(20px,2.2vw,42px)!important;display:flex;align-items:flex-end;gap:12px;border-right:1px solid var(--line)}
+.story-band>div:last-child{border-right:0}
+.story-mark{align-items:flex-start!important;justify-content:flex-end!important}
+.story-mark span{line-height:1.5;font-size:11px}
+.story-band b{font-size:clamp(19px,1.7vw,29px);font-weight:400;letter-spacing:-.05em}
+.story-band em{font-size:11px;font-style:normal;color:#888;margin:0 0 4px}
+.feature{width:100%;min-height:clamp(520px,43vw,720px);display:grid;grid-template-columns:1.08fr .92fr;background:#eaeaea}
+.feature-copy{padding:clamp(50px,6vw,115px) clamp(24px,5vw,100px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.feature .eyebrow{margin:0 0 clamp(24px,2vw,38px);font-size:11px;letter-spacing:.13em;color:#555}
+.feature h2{font-size:clamp(54px,6.1vw,118px);line-height:.98;letter-spacing:-.083em;font-weight:400;margin:0 0 clamp(24px,2.8vw,46px)}
+.feature p{font-size:clamp(13px,1vw,17px);line-height:1.85;margin:0 0 28px;color:#555}
+.feature-notes{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 27px}
+.feature-notes span{padding:7px 11px;border:1px solid #b8b8b8;font-size:11px;color:#555}
+.feature-art{min-height:0!important;background:#1c1c1c;display:flex;align-items:center;justify-content:center}
+.feature-art-inner{display:flex;flex-direction:column;align-items:center;gap:35px}
+.feature-art-inner .feature-logo{display:block;width:clamp(220px,29vw,500px);max-width:75%;height:auto;filter:invert(1)}
+.feature-art-inner span{color:#a0a0a0;font-size:11px;letter-spacing:.2em}
+#journal{padding-block:clamp(75px,7vw,130px)}
+.journal-card{min-height:220px}
+.footer{max-width:none;width:100%;padding:clamp(56px,5vw,95px) var(--editorial-pad) 35px;border-top:1px solid var(--line);background:#f7f7f7}
+.footer-wrap{width:100%;max-width:none!important;margin:0!important;display:grid;grid-template-columns:minmax(330px,1.55fr) minmax(270px,1.15fr) minmax(130px,.57fr) minmax(100px,.38fr);gap:clamp(22px,3.3vw,76px);align-items:start}
+.footer h4{font-size:12px;font-weight:650;margin:0 0 19px}
+.footer p,.footer a{font-size:clamp(10px,.72vw,12px);line-height:2}
+.foot-links{margin-bottom:48px;gap:12px 18px}
+.copyright{max-width:none!important;margin:clamp(50px,5vw,85px) 0 0!important;border-top:1px solid #dcdcdc;padding-top:21px;font-size:11px;color:#777}
+@media(max-width:1100px){
+.hero-top{grid-template-columns:minmax(0,1fr) 210px;min-height:300px}
+.hero-word{font-size:17vw}
+.story-grid,.story-band{grid-template-columns:1fr 1fr}
+.story-cell,.story-cell.story-photo{height:340px;min-height:0!important;border-bottom:1px solid var(--line)}
+.story-cell:nth-child(2){border-right:0}
+.story-cell:nth-child(n+3){border-bottom:0}
+.story-band>div:nth-child(2){border-right:0}
+.story-band>div{min-height:76px}
+.feature{grid-template-columns:1fr 1fr}
+.feature h2{font-size:clamp(50px,5.8vw,76px)}
+.footer-wrap{grid-template-columns:1.4fr 1fr;gap:40px}
+.footer-business{grid-column:auto}
+}
+@media(max-width:700px){
+.hero-top{padding:40px var(--editorial-pad) 35px;display:flex;flex-direction:column;gap:22px;min-height:0}
+.hero-word{font-size:22vw}
+.hero-emblem{margin:0!important;align-self:flex-end}
+.hero-emblem img{width:clamp(145px,37vw,220px)}
+.story-grid,.story-band{grid-template-columns:1fr 1fr}
+.story-cell,.story-cell.story-photo{height:245px;padding:18px 15px}
+.story-cell.story-photo{padding:0}
+.hero-identity small{font-size:11px}
+.hero-symbol{width:clamp(82px,23vw,135px);margin:0!important}
+.hero-cell-index{font-size:9px}
+.hero-copy{gap:18px}
+.hero-copy p{font-size:clamp(13px,3.25vw,17px)!important}
+.hero-copy .hero-copy-sub{font-size:clamp(10px,2.5vw,13px)!important}
+.hero-story-link{font-size:10px}
+.story-band>div{min-height:60px;padding:12px 14px!important}
+.story-band b{font-size:19px}
+.feature{grid-template-columns:1fr}
+.feature-copy{padding:62px var(--editorial-pad)}
+.feature h2{font-size:clamp(49px,11vw,76px)}
+.feature-art{min-height:310px!important}
+.feature-art-inner .feature-logo{width:290px}
+.footer-wrap{grid-template-columns:1fr 1fr;gap:32px 20px}
+.footer-business{grid-column:1/-1}
+.footer-wrap>div:nth-child(2){grid-column:1/-1}
+.foot-links{margin-bottom:30px}
+}
+@media(max-width:390px){.story-cell,.story-cell.story-photo{height:260px}.hero-copy p{font-size:12px!important}.hero-copy .hero-copy-sub{font-size:10px!important}}
+
 </style>
 </head>
 <body>
@@ -98,13 +196,55 @@ html,body{width:100%;min-width:320px;overflow-x:clip}
 <nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴"><a href="#collection">Perfume</a><a href="#story">Lifestyle</a><a href="#journal">Special / Press</a><a href="#story">About Us</a><a href="#footer">Global / B2B / Academy</a></nav></div>
 </header>
 <main>
-<section class="hero" aria-label="브랜드 소개"><div class="hero-top"><h1 class="hero-word">Heroes</h1><div class="hero-emblem"><img src="assets/heroes-of-korea-logo.svg" alt="HEROES of KOREA"></div></div>
-<div class="story-grid"><div class="story-cell hero-identity"><small>HEROES OF KOREA<br>PARFUM</small><img class="hero-symbol" src="assets/heroes-of-korea-symbol.svg" alt="히어로즈 오브 코리아 브랜드 심볼"></div><div class="story-cell"><p>Scent inspires<br>a better tomorrow.<br><br>Rooted in<br>Korean heritage.</p></div><div class="story-cell"><p>Stories of people,<br>culture and place,<br>preserved<br>through scent.</p></div><div class="story-cell story-photo"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261108-051609-photo-crop-back-view-79a7ba53.webp" alt="HEROES of KOREA 쇼핑백을 든 모델" fetchpriority="high"><a href="#story" class="photo-story">OUR STORY ↗</a></div></div>
-<div class="story-band"><div class="story-mark"><span>HEROES OF KOREA<br><strong>ARCHIVE 01—06</strong></span></div><div><b>Nature</b><em>01</em></div><div><b>Heritage</b><em>02</em></div><div><b>People</b><em>03</em></div></div>
+<section class="hero" aria-label="브랜드 소개">
+  <div class="hero-top">
+    <h1 class="hero-word">Heroes</h1>
+    <div class="hero-emblem"><img src="assets/heroes-of-korea-logo.svg" alt="HEROES of KOREA"></div>
+  </div>
+  <div class="story-grid">
+    <div class="story-cell hero-identity">
+      <small>HEROES OF KOREA<br>PARFUM</small>
+      <img class="hero-symbol" src="assets/heroes-of-korea-symbol.svg" alt="히어로즈 오브 코리아 브랜드 심볼">
+      <span class="hero-cell-index">01 — A FRAGRANCE ARCHIVE</span>
+    </div>
+    <div class="story-cell hero-copy">
+      <p>Scent inspires<br>a better tomorrow.</p>
+      <p class="hero-copy-sub">A fragrance house<br>rooted in Korean heritage.</p>
+    </div>
+    <div class="story-cell hero-copy">
+      <p>Nature, heritage<br>and people shape<br>every story we tell.</p>
+      <p class="hero-copy-sub">한국의 인물과 문화, 장소의 기억을<br>향이라는 언어로 다시 기록합니다.</p>
+      <a class="hero-story-link" href="#story">Discover our story ↗</a>
+    </div>
+    <div class="story-cell story-photo">
+      <img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261108-051609-photo-crop-back-view-79a7ba53.webp" alt="HEROES of KOREA 쇼핑백을 든 모델" fetchpriority="high">
+      <a href="#story" class="photo-story">OUR STORY ↗</a>
+    </div>
+  </div>
+  <div class="story-band">
+    <div class="story-mark"><span>HEROES OF KOREA<br><strong>ARCHIVE 01—06</strong></span></div>
+    <div><b>Nature</b><em>01</em></div>
+    <div><b>Heritage</b><em>02</em></div>
+    <div><b>People</b><em>03</em></div>
+  </div>
 </section>
 <section class="section" id="collection"><div class="section-head"><span class="dash"></span><h2>Archived in scent</h2><p>인물의 이야기를 향으로 기록하다</p></div>
 <div class="products"><article class="product"><div class="visual"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261108-051606-5cacdba296bf5479fa0a0e2ba5eda921-e667b2a5.webp" alt="이순신 히어로즈 오브 코리아 향수" loading="lazy" decoding="async"></div><div class="product-meta"><strong>이순신</strong><span>EAU DE PARFUM</span></div></article><article class="product"><div class="visual"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261108-051606-b5bf4f8c3be8f49661677eef8d50ef5a-c7ee802b.webp" alt="허난설헌 히어로즈 오브 코리아 향수" loading="lazy" decoding="async"></div><div class="product-meta"><strong>허난설헌</strong><span>EAU DE PARFUM</span></div></article><article class="product"><div class="visual"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261108-051607-b53b402010dbcf679da43c25412d7a8d-63dc4bc9.webp" alt="신사임당 히어로즈 오브 코리아 향수" loading="lazy" decoding="async"></div><div class="product-meta"><strong>신사임당</strong><span>EAU DE PARFUM</span></div></article><article class="product"><div class="visual"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261108-051608-e73e02e8441e40ac2c960e1983af7669-c881dc3d.webp" alt="세종대왕 히어로즈 오브 코리아 향수" loading="lazy" decoding="async"></div><div class="product-meta"><strong>세종대왕</strong><span>EAU DE PARFUM</span></div></article><article class="product"><div class="visual"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261108-051609-f5a77bc014858cdd4310c45f14a69a24-ed1f2f9d.webp" alt="김홍도 히어로즈 오브 코리아 향수" loading="lazy" decoding="async"></div><div class="product-meta"><strong>김홍도</strong><span>EAU DE PARFUM</span></div></article><article class="product"><div class="visual"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261108-051609-fd790d76bb2e4a9ab97a678c8119e0fe-7d101640.webp" alt="정조대왕 히어로즈 오브 코리아 향수" loading="lazy" decoding="async"></div><div class="product-meta"><strong>정조대왕</strong><span>EAU DE PARFUM</span></div></article></div><div class="section-foot"><a href="#story" class="outline">DISCOVER THE COLLECTION ↗</a></div></section>
-<section class="feature" id="story"><div class="feature-copy"><span class="eyebrow">Our story / Korean heritage</span><h2>Scent inspires<br>a better<br>tomorrow.</h2><p>한국의 인물과 문화유산에서 출발한 이야기.<br>히어로즈 오브 코리아는 그 기억을 향으로 새롭게 기록합니다.</p><a class="outline" href="#journal">EXPLORE OUR STORY ↗</a></div><div class="feature-art"><div><img src="assets/heroes-of-korea-logo.svg" alt="HEROES of KOREA" class="feature-logo"></div></div></section>
+<section class="feature" id="story">
+  <div class="feature-copy">
+    <span class="eyebrow">OUR STORY / KOREAN HERITAGE</span>
+    <h2>Scent inspires<br>a better<br>tomorrow.</h2>
+    <p>한국의 인물과 문화유산에서 출발한 이야기.<br>히어로즈 오브 코리아는 그 기억을 향으로 새롭게 기록합니다.</p>
+    <div class="feature-notes" aria-label="브랜드 키워드"><span>Nature</span><span>Heritage</span><span>People</span></div>
+    <a class="outline" href="#journal">EXPLORE OUR STORY ↗</a>
+  </div>
+  <div class="feature-art">
+    <div class="feature-art-inner">
+      <img src="assets/heroes-of-korea-logo.svg" alt="HEROES of KOREA" class="feature-logo">
+      <span>ARCHIVED IN SCENT</span>
+    </div>
+  </div>
+</section>
 <section class="section" id="journal"><div class="section-head"><span class="dash"></span><h2>Journal & News</h2><p>브랜드의 새로운 기록</p></div><div class="journal"><article class="journal-card"><small>01 / NEWS</small><h3>시향지 배송 서비스</h3><p class="placeholder">공지 상세 및 이미지 연동 예정</p></article><article class="journal-card"><small>02 / STORIES</small><h3>향으로 기록하는 한국의 인물</h3><p class="placeholder">콘텐츠 연동 예정</p></article><article class="journal-card"><small>03 / PRESS</small><h3>Heroes of Korea Journal</h3><p class="placeholder">콘텐츠 연동 예정</p></article></div></section>
 </main>
 <footer class="footer" id="footer"><div class="footer-wrap"><div class="footer-business"><h4>쇼핑몰 기본정보</h4><p>상호명 주식회사에프오씨씨　대표자명 김덕영<br>사업장 주소 22009 인천 연수구 인천타워대로 185 송도 센트럴비즈 한라 제812호<br>대표 전화 01027887263　사업자 등록번호 161-87-02570<br>통신판매업 신고번호 2024-서울중구-2038<br>개인정보보호책임자 주식회사에프오씨씨</p></div><div><div class="foot-links"><a href="#footer">회사소개</a><a href="#footer">이용약관</a><a href="#footer">개인정보처리방침</a><a href="#footer">이용안내</a><a href="#footer">자주묻는질문(FAQ)</a></div><h4>고객센터 정보</h4><p>상담/주문전화　010-9551-7263<br>상담/주문 이메일<br><a href="mailto:ceo@focc.company">ceo@focc.company</a></p><h4>CS운영시간</h4><p>11:00 ~ 18:00 점심시간 12:00 ~ 13:00</p></div><div><h4>결제 정보</h4><p>무통장 계좌정보<br><span class="placeholder">실제 계좌 정보 확인 후 표기</span></p></div><div><h4>SNS</h4><p>instagram<br>youtube</p><p class="placeholder">공식 URL 연결 예정</p></div></div><div class="copyright">Copyright © Heroes of Korea. All Rights Reserved. Hosting by Cafe24 Corp.</div></footer>
