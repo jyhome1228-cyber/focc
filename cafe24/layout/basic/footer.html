@@ -1,36 +1,134 @@
-<!-- HEROES OF KOREA / Cafe24 replacement footer -->
-<footer class="focc-footer" id="focc-footer">
-  <div class="focc-footer-grid">
-    <div class="focc-footer-company">
-      <a href="/" class="focc-footer-logo" aria-label="히어로즈 오브 코리아 홈">
-        <img src="https://jyhome1228-cyber.github.io/focc/assets/heroes-of-korea-logo.svg" alt="HEROES of KOREA" width="190" height="48">
-      </a>
-      <h2>COMPANY</h2>
-      <p>상호명 주식회사에프오씨씨　대표자 김덕영<br>
-      주소 22009 인천 연수구 인천타워대로 185 송도 센트럴비즈 한라 제812호<br>
-      사업자등록번호 161-87-02570<br>
-      통신판매업 신고번호 2024-서울중구-2038<br>
-      대표전화 01027887263<br>
-      개인정보보호책임자 주식회사에프오씨씨</p>
-    </div>
-    <div class="focc-footer-customer">
-      <h2>CUSTOMER SERVICE</h2>
-      <p><a href="tel:01095517263">010-9551-7263</a><br>
-      <a href="mailto:ceo@focc.company">ceo@focc.company</a><br>
-      11:00 — 18:00<br>
-      Lunch 12:00 — 13:00</p>
-    </div>
-    <div class="focc-footer-links">
-      <h2>INFORMATION</h2>
-      <a href="/shopinfo/company.html">회사소개</a>
-      <a href="/member/mall_agreement.html">이용약관</a>
-      <a href="/member/privacy.html"><strong>개인정보처리방침</strong></a>
-      <a href="/shopinfo/guide.html">이용안내</a>
-      <a href="/board/index.html">고객센터</a>
-    </div>
+<!-- HEROES OF KOREA | CAFE24 FOOTER | focc design -->
+<style>
+#footer.focc-footer{position:relative;clear:both;width:100%;margin:0;padding:65px clamp(20px,4vw,76px) 28px;background:#f7f7f7;border-top:1px solid #dedede;color:#111;font-family:"DM Sans","Noto Sans KR",sans-serif;text-align:left;box-sizing:border-box}
+#footer.focc-footer *,#footer.focc-footer *::before,#footer.focc-footer *::after{box-sizing:border-box}
+#footer.focc-footer a{color:inherit;text-decoration:none}
+#footer.focc-footer a:hover{text-decoration:underline;text-underline-offset:4px}
+#footer.focc-footer>.inner{width:100%;max-width:1920px;margin:0 auto;padding:0!important;background:transparent}
+#footer.focc-footer .inner_t{display:grid!important;grid-template-columns:minmax(0,1.65fr) minmax(0,1.35fr);gap:60px;align-items:start;margin:0!important;padding:0!important;border:0!important}
+#footer.focc-footer .info_left,#footer.focc-footer .info_right{float:none!important;width:auto!important;max-width:none!important;min-width:0;margin:0!important;padding:0!important}
+#footer.focc-footer .bt_logo{display:block!important;width:auto!important;margin:0 0 34px!important;padding:0!important}
+#footer.focc-footer .bt_logo a{display:inline-block}
+#footer.focc-footer .bt_logo img{display:block;width:190px!important;max-width:100%;height:auto!important}
+#footer.focc-footer .bt_title{display:block;font-size:12px!important;font-weight:600!important;line-height:1.5;letter-spacing:0;margin:0 0 17px!important;padding:0!important;color:#111!important}
+#footer.focc-footer .bt_info_list{display:grid;gap:5px;font-size:11px!important;line-height:1.9;color:#333}
+#footer.focc-footer .bt_info_list>div{display:block!important;float:none!important;width:auto!important;margin:0!important;padding:0!important;font-size:11px!important}
+#footer.focc-footer .bt_info_list [data-ez-role="field"]{display:inline-block;min-width:105px;color:#666}
+#footer.focc-footer .bt_info_list [data-ez-role="value"]{color:#333}
+#footer.focc-footer .info_right{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+#footer.focc-footer .bt_util{grid-column:1/-1;margin:0!important;padding:0!important}
+#footer.focc-footer .bt_util ul{display:flex!important;flex-wrap:wrap;gap:12px 22px;list-style:none;margin:0!important;padding:0!important}
+#footer.focc-footer .bt_util li{float:none!important;margin:0!important;padding:0!important}
+#footer.focc-footer .bt_util a{font-size:11px!important;line-height:1.7}
+#footer.focc-footer .wrap_cs{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:36px;margin:0!important;padding:0!important}
+#footer.focc-footer .cs_center_txt,#footer.focc-footer .bank_txt,#footer.focc-footer .sns_txt{float:none!important;width:auto!important;margin:0!important;padding:0!important}
+#footer.focc-footer .cs_center_txt [data-ez-role="list"]>div{margin:0 0 8px!important;font-size:11px;line-height:1.9}
+#footer.focc-footer .cs_center_txt strong{display:block!important;font-weight:400;color:#777}
+#footer.focc-footer .cs_center_txt [data-ez-role="value"]{display:block;color:#333}
+#footer.focc-footer .bank_txt .bt_title_sub,#footer.focc-footer .bank_txt [data-ez-role="list"]{font-size:11px;line-height:1.9}
+#footer.focc-footer .bank_txt .bt_title_sub strong{font-weight:400}
+#footer.focc-footer .sns_txt{grid-column:1/-1;display:flex;gap:16px;flex-wrap:wrap;align-items:baseline}
+#footer.focc-footer .sns_txt .bt_title{flex-basis:100%;margin-bottom:0!important}
+#footer.focc-footer .sns_txt a{font-size:11px}
+#footer.focc-footer .inner_b{display:flex!important;justify-content:space-between;align-items:center;gap:24px;margin:50px 0 0!important;padding:22px 0 0!important;border-top:1px solid #ddd;font-size:10px;color:#777}
+#footer.focc-footer .bt_copyright{font-size:10px!important;line-height:1.7;color:#777;margin:0!important;padding:0!important}
+#footer.focc-footer .bt_dummy{margin:0!important;padding:0!important}
+#footer.focc-footer #right_quick{position:fixed}
+@media(max-width:960px){#footer.focc-footer .inner_t{grid-template-columns:1fr;gap:42px}#footer.focc-footer .info_right{grid-template-columns:1fr}#footer.focc-footer .wrap_cs{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){#footer.focc-footer{padding:48px 20px 85px}#footer.focc-footer .bt_logo{margin-bottom:25px!important}#footer.focc-footer .bt_logo img{width:155px!important}#footer.focc-footer .inner_t{gap:32px}#footer.focc-footer .info_right{gap:26px}#footer.focc-footer .wrap_cs{grid-template-columns:1fr;gap:22px}#footer.focc-footer .bt_util ul{gap:10px 16px}#footer.focc-footer .bt_info_list [data-ez-role="field"]{min-width:90px}#footer.focc-footer .inner_b{margin-top:38px!important;display:block!important}}
+</style>
+
+<!-- Mobile bottom navigation: Cafe24 functionality preserved -->
+<div class="bottom-nav RMB RTB" data-ez="contents-12c3z8n-1" ez-module="bottom-navigation">
+  <ul class="bottom-nav__tabBar">
+    <li><button class="btnNav eNavFold" type="button"><i aria-hidden="true" class="icon icoNav"></i>네비게이션</button></li>
+    <li><button class="btnSearch eSearch" type="button"><!--@import(/svg/icon-search.html)-->검색</button></li>
+    <li><a href="/"><!--@import(/svg/icon-home.html)-->홈</a></li>
+    <li module="Layout_stateLogon"><a href="/order/basket.html"><!--@import(/svg/icon-cart.html)-->Cart <span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a></li>
+    <li module="Layout_stateLogoff"><a href="/order/basket.html"><!--@import(/svg/icon-cart.html)-->Cart <span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a></li>
+    <li><a href="/myshop/index.html"><!--@import(/svg/icon-user.html)-->마이쇼핑</a></li>
+  </ul>
+  <div class="bottom-nav__top"><a href="#wrap" title="화면 최상단으로 이동하기"><!--@import(/svg/icon-quick-arrow.html)--></a></div>
+</div>
+<div class="footer_margin" data-ez="module-00nw8od-1" data-ez-module="user-defined/1" data-ez-name="USER DEFINED" data-ez-type="plain"></div>
+
+<footer class="layout01 focc-footer" id="footer" data-ez="contents-0u0u5aa-1" data-ez-layout="layout01">
+  <div id="right_quick">
+    <div><a href="/product/recent_view_product.html" aria-label="최근 본 상품"><img src="/SkinImg/img/recent_viewed.svg" alt=""></a></div>
+    <div><a href="#none" onclick="$('html,body').animate({scrollTop:0},'slow')" aria-label="맨 위로"><img src="/SkinImg/img/r_quick_top.svg" alt=""></a></div>
+    <div><a href="#none" onclick="$('html,body').animate({scrollTop:$(document).height()},'slow');" aria-label="맨 아래로"><img src="/SkinImg/img/r_quick_bottom.svg" alt=""></a></div>
   </div>
-  <div class="focc-footer-bottom">
-    <span>© HEROES OF KOREA. ALL RIGHTS RESERVED.</span>
-    <span>HOSTED BY CAFE24</span>
+  <div class="inner" module="Layout_footer">
+    <div class="inner_t">
+      <div class="info_left">
+        <div class="bt_logo" module="Layout_LogoBottom">
+          <a href="/"><img src="https://jyhome1228-cyber.github.io/focc/assets/heroes-of-korea-logo.svg" alt="HEROES OF KOREA"></a>
+        </div>
+        <div class="bt_info" data-ez-group="info">
+          <div class="bt_title" data-ez-role="title">COMPANY</div>
+          <div class="bt_info_list" data-ez-role="list">
+            <div data-ez-item="company_name"><span data-ez-role="field">상호명</span> <span data-ez-role="value">{$company_name}</span></div>
+            <div data-ez-item="president_name"><span data-ez-role="field">대표자명</span> <span data-ez-role="value">{$president_name}</span></div>
+            <div data-ez-item="address"><span data-ez-role="field">사업장 주소</span> <span data-ez-role="value">{$mall_zipcode} {$mall_addr1} {$mall_addr2}</span></div>
+            <div data-ez-item="phone"><span data-ez-role="field">대표 전화</span> <span data-ez-role="value">{$phone}</span></div>
+            <div data-ez-item="company_regno"><span data-ez-role="field">사업자 등록번호</span> <span data-ez-role="value">{$company_regno}</span></div>
+            <div data-ez-item="network_regno"><span data-ez-role="field">통신판매업 신고번호</span> <span data-ez-role="value">{$network_regno} {$biz_no_link}</span></div>
+            <div data-ez-item="cpo_name"><span data-ez-role="field">개인정보보호책임자</span> <span data-ez-role="value">{$cpo_name}</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="info_right">
+        <div class="bt_util" data-ez-group="shortcut">
+          <div data-ez-role="title" style="display:none">바로가기</div>
+          <ul data-ez-role="list">
+            <li data-ez-item="company"><a href="/shopinfo/company.html">회사소개</a></li>
+            <li data-ez-item="agreement"><a href="/member/mall_agreement.html">이용약관</a></li>
+            <li data-ez-item="privacy"><a href="/member/privacy.html"><strong>개인정보처리방침</strong></a></li>
+            <li data-ez-item="guide"><a href="/shopinfo/guide.html">이용안내</a></li>
+            <li data-ez-item="faq"><a href="/board/board/3">자주묻는질문(FAQ)</a></li>
+          </ul>
+        </div>
+        <div class="wrap_cs">
+          <div class="cs_center_txt" data-ez-group="cs" module="Layout_Info">
+            <div class="bt_title" data-ez-role="title">CUSTOMER SERVICE</div>
+            <div data-ez-role="list">
+              <div class="bt_tel" data-ez-item="phone"><strong>상담/주문전화</strong><span data-ez-role="value">{$phone}</span></div>
+              <div class="bt_mail" data-ez-item="email"><strong>상담/주문 이메일</strong><span data-ez-role="value">{$inquiry_email}</span></div>
+              <div class="bt_time" data-ez-item="runtime"><strong>CS운영시간</strong><span data-ez-role="value">{$runtime}</span></div>
+            </div>
+          </div>
+          <div class="bank_txt" data-ez-group="bank">
+            <div class="bt_title" data-ez-role="title">PAYMENT INFORMATION</div>
+            <div class="bt_title_sub"><strong>무통장 계좌정보</strong></div>
+            <div data-ez-role="list"><div data-ez-role="item"><span data-ez-role="bank_name"></span> <span data-ez-role="account_number"></span> <span data-ez-role="account_name"></span></div></div>
+          </div>
+          <div class="sns_txt" data-ez-group="sns" data-ez-role="list">
+            <div class="bt_title" data-ez-role="title">SOCIAL</div>
+            <a data-ez-item="instagram" href="https://www.instagram.com/heroesofkorea_official/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a data-ez-item="youtube" href="https://www.youtube.com/@haninalda21" target="_blank" rel="noopener noreferrer">YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="inner_b">
+      <div class="bt_copyright">Copyright © {$mall_name}. All Rights Reserved. Hosting by Cafe24 Corp.</div>
+      <div class="bt_dummy">
+        <div class="bt_escrow" data-ez-escrow style="display:none">
+          <a data-ez-link="#link" href="#">
+            <img alt="올앳" class="bt_ew_allat" data-ez-escrow-id="allat" src="/SkinImg/img/bt_ew_allat.png">
+            <img alt="이니시스" class="bt_ew_iniapy" data-ez-escrow-id="inicis" src="/SkinImg/img/bt_ew_iniapy.png">
+            <img alt="NHN한국사이버결제" class="bt_ew_kcp" data-ez-escrow-id="kcp" src="/SkinImg/img/bt_ew_kcp.png">
+            <img alt="한국정보통신" class="bt_ew_kicc" data-ez-escrow-id="kicc" src="/SkinImg/img/bt_ew_kicc.png">
+            <img alt="케이에스넷" class="bt_ew_ksnet" data-ez-escrow-id="ksnet" src="/SkinImg/img/bt_ew_ksnet.png">
+            <img alt="나이스페이먼츠" class="bt_ew_nice" data-ez-escrow-id="nicepay" src="/SkinImg/img/bt_ew_nice.png">
+            <img alt="토스페이먼츠" class="bt_ew_payments" data-ez-escrow-id="dacom" src="/SkinImg/img/bt_ew_payments.png">
+            <img alt="세틀뱅크" class="bt_ew_settle" data-ez-escrow-id="settlebank" src="/SkinImg/img/bt_ew_settle.png">
+            <img alt="스마트로" class="bt_ew_smartro" data-ez-escrow-id="smartro" src="/SkinImg/img/bt_ew_smartro.png">
+            <span>고객님은 안전거래를 위해 결제시 저희 쇼핑몰에서 가입한 구매안전 서비스를 이용하실 수 있습니다. [서비스가입정보확인]</span>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
+<!--#ez="1/6"-->
