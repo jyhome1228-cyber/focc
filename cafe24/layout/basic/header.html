@@ -1,64 +1,80 @@
-<!-- HEROES OF KOREA / Cafe24 replacement header -->
+<!-- HEROES OF KOREA — Cafe24 header (original Cafe24 modules retained) -->
 <!--@css(/layout/basic/css/focc-shell.css)-->
-<header class="focc-header" id="focc-header">
+<header id="header" class="focc-cafe24-header">
   <div class="focc-header-inner">
-    <a class="focc-header-logo" href="/" aria-label="히어로즈 오브 코리아 홈">
-      <img src="https://jyhome1228-cyber.github.io/focc/assets/heroes-of-korea-logo.svg" alt="HEROES of KOREA" width="180" height="45">
-    </a>
-
-    <nav class="focc-desktop-nav" aria-label="주 메뉴">
-      <a href="/product/list.html?cate_no=45">Perfume</a>
-      <a href="/product/list.html?cate_no=54">Lifestyle</a>
-      <a href="/board/gallery/list.html?board_no=8">Press</a>
-      <a href="https://jyhome1228-cyber.github.io/focc/about.html">About Us</a>
-      <a href="https://jyhome1228-cyber.github.io/focc/global.html">Global</a>
-    </nav>
-
-    <div class="focc-header-actions">
-      <div class="focc-login" module="Layout_statelogoff">
-        <a href="/member/login.html" aria-label="로그인" title="로그인">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c0-4.2 3.1-6.5 7.5-6.5s7.5 2.3 7.5 6.5"/></svg>
-        </a>
+    <div class="toparea display_pc_only focc-accessible-tools">
+      <div class="toparea_shoppinginfo">
+        <div class="list" module="Layout_multishopList">
+          <!--@css(/css/module/layout/3242/multishoplist.css)-->
+          <button class="toggle" type="button"><span>{$current_language}</span></button>
+          <ul module="Layout_multishopListitem">
+            <li class="{$selected_class}"><a href="//{$shop_domain}/"><span class="name">{$locale_language}</span><span class="unit">{$currency_code}</span></a></li>
+            <li class="{$selected_class}"><a href="//{$shop_domain}/"><span class="name">{$locale_language}</span><span class="unit">{$currency_code}</span></a></li>
+          </ul>
+        </div>
+        <div data-ez-group="shopping-info" data-ez-role="list"><ul module="Layout_shoppingInfo">
+          <li class="{$use_mileage|display}"><a href="/myshop/mileage/historyList.html">{$mileage_name} <strong>{$mileage}</strong></a></li>
+          <li class="{$use_deposit|display}"><a href="/myshop/deposits/historyList.html">{$deposit_name} <strong>{$deposit}</strong></a></li>
+          <li class="{$use_coupon_cnt|display}"><a href="/myshop/coupon/coupon.html">쿠폰 <strong>{$coupon_cnt}</strong></a></li>
+          <li class="{$use_interest_prd|display}"><a href="/myshop/wish_list.html">관심상품 <strong>{$interest_prd_cnt}</strong></a></li>
+          <li class="{$use_like_product_cnt|display}">{$like_prd_tag}</li>
+          <li class="{$use_basket_cnt|display}"><a href="/order/basket.html">장바구니 <strong>{$basket_cnt} <span class="{$use_basket_price|display}">({$basket_price})</span></strong></a></li>
+        </ul></div>
       </div>
-      <div class="focc-login" module="Layout_stateLogon">
-        <a href="/myshop/index.html" aria-label="마이페이지" title="마이페이지">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c0-4.2 3.1-6.5 7.5-6.5s7.5 2.3 7.5 6.5"/></svg>
-        </a>
-        <a href="{$action_logout}" class="focc-logout">로그아웃</a>
+      <div class="toparea_state" data-ez-group="top-util-menu" data-ez-role="list">
+        <a data-ez-item="login" href="/member/login.html" module="Layout_statelogoff">로그인</a>
+        <a data-ez-item="modify" href="/member/modify.html" module="Layout_stateLogon">내정보수정</a>
+        <a data-ez-item="logout" href="{$action_logout}" module="Layout_stateLogon">로그아웃</a>
+        <a data-ez-item="order" href="/myshop/order/list.html">주문조회</a>
+        <a data-ez-item="mypage" href="/myshop/index.html" module="Layout_stateLogon">마이페이지</a>
+        <a data-ez-item="recent" href="/product/recent_view_product.html">최근본상품</a>
+        <div class="toparea_state_board"><a data-ez-item="board" href="#none">고객센터 <i class="icon icoArrowBottom" aria-hidden="true"></i></a>
+          <ul module="Layout_BoardInfo"><li><a href="{$link_board_list}">{$board_name}</a></li><li><a href="{$link_board_list}">{$board_name}</a></li></ul>
+        </div>
       </div>
-      <a href="/order/basket.html" aria-label="장바구니" title="장바구니">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 8h17l-1.4 12h-14zM8.5 9V6a3.5 3.5 0 0 1 7 0v3"/></svg>
-      </a>
-      <a href="/product/search.html" aria-label="상품 검색" title="검색">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
-      </a>
-      <button id="focc-menu-toggle" class="focc-menu-toggle" type="button" aria-label="메뉴 열기" aria-controls="focc-mobile-nav" aria-expanded="false">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
-      </button>
+    </div>
+    <div class="top_nav_box focc-main-nav" id="top_nav_box">
+      <div class="top_logo" module="Layout_LogoTop">
+        <a href="/" aria-label="히어로즈 오브 코리아 홈"><img src="https://jyhome1228-cyber.github.io/focc/assets/heroes-of-korea-logo.svg" alt="HEROES of KOREA"></a>
+      </div>
+      <div data-ez-mode="manual" data-ez-module="menu-main/1" class="focc-nav-holder">
+        <nav class="xans-element- xans-layout xans-layout-category top_category focc-nav" aria-label="주 메뉴">
+          <ul>
+            <li><a href="/category/%ED%96%A5%EC%88%98/45/">Perfume</a></li>
+            <li><a href="/category/%EC%95%85%EC%84%B8%EC%84%9C%EB%A6%AC/54/">Lifestyle</a></li>
+            <li><a href="/board/%EA%B0%A4%EB%9F%AC%EB%A6%AC/8/">Press</a></li>
+            <li><a href="https://jyhome1228-cyber.github.io/focc/about.html">About Us</a></li>
+            <li><a href="https://heroesofkorea.store/">Global</a></li>
+          </ul>
+        </nav>
+      </div>
+      <ul class="top_mypage focc-actions">
+        <li><a href="/myshop/index.html" aria-label="마이페이지"><!--@import(/svg/icon-user.html)--></a></li>
+        <li><a href="/order/basket.html" module="Layout_orderBasketcount" aria-label="장바구니">
+          <!--@import(/svg/icon-cart.html)-->
+          <span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span>
+        </a></li>
+        <li class="top_search"><a class="eSearch" href="javascript:;" aria-label="상품 검색"><!--@import(/svg/icon-search.html)--></a></li>
+        <li class="mo_nav"><a class="eNavFold" href="javascript:;" aria-label="모바일 메뉴"><i aria-hidden="true" class="icon icoNav"></i></a></li>
+      </ul>
+    </div>
+    <div module="Layout_SearchHeader">
+      <!-- $product_page=/product/detail.html
+           $category_page=/product/list.html -->
+      <fieldset>
+        <legend>검색</legend>
+        <div class="wrap_search_box">
+          <div class="search_find_product">Find Product</div>
+          <div class="top_search_box">
+            <button class="btnClose" type="button"><img alt="닫기" src="/SkinImg/img/pc_search_close.svg"></button>
+            {$form.keyword}
+            <button class="btnDelete" type="button">삭제</button>
+            <button class="btnSearch" onclick="{$action_search_submit}" type="button"><img alt="검색" src="/SkinImg/img/top_search.svg"></button>
+            <ul class="autoDrop" id="{$search_auto_id}"></ul>
+          </div>
+        </div>
+      </fieldset>
     </div>
   </div>
-  <nav id="focc-mobile-nav" class="focc-mobile-nav" aria-label="모바일 주 메뉴" hidden>
-    <a href="/">Home</a>
-    <a href="/product/list.html?cate_no=45">Perfume</a>
-    <a href="/product/list.html?cate_no=54">Lifestyle</a>
-    <a href="/board/gallery/list.html?board_no=8">Press</a>
-    <a href="https://jyhome1228-cyber.github.io/focc/about.html">About Us</a>
-    <a href="https://jyhome1228-cyber.github.io/focc/global.html">Global</a>
-    <a href="/myshop/order/list.html">Order History</a>
-  </nav>
 </header>
-<script>
-(function(){
-  var button=document.getElementById('focc-menu-toggle');
-  var nav=document.getElementById('focc-mobile-nav');
-  if(!button||!nav)return;
-  button.addEventListener('click',function(){
-    var open=button.getAttribute('aria-expanded')!=='true';
-    button.setAttribute('aria-expanded',String(open));
-    nav.hidden=!open;
-  });
-  nav.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click',function(){nav.hidden=true;button.setAttribute('aria-expanded','false');});
-  });
-})();
-</script>
+<!-- Existing Cafe24 eNavFold sidebar and eSearch scripts remain active. -->
