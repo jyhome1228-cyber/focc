@@ -384,6 +384,16 @@ html,body{overflow-x:clip}
  .mobile-nav.open{display:flex;flex-direction:column}
  .mobile-nav a{padding:14px 0;min-height:44px}
 }
+
+/* Ensure six category labels do not collide with the logo on tablets */
+@media(min-width:701px) and (max-width:1160px){
+ .header-main{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;align-items:center;gap:12px!important}
+ .header-main .nav{display:none!important}
+ .header-main .utility{display:none!important}
+ .header-main .mobile-toggle{display:block!important;grid-column:2!important;grid-row:1!important;justify-self:end!important;min-width:44px;min-height:44px}
+ .header-main .header-logo{grid-column:1!important;grid-row:1!important}
+ .mobile-nav.open{display:flex!important;flex-direction:column}
+}
 </style>
 </head>
 <body><div class="wrap">
