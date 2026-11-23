@@ -340,6 +340,37 @@ html,body{overflow-x:clip}
 .header-main .nav a[aria-current="page"],.mobile-nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:8px}
 .subpage-hero h1{overflow-wrap:anywhere}
 @media(max-width:600px){.subpage-hero{padding-top:48px;padding-bottom:48px}.subpage-hero h1{font-size:clamp(30px,8vw,38px)}.subpage-note{padding:60px var(--pad) 85px}}
+
+
+/* 2026-11-23 mobile audit: safe layout and navigation */
+@media(max-width:700px){
+ html,body{max-width:100%;overflow-x:clip}
+ .wrap{max-width:100%;min-width:0;overflow-x:clip}
+ .header,.header-main,.footer,.footer-wrap{max-width:100%;min-width:0}
+ .header-main{grid-template-columns:minmax(0,1fr) auto!important;column-gap:12px!important}
+ .header-logo{min-width:0}
+ .header-logo img{max-width:min(45vw,175px);height:auto}
+ .mobile-toggle{position:relative;z-index:12;min-width:42px;min-height:42px;justify-self:end;grid-column:2}
+ .mobile-nav{max-width:100%;overflow-wrap:anywhere}
+ .footer-wrap{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .footer-wrap>div{min-width:0;overflow-wrap:anywhere}
+ img{max-width:100%}
+}
+@media(max-width:380px){
+ .header-logo img{max-width:155px}
+ .footer-wrap{gap:20px 12px!important}
+}
+
+
+@media(max-width:700px){
+ .subpage-hero{padding:48px 17px}
+ .subpage-hero h1{font-size:clamp(30px,8.5vw,40px)}
+ .projects-section,.section{max-width:100%}
+ .project-grid,.journal{display:grid;grid-template-columns:minmax(0,1fr)}
+ .project-grid article,.journal-card{min-width:0}
+ .subpage-note{padding:60px 17px 80px}
+}
+
 </style>
 </head>
 <body><div class="wrap">
