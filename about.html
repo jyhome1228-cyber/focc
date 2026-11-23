@@ -340,6 +340,40 @@ html,body{overflow-x:clip}
 .header-main .nav a[aria-current="page"],.mobile-nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:8px}
 .subpage-hero h1{overflow-wrap:anywhere}
 @media(max-width:600px){.subpage-hero{padding-top:48px;padding-bottom:48px}.subpage-hero h1{font-size:clamp(30px,8vw,38px)}.subpage-note{padding:60px var(--pad) 85px}}
+
+/* Refined About Us — compact editorial hierarchy aligned with the FOCC site */
+.about-editorial{max-width:1440px;margin:0 auto;padding:0 32px}
+.about-editorial .about-overline{font:500 11px/1.5 'DM Sans',sans-serif;letter-spacing:.065em;color:#777;margin:0 0 22px}
+.about-lead{display:grid;grid-template-columns:1fr .82fr;gap:clamp(35px,5vw,85px);align-items:center;padding:85px 0 100px}
+.about-lead-copy h1{font:400 clamp(38px,4.3vw,64px)/1.15 'DM Sans',sans-serif;letter-spacing:-.06em;margin:0 0 29px}
+.about-lead-copy>p:last-child{font-size:clamp(14px,1.12vw,17px);line-height:1.95;color:#555;word-break:keep-all}
+.about-lead-photo{margin:0;height:clamp(350px,36vw,515px);overflow:hidden;background:#eee}
+.about-lead-photo img{width:100%;height:100%;object-fit:cover}
+.about-manifesto{border-top:1px solid #d9d9d9;display:grid;grid-template-columns:1fr 2fr;gap:55px;padding:90px 0 105px}
+.about-section-label span{font-size:11px;letter-spacing:.07em;color:#777}
+.about-manifesto-content h2{font-size:clamp(28px,2.9vw,42px);font-weight:400;line-height:1.5;letter-spacing:-.06em;margin:0 0 35px}
+.about-manifesto-content p{max-width:745px;font-size:14px;line-height:2.1;color:#555;margin:0}
+.about-manifesto-content p+p{margin-top:20px}
+.about-visual-story{border-top:1px solid #ddd;display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,5vw,85px);align-items:center;padding:85px 0 110px}
+.about-visual-story figure{margin:0;overflow:hidden;aspect-ratio:1/1;background:#f5f5f5}
+.about-visual-story figure img{width:100%;height:100%;object-fit:cover}
+.about-visual-story h2{font-size:clamp(29px,3vw,43px);font-weight:400;letter-spacing:-.06em;margin:0 0 28px}
+.about-visual-story div>p:not(.about-overline){max-width:480px;font-size:14px;line-height:2.1;color:#555}
+.about-visual-story div>p+p{margin-top:23px}
+.about-values{border-top:1px solid #ddd;padding:100px 0 120px}
+.about-values-head{display:grid;grid-template-columns:1fr 2fr;column-gap:55px;align-items:start;margin-bottom:46px}
+.about-values-head .about-overline{grid-row:1/3}
+.about-values-head h2{font-size:clamp(27px,2.8vw,40px);font-weight:400;letter-spacing:-.06em;line-height:1.5;margin:0 0 10px}
+.about-values-head>p:last-child{color:#777;font-size:13px}
+.about-values-list{border-top:1px solid #d5d5d5;display:grid;grid-template-columns:repeat(2,1fr)}
+.about-values-list article{display:grid;grid-template-columns:120px 1fr;gap:24px;min-height:180px;padding:27px 20px 33px 0;border-bottom:1px solid #ddd}
+.about-values-list article:nth-child(odd){border-right:1px solid #ddd}
+.about-values-list article:nth-child(even){padding-left:28px}
+.about-values-list h3{font-size:21px;letter-spacing:-.05em;font-weight:500;margin:0}
+.about-values-list article span{display:block;color:#777;font:400 12px/1.7 'DM Sans',sans-serif;margin-bottom:11px}
+.about-values-list article p{color:#555;font-size:13px;line-height:1.95;margin:0}
+@media(max-width:800px){.about-editorial{padding:0 20px}.about-lead{grid-template-columns:1fr;gap:35px;padding:55px 0 70px}.about-lead-photo{height:380px}.about-manifesto,.about-visual-story{grid-template-columns:1fr;gap:28px;padding:65px 0 80px}.about-values{padding:75px 0 90px}.about-values-head{display:block}.about-values-list article{grid-template-columns:1fr;gap:10px;padding:24px 15px 25px 0}.about-values-list article:nth-child(even){padding-left:15px}}
+@media(max-width:550px){.about-lead-photo{height:300px}.about-values-list{grid-template-columns:1fr}.about-values-list article:nth-child(odd){border-right:0}.about-values-list article:nth-child(even){padding-left:0}.about-values-list article{min-height:0}.about-editorial .about-overline{margin-bottom:14px}}
 </style>
 </head>
 <body><div class="wrap">
@@ -348,14 +382,25 @@ html,body{overflow-x:clip}
 <div class="nav-row header-main"><a href="index.html" class="header-logo" aria-label="Heroes of Korea 홈"><img src="assets/heroes-of-korea-logo.svg" alt="HEROES of KOREA"></a><button class="mobile-toggle" id="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav class="nav" aria-label="주 메뉴"><a href="perfume.html">Perfume</a><a href="lifestyle.html">Lifestyle</a><a href="press.html">Press</a><a href="about.html" aria-current="page">About Us</a><a href="global.html">Global</a></nav><div class="utility"><a href="#footer" aria-label="회원">♙</a><a href="perfume.html" aria-label="장바구니">♧</a><a href="perfume.html" aria-label="검색">⌕</a></div>
 <nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴"><a href="perfume.html">Perfume</a><a href="lifestyle.html">Lifestyle</a><a href="press.html">Press</a><a href="about.html" aria-current="page">About Us</a><a href="global.html">Global</a></nav></div>
 </header>
-<main><section class="subpage-hero"><span class="subpage-label">HEROES OF KOREA / ABOUT US</span><h1>We record.</h1><p>우리는 사료와 기억에서 출발하여 한국의 이야기를 향으로 기록합니다.</p></section>
-<section class="manifesto-section" id="manifesto" aria-labelledby="manifesto-heading">
- <div class="manifesto-index"><span>THE STORY / 001</span><span>HEROES OF KOREA · EST. 2020</span></div>
- <div class="manifesto-main"><span class="manifesto-label">OUR MANIFESTO</span><div><h2 id="manifesto-heading">우리가 만드는 것은<br>유행이 아니라 기록입니다.</h2><p>백 년 전 누군가가 적어두지 않았다면, 우리는 허난설헌을 몰랐을 것입니다.<br>백 년 후 우리가 기록하지 않으면, 누군가는 허난설헌을 모를 것입니다.</p><p>히어로즈 오브 코리아는 사료에 근거한 인물과 시대의 이야기를 한국인 창작자의 손으로 향에 담습니다. 그렇게 만들어진 한 병의 향은 잊혀질 뻔한 기억을 오늘로 데려오고, 새로운 추억의 시작이 됩니다.</p></div></div>
- <div class="manifesto-bottom"><span>RECORD THE PAST.</span><span>INSPIRE THE FUTURE.</span></div>
+<main class="about-editorial">
+<section class="about-lead">
+ <div class="about-lead-copy"><p class="about-overline">ABOUT HEROES OF KOREA</p><h1>We record.</h1><p>우리는 한국의 인물과 시대를 향으로 기록합니다.<br>그들이 남긴 이야기를 오늘의 감각으로 이어갑니다.</p></div>
+ <figure class="about-lead-photo"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261108-051609-photo-crop-back-view-79a7ba53.webp" alt="히어로즈 오브 코리아 브랜드 캠페인" loading="eager"></figure>
 </section>
-<section class="feature" id="story"><div class="feature-copy"><span class="eyebrow">MISSION / VISION</span><h2>기록을 입다.<br><span class="feature-secondary">Korea, in scent.</span></h2><p>우리는 한국의 영웅, 사람, 장소, 시대를 향기로 기록합니다.<br>그 향기로 모두에게 영감과 새로운 추억의 시작을 선물합니다.</p><div class="feature-notes"><span>RECORD</span><span>INSPIRE</span><span>REMEMBER</span></div><a class="outline" href="about.html#values">OUR PHILOSOPHY </a></div><div class="feature-art"><div class="feature-art-inner"><img src="assets/heroes-of-korea-logo.svg" alt="HEROES of KOREA" class="feature-logo"><span>WE RECORD, THEN WEAR IT.</span></div></div></section>
-<section class="values-section section" id="values"><div class="section-head"><span class="dash"></span><h2>Our Philosophy</h2><p>기록을 이어가는 네 가지 태도</p></div><div class="value-grid"><article><span>01 / RESISTANCE</span><h3>저항</h3><p>우리는 잊혀짐에<br>저항하는 향을 만든다.</p></article><article><span>02 / INSPIRATION</span><h3>영감</h3><p>영웅들의 삶과 이야기에서<br>영감을 길어 올린다.</p></article><article><span>03 / MEMORY</span><h3>추억</h3><p>새로운 추억이<br>시작되는 향을 만든다.</p></article><article><span>04 / AUTHORSHIP</span><h3>창작</h3><p>한국인 창작자가<br>전 과정을 직접 수행한다.</p></article></div></section>
+<section class="about-manifesto" id="manifesto">
+ <div class="about-section-label"><span>OUR MANIFESTO</span></div>
+ <div class="about-manifesto-content"><h2>우리가 만드는 것은<br>유행이 아니라 기록입니다.</h2><p>백 년 전 누군가가 적어두지 않았다면, 우리는 허난설헌을 몰랐을 것입니다. 백 년 후 우리가 기록하지 않으면, 누군가는 허난설헌을 모를 것입니다.</p><p>히어로즈 오브 코리아는 사료에 근거한 인물과 시대의 이야기를 한국인 창작자의 손으로 향에 담습니다. 한 병의 향이 잊혀질 뻔한 기억을 오늘로 데려오고, 새로운 추억의 시작이 됩니다.</p></div>
+</section>
+<section class="about-visual-story" id="story"><figure><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261123-002451-fbc73a40-1a78-4ab1-b0e1-8fd967738821-67b57c36.webp" alt="히어로즈 오브 코리아 정조대왕 오 드 퍼퓸" loading="lazy"></figure><div><p class="about-overline">A STORY HELD IN SCENT</p><h2>기록을 입다.</h2><p>우리는 한국의 영웅과 사람, 장소와 시대의 이야기를 향으로 기록합니다. 그 향이 각자의 일상에서 새로운 기억이 되기를 바랍니다.</p><p>Record the past. Inspire the future.</p></div></section>
+<section class="about-values" id="values">
+ <div class="about-values-head"><p class="about-overline">OUR PHILOSOPHY</p><h2>기록을 이어가는 네 가지 태도.</h2><p>히어로즈 오브 코리아가 향을 만드는 기준입니다.</p></div>
+ <div class="about-values-list">
+ <article><h3>저항.</h3><div><span>Resistance</span><p>잊혀지는 이야기를 다시 기억하기 위해 향을 만듭니다.</p></div></article>
+ <article><h3>영감.</h3><div><span>Inspiration</span><p>인물의 삶과 이야기에서 새로운 감각의 출발점을 찾습니다.</p></div></article>
+ <article><h3>추억.</h3><div><span>Memory</span><p>하나의 향이 누군가에게 새로운 기억으로 남기를 바랍니다.</p></div></article>
+ <article><h3>창작.</h3><div><span>Authorship</span><p>한국인 창작자의 해석과 작업으로 향의 이야기를 완성합니다.</p></div></article>
+ </div>
+</section>
 </main>
 <footer class="footer" id="footer"><div class="footer-wrap"><div class="footer-business"><a class="footer-brand" href="index.html" aria-label="Heroes of Korea 홈"><img src="assets/heroes-of-korea-logo.svg" alt="HEROES of KOREA"></a><h4>쇼핑몰 기본정보</h4><p>상호명 주식회사에프오씨씨　대표자명 김덕영<br>사업장 주소 22009 인천 연수구 인천타워대로 185 송도 센트럴비즈 한라 제812호<br>대표 전화 01027887263　사업자 등록번호 161-87-02570<br>통신판매업 신고번호 2024-서울중구-2038<br>개인정보보호책임자 주식회사에프오씨씨</p></div><div><div class="foot-links"><a href="about.html">회사소개</a><a href="#footer">이용약관</a><a href="#footer">개인정보처리방침</a><a href="#footer">이용안내</a><a href="#footer">자주묻는질문(FAQ)</a></div><h4>고객센터 정보</h4><p>상담/주문전화　010-9551-7263<br>상담/주문 이메일<br><a href="mailto:ceo@focc.company">ceo@focc.company</a></p><h4>CS운영시간</h4><p>11:00 ~ 18:00 점심시간 12:00 ~ 13:00</p></div><div><h4>결제 정보</h4><p>무통장 계좌정보<br><span class="placeholder">실제 계좌 정보 확인 후 표기</span></p></div><div><h4>SNS</h4><p>instagram<br>youtube</p><p class="placeholder">공식 URL 연결 예정</p></div></div><div class="copyright">Copyright © Heroes of Korea. All Rights Reserved. Hosting by Cafe24 Corp.</div></footer>
 </div><script>(function(){const t=document.getElementById('menu-toggle'),n=document.getElementById('mobile-nav');if(!t||!n)return;t.addEventListener('click',()=>{const o=n.classList.toggle('open');t.setAttribute('aria-expanded',String(o));t.textContent=o?'×':'☰'});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');t.setAttribute('aria-expanded','false');t.textContent='☰'}))})();</script></body></html>
