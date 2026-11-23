@@ -478,6 +478,18 @@ html,body{overflow-x:clip}
  .hok26-product-grid{gap:22px 10px}
 }
 
+
+/* Navigation updated for six FOCC categories */
+@media(min-width:961px){
+ .header-main{grid-template-columns:minmax(155px,1fr) minmax(0,auto) minmax(100px,1fr)!important;gap:clamp(12px,1.5vw,24px)!important}
+ .header-main .nav{gap:clamp(12px,1.5vw,25px)!important;font-size:clamp(11px,.92vw,13px)!important;white-space:nowrap}
+ .header-main .utility{gap:12px!important}
+}
+@media(max-width:960px){
+ .header-main .nav{display:none!important}
+ .mobile-nav.open{display:flex;flex-direction:column}
+ .mobile-nav a{padding:14px 0;min-height:44px}
+}
 </style></head>
 <body>
 <div id="intro-screen" class="intro-screen" aria-label="Heroes of Korea 브랜드 오프닝" role="status">
@@ -487,8 +499,8 @@ html,body{overflow-x:clip}
 <div class="wrap">
 <header class="header" id="top">
 <div class="topbar"><span>한국어 ▾ &nbsp;&nbsp; 적립금 0원 &nbsp; 쿠폰 0개 &nbsp; 장바구니 0개 (0원)</span><div class="toplinks"><a href="#footer">내정보수정</a><a href="#footer">로그아웃</a><a href="#footer">주문조회</a><a href="#footer">마이페이지</a><a href="press.html">최근본상품</a><a href="#footer">고객센터</a></div></div>
-<div class="nav-row header-main"><a href="index.html" class="header-logo" aria-label="Heroes of Korea 홈"><img src="assets/heroes-of-korea-logo.svg" alt="HEROES of KOREA"></a><button class="mobile-toggle" id="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav class="nav" aria-label="주 메뉴"><a href="perfume.html">Perfume</a><a href="lifestyle.html">Lifestyle</a><a href="press.html">Press</a><a href="about.html">About Us</a><a href="global.html">Global</a></nav><div class="utility"><a href="#footer" aria-label="회원">♙</a><a href="perfume.html" aria-label="장바구니">♧</a><a href="perfume.html" aria-label="검색">⌕</a></div>
-<nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴"><a href="perfume.html">Perfume</a><a href="lifestyle.html">Lifestyle</a><a href="press.html">Press</a><a href="about.html">About Us</a><a href="global.html">Global</a></nav></div>
+<div class="nav-row header-main"><a href="index.html" class="header-logo" aria-label="Heroes of Korea 홈"><img src="assets/heroes-of-korea-logo.svg" alt="HEROES of KOREA"></a><button class="mobile-toggle" id="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav class="nav" aria-label="주 메뉴"><a href="perfume.html">Beauty &amp; Perfume</a><a href="lifestyle.html">Lifestyle</a><a href="furniture.html">Furniture</a><a href="fnb.html">F&amp;B</a><a href="fashion.html">Fashion</a><a href="about.html">About Us</a></nav><div class="utility"><a href="#footer" aria-label="회원">♙</a><a href="perfume.html" aria-label="장바구니">♧</a><a href="perfume.html" aria-label="검색">⌕</a></div>
+<nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴"><a href="perfume.html">Beauty &amp; Perfume</a><a href="lifestyle.html">Lifestyle</a><a href="furniture.html">Furniture</a><a href="fnb.html">F&amp;B</a><a href="fashion.html">Fashion</a><a href="about.html">About Us</a></nav></div>
 </header>
 <main>
 <section class="hero" aria-label="브랜드 소개">
