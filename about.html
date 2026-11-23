@@ -374,6 +374,43 @@ html,body{overflow-x:clip}
 .about-values-list article p{color:#555;font-size:13px;line-height:1.95;margin:0}
 @media(max-width:800px){.about-editorial{padding:0 20px}.about-lead{grid-template-columns:1fr;gap:35px;padding:55px 0 70px}.about-lead-photo{height:380px}.about-manifesto,.about-visual-story{grid-template-columns:1fr;gap:28px;padding:65px 0 80px}.about-values{padding:75px 0 90px}.about-values-head{display:block}.about-values-list article{grid-template-columns:1fr;gap:10px;padding:24px 15px 25px 0}.about-values-list article:nth-child(even){padding-left:15px}}
 @media(max-width:550px){.about-lead-photo{height:300px}.about-values-list{grid-template-columns:1fr}.about-values-list article:nth-child(odd){border-right:0}.about-values-list article:nth-child(even){padding-left:0}.about-values-list article{min-height:0}.about-editorial .about-overline{margin-bottom:14px}}
+
+
+/* 2026-11-23 mobile audit: safe layout and navigation */
+@media(max-width:700px){
+ html,body{max-width:100%;overflow-x:clip}
+ .wrap{max-width:100%;min-width:0;overflow-x:clip}
+ .header,.header-main,.footer,.footer-wrap{max-width:100%;min-width:0}
+ .header-main{grid-template-columns:minmax(0,1fr) auto!important;column-gap:12px!important}
+ .header-logo{min-width:0}
+ .header-logo img{max-width:min(45vw,175px);height:auto}
+ .mobile-toggle{position:relative;z-index:12;min-width:42px;min-height:42px;justify-self:end;grid-column:2}
+ .mobile-nav{max-width:100%;overflow-wrap:anywhere}
+ .footer-wrap{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .footer-wrap>div{min-width:0;overflow-wrap:anywhere}
+ img{max-width:100%}
+}
+@media(max-width:380px){
+ .header-logo img{max-width:155px}
+ .footer-wrap{gap:20px 12px!important}
+}
+
+
+@media(max-width:700px){
+ .about-editorial{padding:0 17px}
+ .about-lead{grid-template-columns:minmax(0,1fr);gap:30px;padding:48px 0 70px}
+ .about-lead-copy{min-width:0}
+ .about-lead-copy h1{font-size:clamp(38px,10vw,53px)}
+ .about-lead-photo{height:clamp(270px,80vw,410px)}
+ .about-manifesto,.about-visual-story{grid-template-columns:minmax(0,1fr);gap:25px}
+ .about-manifesto-content,.about-visual-story>div{min-width:0}
+ .about-visual-story figure{width:100%}
+ .about-values-list{grid-template-columns:minmax(0,1fr)}
+ .about-values-list article,.about-values-list article:nth-child(even){border-right:0;padding:23px 0;grid-template-columns:95px minmax(0,1fr)}
+ .about-values-list article h3{font-size:19px}
+}
+@media(max-width:380px){.about-values-list article,.about-values-list article:nth-child(even){grid-template-columns:1fr;gap:10px}}
+
 </style>
 </head>
 <body><div class="wrap">
