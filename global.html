@@ -371,13 +371,25 @@ html,body{overflow-x:clip}
  .subpage-note{padding:60px 17px 80px}
 }
 
+
+/* Navigation updated for six FOCC categories */
+@media(min-width:961px){
+ .header-main{grid-template-columns:minmax(155px,1fr) minmax(0,auto) minmax(100px,1fr)!important;gap:clamp(12px,1.5vw,24px)!important}
+ .header-main .nav{gap:clamp(12px,1.5vw,25px)!important;font-size:clamp(11px,.92vw,13px)!important;white-space:nowrap}
+ .header-main .utility{gap:12px!important}
+}
+@media(max-width:960px){
+ .header-main .nav{display:none!important}
+ .mobile-nav.open{display:flex;flex-direction:column}
+ .mobile-nav a{padding:14px 0;min-height:44px}
+}
 </style>
 </head>
 <body><div class="wrap">
 <header class="header" id="top">
 <div class="topbar"><span>한국어 ▾ &nbsp;&nbsp; 적립금 0원 &nbsp; 쿠폰 0개 &nbsp; 장바구니 0개 (0원)</span><div class="toplinks"><a href="#footer">내정보수정</a><a href="#footer">로그아웃</a><a href="#footer">주문조회</a><a href="#footer">마이페이지</a><a href="press.html">최근본상품</a><a href="#footer">고객센터</a></div></div>
-<div class="nav-row header-main"><a href="index.html" class="header-logo" aria-label="Heroes of Korea 홈"><img src="assets/heroes-of-korea-logo.svg" alt="HEROES of KOREA"></a><button class="mobile-toggle" id="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav class="nav" aria-label="주 메뉴"><a href="perfume.html">Perfume</a><a href="lifestyle.html">Lifestyle</a><a href="press.html">Press</a><a href="about.html">About Us</a><a href="global.html" aria-current="page">Global</a></nav><div class="utility"><a href="#footer" aria-label="회원">♙</a><a href="perfume.html" aria-label="장바구니">♧</a><a href="perfume.html" aria-label="검색">⌕</a></div>
-<nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴"><a href="perfume.html">Perfume</a><a href="lifestyle.html">Lifestyle</a><a href="press.html">Press</a><a href="about.html">About Us</a><a href="global.html" aria-current="page">Global</a></nav></div>
+<div class="nav-row header-main"><a href="index.html" class="header-logo" aria-label="Heroes of Korea 홈"><img src="assets/heroes-of-korea-logo.svg" alt="HEROES of KOREA"></a><button class="mobile-toggle" id="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav class="nav" aria-label="주 메뉴"><a href="perfume.html">Beauty &amp; Perfume</a><a href="lifestyle.html">Lifestyle</a><a href="furniture.html">Furniture</a><a href="fnb.html">F&amp;B</a><a href="fashion.html">Fashion</a><a href="about.html">About Us</a></nav><div class="utility"><a href="#footer" aria-label="회원">♙</a><a href="perfume.html" aria-label="장바구니">♧</a><a href="perfume.html" aria-label="검색">⌕</a></div>
+<nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴"><a href="perfume.html">Beauty &amp; Perfume</a><a href="lifestyle.html">Lifestyle</a><a href="furniture.html">Furniture</a><a href="fnb.html">F&amp;B</a><a href="fashion.html">Fashion</a><a href="about.html">About Us</a></nav></div>
 </header>
 <main><section class="subpage-hero"><span class="subpage-label">HEROES OF KOREA / GLOBAL ARCHIVE</span><h1>Across borders.</h1><p>한국에서 시작된 향의 기록은 세계 여러 도시로 이어집니다.</p></section>
 <section class="projects-section section" id="projects"><div class="section-head"><span class="dash"></span><h2>Beyond Fragrance</h2><p>향으로 확장하는 기록의 방식</p></div><div class="project-grid"><article><small>01 / SCENT DEVELOPMENT</small><h3>ODM & Collaboration</h3><p>괌 정부 관광청, 한국도서관문화진흥원, 태안국제원예치유박람회 등 장소와 문화의 경험을 향으로 해석한 프로젝트.</p></article><article id="academy"><small>02 / EXPERIENCE</small><h3>Diffuser Workshop</h3><p>후각과 조향을 직접 경험하는 디퓨저 클래스. 소요 시간 60~90분, 10명 이상 참여 프로그램.</p></article><article id="global"><small>03 / GLOBAL ARCHIVE</small><h3>Pop-up & Exhibition</h3><p>오사카, 홍콩, 도쿄 다이칸야마, 서울과 미국 LA 등으로 확장한 브랜드의 기록.</p></article></div></section></main>
