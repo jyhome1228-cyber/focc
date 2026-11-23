@@ -348,6 +348,75 @@ html,body{overflow-x:clip}
 .philosophy-list p{font-size:13px;line-height:1.95;color:#444;max-width:300px;margin:14px 0 0}
 @media(max-width:800px){.values-section{padding:70px var(--pad) 85px}.philosophy-heading{display:block}.philosophy-heading>p{margin-top:16px}.philosophy-layout{grid-template-columns:1fr}.philosophy-photo{height:310px;min-height:0}.philosophy-list article{min-height:170px}}
 @media(max-width:480px){.philosophy-list{grid-template-columns:1fr}.philosophy-list article{min-height:0}.philosophy-photo{height:250px}}
+
+/* 2026-11-23: HOMEPAGE EDITORIAL RESET — restrained typography and updated 9-product collection */
+.hok26{width:100%;background:#fafafa;color:#181818;font-family:"DM Sans","Noto Sans KR",sans-serif}
+.hok26 *{box-sizing:border-box}
+.hok26 h1,.hok26 h2,.hok26 h3,.hok26 p,.hok26 figure{margin:0}
+.hok26-overline{font-size:11px;letter-spacing:.065em;color:#7b7b7b;font-weight:500;margin-bottom:18px!important}
+.hok26-hero,.hok26-collection,.hok26-story,.hok26-philosophy,.hok26-beyond{max-width:1440px;margin-inline:auto}
+.hok26-hero{display:grid;grid-template-columns:.94fr 1.06fr;gap:clamp(35px,5vw,90px);align-items:center;padding:clamp(60px,6vw,110px) 32px clamp(65px,7vw,115px)}
+.hok26-hero-copy{max-width:555px}.hok26-hero h1{font-size:clamp(36px,4vw,62px);font-weight:400;line-height:1.19;letter-spacing:-.075em;max-width:600px;margin-bottom:25px}
+.hok26-lead{font-size:clamp(17px,1.55vw,22px);font-weight:400;letter-spacing:-.045em;line-height:1.7;margin-bottom:24px!important}
+.hok26-prose{font-size:14px;line-height:2.1;color:#606060;max-width:490px;margin-bottom:35px!important;word-break:keep-all}
+.hok26-text-link{display:inline-block;font-size:13px;text-underline-offset:6px;text-decoration:underline}
+.hok26-text-link:hover{opacity:.6}
+.hok26-hero-image{height:clamp(410px,40vw,610px);overflow:hidden;background:#eee}
+.hok26-hero-image img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hok26-section-head{display:flex;align-items:end;justify-content:space-between;gap:35px;margin-bottom:38px}
+.hok26-section-head h2{font-size:clamp(26px,2.8vw,40px);font-weight:400;letter-spacing:-.065em;line-height:1.45}
+.hok26-section-head>p{max-width:355px;font-size:13px;line-height:1.85;color:#737373;text-align:right}
+.hok26-collection{padding:90px 32px 110px;border-top:1px solid #dedede}
+.hok26-product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 23px}
+.hok26-product{display:block;min-width:0}
+.hok26-product-image{width:100%;aspect-ratio:1;overflow:hidden;background:#eee}
+.hok26-product-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease}
+.hok26-product:hover img{transform:scale(1.045)}
+.hok26-product-meta{padding-top:13px;display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.hok26-product-meta h3{font-size:15px;font-weight:500;letter-spacing:-.04em}
+.hok26-product-meta span{font-size:10px;letter-spacing:.03em;color:#828282}
+.hok26-section-end{text-align:center;margin-top:54px}
+.hok26-story{padding:105px 32px 115px;display:grid;grid-template-columns:1fr 1fr;gap:clamp(50px,6vw,115px);align-items:center;border-top:1px solid #dedede}
+.hok26-story figure{height:clamp(370px,39vw,550px);background:#eee;overflow:hidden}
+.hok26-story figure img{width:100%;height:100%;object-fit:cover}
+.hok26-story-copy{max-width:570px}
+.hok26-story h2{font-size:clamp(29px,3.1vw,44px);font-weight:400;letter-spacing:-.07em;line-height:1.4;margin-bottom:13px}
+.hok26-story .hok26-english{font:400 clamp(17px,2vw,27px)/1.5 Georgia,serif;color:#777;margin-bottom:34px}
+.hok26-story-copy>p:not(.hok26-overline):not(.hok26-english){font-size:14px;line-height:2.15;color:#555;word-break:keep-all;margin-bottom:19px}
+.hok26-story .hok26-text-link{margin-top:15px}
+.hok26-philosophy{border-top:1px solid #dedede;padding:100px 32px 110px}
+.hok26-values{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid #cfcfcf}
+.hok26-values article{padding:24px 22px 20px 0;min-height:195px;border-right:1px solid #ddd}
+.hok26-values article:not(:first-child){padding-left:23px}
+.hok26-values article:last-child{border-right:0}
+.hok26-values h3{font-size:22px;font-weight:500;letter-spacing:-.06em;margin-bottom:12px}
+.hok26-values span{font-size:12px;color:#878787}
+.hok26-values p{font-size:13px;line-height:1.95;color:#505050;margin-top:19px}
+.hok26-beyond{padding:95px 32px 130px;border-top:1px solid #ddd}
+.hok26-beyond-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.hok26-beyond-grid article{border-top:1px solid #c9c9c9;padding-top:24px}
+.hok26-beyond-grid h3{font-size:19px;font-weight:500;letter-spacing:-.045em;margin-bottom:17px}
+.hok26-beyond-grid p{font-size:13px;line-height:2;color:#666}
+@media(max-width:900px){
+.hok26-hero,.hok26-story{grid-template-columns:1fr;gap:35px}
+.hok26-hero-image{height:440px}
+.hok26-hero-copy{max-width:700px}
+.hok26-story figure{height:390px}
+.hok26-values{grid-template-columns:repeat(2,1fr)}
+.hok26-values article:nth-child(2){border-right:0}.hok26-values article:nth-child(-n+2){border-bottom:1px solid #ddd}
+}
+@media(max-width:600px){
+.hok26-hero,.hok26-story,.hok26-collection,.hok26-philosophy,.hok26-beyond{padding-left:20px;padding-right:20px}
+.hok26-hero{padding-top:55px;padding-bottom:70px}.hok26-hero h1{font-size:39px}.hok26-hero-image{height:340px}
+.hok26-section-head{display:block;margin-bottom:28px}.hok26-section-head>p{text-align:left;margin-top:14px}
+.hok26-collection{padding-top:70px;padding-bottom:80px}
+.hok26-product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 11px}
+.hok26-product-meta{display:block}.hok26-product-meta h3{font-size:14px}.hok26-product-meta span{display:block;font-size:10px;margin-top:4px}
+.hok26-story{padding-top:75px;padding-bottom:85px}.hok26-story figure{height:315px}
+.hok26-philosophy{padding-top:70px;padding-bottom:80px}.hok26-values article{min-height:165px;padding-right:12px}.hok26-values article:not(:first-child){padding-left:13px}
+.hok26-values h3{font-size:19px}.hok26-values p{font-size:12px}
+.hok26-beyond{padding-top:70px;padding-bottom:85px}.hok26-beyond-grid{grid-template-columns:1fr;gap:30px}
+}
 </style></head>
 <body>
 <div id="intro-screen" class="intro-screen" aria-label="Heroes of Korea 브랜드 오프닝" role="status">
@@ -360,56 +429,50 @@ html,body{overflow-x:clip}
 <div class="nav-row header-main"><a href="index.html" class="header-logo" aria-label="Heroes of Korea 홈"><img src="assets/heroes-of-korea-logo.svg" alt="HEROES of KOREA"></a><button class="mobile-toggle" id="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav class="nav" aria-label="주 메뉴"><a href="perfume.html">Perfume</a><a href="lifestyle.html">Lifestyle</a><a href="press.html">Press</a><a href="about.html">About Us</a><a href="global.html">Global</a></nav><div class="utility"><a href="#footer" aria-label="회원">♙</a><a href="perfume.html" aria-label="장바구니">♧</a><a href="perfume.html" aria-label="검색">⌕</a></div>
 <nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴"><a href="perfume.html">Perfume</a><a href="lifestyle.html">Lifestyle</a><a href="press.html">Press</a><a href="about.html">About Us</a><a href="global.html">Global</a></nav></div>
 </header>
-<main>
-<section class="hero" aria-label="브랜드 소개">
-  <div class="hero-top">
-    <h1 class="hero-word">Heroes</h1>
-    <div class="hero-emblem"><img src="assets/heroes-of-korea-logo.svg" alt="HEROES of KOREA"></div>
-  </div>
-  <div class="story-grid">
-    <div class="story-cell hero-identity">
-      <small>HEROES OF KOREA<br>PARFUM</small>
-      <img class="hero-symbol" src="assets/heroes-of-korea-symbol.svg" alt="히어로즈 오브 코리아 브랜드 심볼">
-      <span class="hero-cell-index">01 — A FRAGRANCE ARCHIVE</span>
-    </div>
-    <div class="story-cell hero-copy">
-      <p>We don’t dramatize.<br>We record.</p>
-      <p class="hero-copy-sub">상상이 아니라 사료에 근거하여,<br>한국의 이야기를 향으로 옮깁니다.</p>
-    </div>
-    <div class="story-cell hero-copy">
-      <p>We record,<br>then wear it.</p>
-      <p class="hero-copy-sub">한국의 영웅과 사람,<br>장소와 한 시대를 향기로 기록합니다.</p>
-      <a class="hero-story-link" href="about.html">Discover our story </a>
-    </div>
-    <div class="story-cell story-photo">
-      <img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261108-051609-photo-crop-back-view-79a7ba53.webp" alt="HEROES of KOREA 쇼핑백을 든 모델" fetchpriority="high">
-      <a href="about.html" class="photo-story">OUR STORY </a>
-    </div>
-  </div>
-  <div class="story-band">
-    <div class="story-mark"><span>HEROES OF KOREA<br><strong>ARCHIVE 001—007</strong></span></div>
-    <div><b>Nature</b><em>01</em></div>
-    <div><b>Heritage</b><em>02</em></div>
-    <div><b>People</b><em>03</em></div>
-  </div>
+<main class="hok26">
+<section class="hok26-hero" aria-labelledby="hok26-hero-title">
+ <div class="hok26-hero-copy">
+  <p class="hok26-overline">HEROES OF KOREA</p>
+  <h1 id="hok26-hero-title">Stories, preserved in scent.</h1>
+  <p class="hok26-lead">한 사람의 삶과 한 시대의 기억을 향으로 전합니다.</p>
+  <p class="hok26-prose">히어로즈 오브 코리아는 한국의 역사적 인물과 문화가 남긴 이야기를 오늘의 감각으로 해석하는 니치 퍼퓸 브랜드입니다. 향을 통해 과거의 이야기가 지금의 일상에 자연스럽게 머물도록 합니다.</p>
+  <a class="hok26-text-link" href="about.html">브랜드 이야기 자세히 보기</a>
+ </div>
+ <figure class="hok26-hero-image"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261108-051609-photo-crop-back-view-79a7ba53.webp" alt="히어로즈 오브 코리아 캠페인 화보" fetchpriority="high"></figure>
 </section>
-<section class="manifesto-section" id="manifesto" aria-labelledby="manifesto-heading">
- <div class="manifesto-index"><span>THE STORY / 001</span><span>HEROES OF KOREA · EST. 2020</span></div>
- <div class="manifesto-main"><span class="manifesto-label">OUR MANIFESTO</span><div><h2 id="manifesto-heading">우리가 만드는 것은<br>유행이 아니라 기록입니다.</h2><p>백 년 전 누군가가 적어두지 않았다면, 우리는 허난설헌을 몰랐을 것입니다.<br>백 년 후 우리가 기록하지 않으면, 누군가는 허난설헌을 모를 것입니다.</p><p>히어로즈 오브 코리아는 사료에 근거한 인물과 시대의 이야기를 한국인 창작자의 손으로 향에 담습니다. 그렇게 만들어진 한 병의 향은 잊혀질 뻔한 기억을 오늘로 데려오고, 새로운 추억의 시작이 됩니다.</p></div></div>
- <div class="manifesto-bottom"><span>RECORD THE PAST.</span><span>INSPIRE THE FUTURE.</span></div>
+<section class="hok26-collection" id="collection" aria-labelledby="hok26-collection-title">
+ <div class="hok26-section-head"><div><p class="hok26-overline">THE FRAGRANCE COLLECTION</p><h2 id="hok26-collection-title">향으로 만나는 아홉 인물.</h2></div><p>Nine figures. Nine distinctive scents.<br>오늘의 감각으로 다시 만나는 한국의 기록.</p></div>
+ <div class="hok26-product-grid"><a class="hok26-product" href="product.html?id=kim-gu" aria-label="김구 향수 상세보기"><div class="hok26-product-image"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232608-image-addb9162.webp" alt="김구 오 드 퍼퓸 50ml" loading="lazy"></div><div class="hok26-product-meta"><h3>김구</h3><span>EAU DE PARFUM · 50ml</span></div></a>
+<a class="hok26-product" href="product.html?id=kim-hongdo" aria-label="김홍도 향수 상세보기"><div class="hok26-product-image"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232608-image-e85ebb1f.webp" alt="김홍도 오 드 퍼퓸 50ml" loading="lazy"></div><div class="hok26-product-meta"><h3>김홍도</h3><span>EAU DE PARFUM · 50ml</span></div></a>
+<a class="hok26-product" href="product.html?id=sejong" aria-label="세종대왕 향수 상세보기"><div class="hok26-product-image"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232608-image-e85c14ec.webp" alt="세종대왕 오 드 퍼퓸 50ml" loading="lazy"></div><div class="hok26-product-meta"><h3>세종대왕</h3><span>EAU DE PARFUM · 50ml</span></div></a>
+<a class="hok26-product" href="product.html?id=shin-saimdang" aria-label="신사임당 향수 상세보기"><div class="hok26-product-image"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232609-image-103f25da.webp" alt="신사임당 오 드 퍼퓸 50ml" loading="lazy"></div><div class="hok26-product-meta"><h3>신사임당</h3><span>EAU DE PARFUM · 50ml</span></div></a>
+<a class="hok26-product" href="product.html?id=yi-sunsin" aria-label="이순신 향수 상세보기"><div class="hok26-product-image"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232609-image-337e3afc.webp" alt="이순신 오 드 퍼퓸 50ml" loading="lazy"></div><div class="hok26-product-meta"><h3>이순신</h3><span>EAU DE PARFUM · 50ml</span></div></a>
+<a class="hok26-product" href="product.html?id=jang-bogo" aria-label="장보고 향수 상세보기"><div class="hok26-product-image"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232609-image-9c29409e.webp" alt="장보고 오 드 퍼퓸 50ml" loading="lazy"></div><div class="hok26-product-meta"><h3>장보고</h3><span>EAU DE PARFUM · 50ml</span></div></a>
+<a class="hok26-product" href="product.html?id=jeongjo" aria-label="정조대왕 향수 상세보기"><div class="hok26-product-image"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261123-002451-fbc73a40-1a78-4ab1-b0e1-8fd967738821-67b57c36.webp" alt="정조대왕 오 드 퍼퓸 50ml" loading="lazy"></div><div class="hok26-product-meta"><h3>정조대왕</h3><span>EAU DE PARFUM · 50ml</span></div></a>
+<a class="hok26-product" href="product.html?id=heo-nanseolheon" aria-label="허난설헌 향수 상세보기"><div class="hok26-product-image"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232610-image-d2e03b47.webp" alt="허난설헌 오 드 퍼퓸 50ml" loading="lazy"></div><div class="hok26-product-meta"><h3>허난설헌</h3><span>EAU DE PARFUM · 50ml</span></div></a>
+<a class="hok26-product" href="product.html?id=heo-jun" aria-label="허준 향수 상세보기"><div class="hok26-product-image"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232610-image-109f2355.webp" alt="허준 오 드 퍼퓸 50ml" loading="lazy"></div><div class="hok26-product-meta"><h3>허준</h3><span>EAU DE PARFUM · 50ml</span></div></a></div>
+ <div class="hok26-section-end"><a class="hok26-text-link" href="perfume.html">전체 향수 살펴보기</a></div>
 </section>
-<section class="hok-main-archive" id="collection"><div class="section-head"><span class="dash"></span><h2>Archived in scent</h2><p>향으로 남긴 기록</p></div><div class="hok-archive-grid"><a href="product.html?id=jeongjo" aria-label="정조대왕 향수 상세페이지 보기"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261123-002451-fbc73a40-1a78-4ab1-b0e1-8fd967738821-67b57c36.webp" alt="정조대왕 향수" loading="lazy"></a><a href="product.html?id=heo-nanseolheon" aria-label="허난설헌 향수 상세페이지 보기"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261108-051606-b5bf4f8c3be8f49661677eef8d50ef5a-c7ee802b.webp" alt="허난설헌 향수" loading="lazy"></a><a href="product.html?id=kim-hongdo" aria-label="김홍도 향수 상세페이지 보기"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261108-051609-f5a77bc014858cdd4310c45f14a69a24-ed1f2f9d.webp" alt="김홍도 향수" loading="lazy"></a><a href="product.html?id=sejong" aria-label="세종대왕 향수 상세페이지 보기"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261108-051608-e73e02e8441e40ac2c960e1983af7669-c881dc3d.webp" alt="세종대왕 향수" loading="lazy"></a><a href="product.html?id=shin-saimdang" aria-label="신사임당 향수 상세페이지 보기"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261108-051607-b53b402010dbcf679da43c25412d7a8d-63dc4bc9.webp" alt="신사임당 향수" loading="lazy"></a><a href="product.html?id=yi-sunsin" aria-label="이순신 향수 상세페이지 보기"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261108-051606-5cacdba296bf5479fa0a0e2ba5eda921-e667b2a5.webp" alt="이순신 향수" loading="lazy"></a><a href="product.html?id=kim-gu" aria-label="김구 향수 상세페이지 보기"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232608-image-addb9162.webp" alt="김구 향수" loading="lazy"></a><a href="product.html?id=jang-bogo" aria-label="장보고 향수 상세페이지 보기"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232609-image-9c29409e.webp" alt="장보고 향수" loading="lazy"></a><a href="product.html?id=heo-jun" aria-label="허준 향수 상세페이지 보기"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232610-image-109f2355.webp" alt="허준 향수" loading="lazy"></a></div></section>
-<section class="feature" id="story"><div class="feature-copy"><span class="eyebrow">MISSION / VISION</span><h2>기록을 입다.<br><span class="feature-secondary">Korea, in scent.</span></h2><p>우리는 한국의 영웅, 사람, 장소, 시대를 향기로 기록합니다.<br>그 향기로 모두에게 영감과 새로운 추억의 시작을 선물합니다.</p><div class="feature-notes"><span>RECORD</span><span>INSPIRE</span><span>REMEMBER</span></div><a class="outline" href="about.html#values">OUR PHILOSOPHY </a></div><div class="feature-art"><div class="feature-art-inner"><img src="assets/heroes-of-korea-logo.svg" alt="HEROES of KOREA" class="feature-logo"><span>WE RECORD, THEN WEAR IT.</span></div></div></section>
-<section class="values-section section" id="values">
-<div class="philosophy-heading"><div><span class="philosophy-label">OUR PHILOSOPHY</span><h2>기록을 이어가는 태도.</h2></div><p>기억하고, 영감을 얻고, 오늘의 향으로 남깁니다.</p></div>
-<div class="philosophy-layout"><div class="philosophy-photo"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261108-051609-photo-crop-back-view-79a7ba53.webp" alt="히어로즈 오브 코리아 브랜드 캠페인" loading="lazy"></div>
-<div class="philosophy-list">
-<article><h3>저항.</h3><div><span>Resistance</span><p>잊혀지는 이야기를 다시 기억하기 위해 향을 만듭니다.</p></div></article>
-<article><h3>영감.</h3><div><span>Inspiration</span><p>인물의 삶과 이야기에서 새로운 감각의 출발점을 찾습니다.</p></div></article>
-<article><h3>추억.</h3><div><span>Memory</span><p>하나의 향이 누군가에게 새로운 기억으로 남기를 바랍니다.</p></div></article>
-<article><h3>창작.</h3><div><span>Authorship</span><p>한국인 창작자의 해석과 작업으로 이야기를 완성합니다.</p></div></article>
-</div></div></section>
-<section class="projects-section section" id="projects"><div class="section-head"><span class="dash"></span><h2>Beyond Fragrance</h2><p>향으로 확장하는 기록의 방식</p></div><div class="project-grid"><article><small>01 / SCENT DEVELOPMENT</small><h3>ODM & Collaboration</h3><p>괌 정부 관광청, 한국도서관문화진흥원, 태안국제원예치유박람회 등 장소와 문화의 경험을 향으로 해석한 프로젝트.</p></article><article id="academy"><small>02 / EXPERIENCE</small><h3>Diffuser Workshop</h3><p>후각과 조향을 직접 경험하는 디퓨저 클래스. 소요 시간 60~90분, 10명 이상 참여 프로그램.</p></article><article id="global"><small>03 / GLOBAL ARCHIVE</small><h3>Pop-up & Exhibition</h3><p>오사카, 홍콩, 도쿄 다이칸야마, 서울과 미국 LA 등으로 확장한 브랜드의 기록.</p></article></div></section><section class="section" id="journal"><div class="section-head"><span class="dash"></span><h2>Brand Journal</h2><p>기억을 기록하는 사람들과 장소들</p></div><div class="journal"><article class="journal-card"><small>01 / POP-UP</small><h3>From Korea to the World</h3><p>오사카 · 홍콩 · 도쿄 · 서울 · 로스앤젤레스</p></article><article class="journal-card"><small>02 / COLLABORATION</small><h3>Culture Meets Scent</h3><p>예술, 서예, 디자인과 조향이 만나는 협업의 기록</p></article><article class="journal-card"><small>03 / PROJECT</small><h3>Stories of Places</h3><p>책의 숲 · 괌의 장소 · 꽃이 피는 바다</p></article></div></section>
+<section class="hok26-story" id="manifesto">
+ <figure><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261123-002451-fbc73a40-1a78-4ab1-b0e1-8fd967738821-67b57c36.webp" alt="정조대왕 오 드 퍼퓸 제품" loading="lazy"></figure>
+ <div class="hok26-story-copy"><p class="hok26-overline">OUR MANIFESTO</p><h2>기록을 입다.</h2><p class="hok26-english">We record, then wear it.</p><p>우리가 만드는 것은 단순한 향기가 아니라, 한 인물과 시대에 대한 새로운 기억입니다. 사료에 근거한 이야기에서 출발해 그 가치를 향이라는 언어로 풀어냅니다.</p><p>그렇게 완성된 한 병의 향은 일상 속에서 또 다른 이야기가 됩니다.</p><a class="hok26-text-link" href="about.html">About Heroes of Korea</a></div>
+</section>
+<section class="hok26-philosophy" id="values" aria-labelledby="hok26-values-title">
+ <div class="hok26-section-head"><div><p class="hok26-overline">OUR PHILOSOPHY</p><h2 id="hok26-values-title">우리가 향을 만드는 태도.</h2></div><p>과거의 기록에서 오늘의 영감을 찾습니다.</p></div>
+ <div class="hok26-values">
+  <article><h3>저항.</h3><span>Resistance</span><p>잊혀지는 이야기를 다시 기억하기 위해 향을 만듭니다.</p></article>
+  <article><h3>영감.</h3><span>Inspiration</span><p>인물의 삶과 이야기에서 새로운 감각의 출발점을 찾습니다.</p></article>
+  <article><h3>추억.</h3><span>Memory</span><p>하나의 향이 누군가에게 새로운 기억으로 남기를 바랍니다.</p></article>
+  <article><h3>창작.</h3><span>Authorship</span><p>한국인 창작자의 해석과 작업으로 이야기를 완성합니다.</p></article>
+ </div>
+</section>
+<section class="hok26-beyond" id="projects"><div class="hok26-section-head"><div><p class="hok26-overline">BEYOND FRAGRANCE</p><h2>향으로 확장되는 기록.</h2></div><p>Collaboration, experience and exhibition.</p></div>
+ <div class="hok26-beyond-grid">
+ <article><h3>ODM &amp; Collaboration</h3><p>장소와 문화의 경험을 향으로 해석하는 협업 프로젝트.</p></article>
+ <article><h3>Diffuser Workshop</h3><p>후각과 조향을 직접 경험하며 향을 이해하는 프로그램.</p></article>
+ <article><h3>Pop-up &amp; Exhibition</h3><p>다양한 도시와 공간에서 만나는 브랜드의 기록.</p></article>
+ </div>
+</section>
 </main>
 <footer class="footer" id="footer"><div class="footer-wrap"><div class="footer-business"><a class="footer-brand" href="index.html" aria-label="Heroes of Korea 홈"><img src="assets/heroes-of-korea-logo.svg" alt="HEROES of KOREA"></a><h4>쇼핑몰 기본정보</h4><p>상호명 주식회사에프오씨씨　대표자명 김덕영<br>사업장 주소 22009 인천 연수구 인천타워대로 185 송도 센트럴비즈 한라 제812호<br>대표 전화 01027887263　사업자 등록번호 161-87-02570<br>통신판매업 신고번호 2024-서울중구-2038<br>개인정보보호책임자 주식회사에프오씨씨</p></div><div><div class="foot-links"><a href="about.html">회사소개</a><a href="#footer">이용약관</a><a href="#footer">개인정보처리방침</a><a href="#footer">이용안내</a><a href="#footer">자주묻는질문(FAQ)</a></div><h4>고객센터 정보</h4><p>상담/주문전화　010-9551-7263<br>상담/주문 이메일<br><a href="mailto:ceo@focc.company">ceo@focc.company</a></p><h4>CS운영시간</h4><p>11:00 ~ 18:00 점심시간 12:00 ~ 13:00</p></div><div><h4>결제 정보</h4><p>무통장 계좌정보<br><span class="placeholder">실제 계좌 정보 확인 후 표기</span></p></div><div><h4>SNS</h4><p>instagram<br>youtube</p><p class="placeholder">공식 URL 연결 예정</p></div></div><div class="copyright">Copyright © Heroes of Korea. All Rights Reserved. Hosting by Cafe24 Corp.</div></footer>
 </div>
