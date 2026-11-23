@@ -84,6 +84,37 @@ body{font-family:'Noto Sans KR',sans-serif;-webkit-font-smoothing:antialiased;le
 @media(min-width:751px){.section.ingredient-editorial{padding:0}.ingredient-editorial .photo{min-height:505px}}
 @media(max-width:750px){.magazine{max-width:100%}.detail-hero img{aspect-ratio:1/1;object-fit:cover}.section{padding-left:20px;padding-right:20px}.section.ingredient-editorial{padding:0}.ingredient-editorial .words{padding:58px 20px}.scent-visual{padding-top:84px;padding-bottom:88px}.notes{padding-top:84px;padding-bottom:95px}.heritage{padding-top:85px;padding-bottom:92px}.product-focus{padding-top:82px;padding-bottom:92px}.product-specs{padding-top:80px;padding-bottom:90px}}
 html.embedded .detail-hero{display:none!important}html.embedded .magazine{padding-top:0}html.embedded .intro{border-top:0}
+
+/* Shared mobile magazine refinements for nine perfume stories */
+@media(max-width:600px){
+ html,body{width:100%;max-width:100%;overflow-x:hidden}
+ .magazine{width:100%;max-width:100%;padding-bottom:48px}
+ .section{padding:72px 18px}
+ .heading{font-size:clamp(25px,7.4vw,32px);line-height:1.42;overflow-wrap:break-word}
+ .intro{grid-template-columns:minmax(0,1fr);gap:26px}
+ .intro>div,.ingredient-editorial .words{min-width:0}
+ .ingredient-editorial{grid-template-columns:minmax(0,1fr);gap:0;padding:0}
+ .ingredient-editorial .photo{width:100%;height:230px;min-height:0}
+ .ingredient-editorial .words{padding:55px 18px 68px}
+ .scent-visual{padding-top:80px;padding-bottom:85px}
+ .scent-gallery{grid-template-columns:minmax(0,1fr);gap:25px}
+ .scent-gallery img{width:100%;height:auto;aspect-ratio:1.55;object-fit:cover}
+ .scent-gallery figcaption{padding-top:10px}
+ .notes{padding-top:75px;padding-bottom:85px}
+ .note-row{grid-template-columns:80px minmax(0,1fr);column-gap:15px;row-gap:8px}
+ .note-row h3{font-size:21px}.note-row .ingredients{font-size:13px;overflow-wrap:anywhere}
+ .note-row .effect{grid-column:2;font-size:12px}
+ .interlude{padding:86px 16px}
+ .interlude blockquote{font-size:clamp(20px,6vw,27px)}
+ .heritage{padding-top:80px;padding-bottom:90px}
+ .heritage-grid{grid-template-columns:minmax(0,1fr);gap:24px}
+ .product-focus{grid-template-columns:minmax(0,1fr);gap:28px;padding-top:78px;padding-bottom:85px}
+ .product-focus .bottle img{max-height:270px}
+ .product-focus .detail{grid-template-columns:112px minmax(0,1fr);gap:10px}
+ .product-specs{padding-top:78px;padding-bottom:85px}
+ .product-specs .spec{grid-template-columns:105px minmax(0,1fr);gap:13px;overflow-wrap:anywhere}
+}
+@media(max-width:360px){.section{padding-left:14px;padding-right:14px}.note-row{grid-template-columns:70px minmax(0,1fr)}}
 </style></head><body><main class="magazine">
 <figure class="detail-hero"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232610-image-109f2355.webp" alt="허준 오 드 퍼퓸 메인 이미지" fetchpriority="high"></figure>
 <section class="section intro"><div><p class="eyebrow">THE STORY BEHIND THE SCENT</p><h2 class="heading">허준, 고요한 균형을 향으로 기록하다.</h2></div><div><p class="copy">조선의 의학자 허준의 정신에서 영감을 받은 허브 우디 오 드 퍼퓸입니다. 몸과 마음의 균형을 중시하는 태도와 사람을 향한 관심을 팔로산토와 허브, 로즈와 우드가 조화되는 향으로 풀어냈습니다.</p><p class="copy">상쾌하고 따뜻한 팔로산토와 베르가못, 민트가 첫인상을 만들고, 제라늄과 로즈, ISO E Super가 부드럽게 이어집니다. 시더우드와 패출리, 먹의 차분한 인상이 오래도록 여운을 남깁니다.</p></div></section>
