@@ -84,6 +84,37 @@ body{font-family:'Noto Sans KR',sans-serif;-webkit-font-smoothing:antialiased;le
 @media(min-width:751px){.section.ingredient-editorial{padding:0}.ingredient-editorial .photo{min-height:505px}}
 @media(max-width:750px){.magazine{max-width:100%}.detail-hero img{aspect-ratio:1/1;object-fit:cover}.section{padding-left:20px;padding-right:20px}.section.ingredient-editorial{padding:0}.ingredient-editorial .words{padding:58px 20px}.scent-visual{padding-top:84px;padding-bottom:88px}.notes{padding-top:84px;padding-bottom:95px}.heritage{padding-top:85px;padding-bottom:92px}.product-focus{padding-top:82px;padding-bottom:92px}.product-specs{padding-top:80px;padding-bottom:90px}}
 html.embedded .detail-hero{display:none!important}html.embedded .magazine{padding-top:0}html.embedded .intro{border-top:0}
+
+/* Shared mobile magazine refinements for nine perfume stories */
+@media(max-width:600px){
+ html,body{width:100%;max-width:100%;overflow-x:hidden}
+ .magazine{width:100%;max-width:100%;padding-bottom:48px}
+ .section{padding:72px 18px}
+ .heading{font-size:clamp(25px,7.4vw,32px);line-height:1.42;overflow-wrap:break-word}
+ .intro{grid-template-columns:minmax(0,1fr);gap:26px}
+ .intro>div,.ingredient-editorial .words{min-width:0}
+ .ingredient-editorial{grid-template-columns:minmax(0,1fr);gap:0;padding:0}
+ .ingredient-editorial .photo{width:100%;height:230px;min-height:0}
+ .ingredient-editorial .words{padding:55px 18px 68px}
+ .scent-visual{padding-top:80px;padding-bottom:85px}
+ .scent-gallery{grid-template-columns:minmax(0,1fr);gap:25px}
+ .scent-gallery img{width:100%;height:auto;aspect-ratio:1.55;object-fit:cover}
+ .scent-gallery figcaption{padding-top:10px}
+ .notes{padding-top:75px;padding-bottom:85px}
+ .note-row{grid-template-columns:80px minmax(0,1fr);column-gap:15px;row-gap:8px}
+ .note-row h3{font-size:21px}.note-row .ingredients{font-size:13px;overflow-wrap:anywhere}
+ .note-row .effect{grid-column:2;font-size:12px}
+ .interlude{padding:86px 16px}
+ .interlude blockquote{font-size:clamp(20px,6vw,27px)}
+ .heritage{padding-top:80px;padding-bottom:90px}
+ .heritage-grid{grid-template-columns:minmax(0,1fr);gap:24px}
+ .product-focus{grid-template-columns:minmax(0,1fr);gap:28px;padding-top:78px;padding-bottom:85px}
+ .product-focus .bottle img{max-height:270px}
+ .product-focus .detail{grid-template-columns:112px minmax(0,1fr);gap:10px}
+ .product-specs{padding-top:78px;padding-bottom:85px}
+ .product-specs .spec{grid-template-columns:105px minmax(0,1fr);gap:13px;overflow-wrap:anywhere}
+}
+@media(max-width:360px){.section{padding-left:14px;padding-right:14px}.note-row{grid-template-columns:70px minmax(0,1fr)}}
 </style></head><body><main class="magazine">
 <figure class="detail-hero"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232608-image-e85c14ec.webp" alt="세종대왕 오 드 퍼퓸 대표 이미지" fetchpriority="high"></figure>
 <section class="section intro"><div><p class="eyebrow">THE STORY BEHIND THE SCENT</p><h2 class="heading">세종대왕, 향으로 남긴 이야기.</h2></div><div><p class="copy">세종대왕의 온화한 리더십과 조용한 자신감에서 영감을 받아 따뜻한 나무 향으로 풀어낸 오 드 퍼퓸입니다. 샌달우드를 중심으로 베티버가 이어지고 앰버·시더우드·패출리가 깊은 잔향을 더합니다.</p><p class="copy">햇볕을 머금은 듯한 샌달우드의 부드러운 첫인상과 베티버의 잔잔한 풀잎 향, 단단한 우디의 마무리가 한 사람의 포용력과 신념을 향으로 표현합니다.</p></div></section>
