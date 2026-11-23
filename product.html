@@ -156,6 +156,20 @@ const editorialContent={
   family:'Rose & Oud · Woody Floral',
   story:'Inspired by the clarity of King Jeongjo’s vision and his compassion for people, this fragrance brings together the elegance of rose and the depth of oud. Bright citrus and berries open the composition, followed by gentle florals and warm spice. A refined woody trail lingers softly on the skin.',
   notes:{top:'Bulgarian Lemon, Raspberry, Cherry, Rose, Bergamot',middle:'Peony, Clove, Cinnamon',base:'Oud, Indonesian Patchouli, Sandalwood, Cedarwood'}
+ },
+ 'jang-bogo':{
+  title:'Jang Bogo',
+  subtitle:'A fragrance of courage and the open sea.',
+  family:'Woody · Sage & Tobacco',
+  story:'Inspired by the pioneering spirit of Jang Bogo, this woody fragrance evokes the freedom and resolve of a voyage across open water. Palo santo and sage lend an airy, herbal opening. Rose brings a graceful heart, while cedarwood, sandalwood, tobacco and hay create a warm, lasting trail.',
+  notes:{top:'Palo Santo, Sage',middle:'Rose',base:'Cedarwood, Tobacco, Hay, Sandalwood'}
+ },
+ 'kim-gu':{
+  title:'Kim Gu',
+  subtitle:'A fragrance of conviction and cultural strength.',
+  family:'Woody · Peppermint & Patchouli',
+  story:'Created in tribute to the ideals of independence, peace and cultural strength associated with Kim Gu. Lemon, eucalyptus and peppermint bring a bright, clear opening. Geranium, neroli and rose soften the heart before vetiver, cedarwood and patchouli leave a grounded woody impression.',
+  notes:{top:'Italian Lemon, Chinese Eucalyptus, Chinese Peppermint',middle:'Geranium, Neroli, Rose',base:'Vetiver, American Cedarwood, Indonesian Patchouli'}
  }
 };
 const editorial=editorialContent[item.id];
@@ -171,8 +185,9 @@ if(editorial){
  ['top','middle','base'].forEach(k=>document.getElementById('notes-'+k).textContent=editorial.notes[k]);
 }else{document.querySelector('.editorial-summary').classList.add('is-pending')}
 const detail=document.getElementById('detail-content');
-if(item.id==='jeongjo'){
- const frame=document.createElement('iframe');frame.className='editorial-frame';frame.title='정조대왕 향수 상세 콘텐츠';frame.loading='lazy';frame.setAttribute('scrolling','no');frame.style.overflow='hidden';frame.src='products/jeongjo.html?embed=1';detail.appendChild(frame);
+const publishedDetails={jeongjo:'products/jeongjo.html','jang-bogo':'products/jang-bogo.html','kim-gu':'products/kim-gu.html'};
+if(publishedDetails[item.id]){
+ const frame=document.createElement('iframe');frame.className='editorial-frame';frame.title=item.name+' 향수 상세 콘텐츠';frame.loading='lazy';frame.setAttribute('scrolling','no');frame.style.overflow='hidden';frame.src=publishedDetails[item.id]+'?embed=1';detail.appendChild(frame);
  frame.addEventListener('load',()=>{
   try{
    const doc=frame.contentDocument,root=doc.documentElement,body=doc.body;
