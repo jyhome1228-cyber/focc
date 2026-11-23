@@ -43,13 +43,26 @@
 
 @media(max-width:850px){.editorial-summary{padding:12px 0 0}.collection{padding:75px 0 95px}.collection-head{display:block;margin-bottom:29px}.collection-description{margin-top:16px}.collection-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 13px}.collection-grid p{font-size:13px;margin-top:12px}}
 @media(max-width:480px){.collection-grid{gap:32px 11px}.collection-grid img{transform:scale(1.07)}.editorial-bottle img{max-height:210px}}
+
+/* 1000px fixed editorial product width on desktop; responsive on smaller screens */
+.shell.product-shell{width:min(100%,1000px);max-width:1000px;margin:0 auto;padding:0}
+.product-shell .product-layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:45px}
+.product-shell .breadcrumb{padding-top:32px;padding-bottom:36px}
+.product-shell .detail-area{margin-top:125px}
+.product-shell .editorial-summary{width:100%;max-width:1000px;padding:60px 36px 0;margin-bottom:85px}
+.product-shell .tab-panel{padding-top:50px;padding-bottom:95px}
+.product-shell .editorial-frame{display:block;width:100%;max-width:1000px;border:0;overflow:hidden}
+.product-shell .collection{padding:125px 0 145px}
+@media(max-width:1020px){.shell.product-shell{width:100%;padding:0 20px}}
+@media(max-width:850px){.product-shell .product-layout{grid-template-columns:1fr;gap:35px}.product-shell .detail-area{margin-top:90px}.product-shell .editorial-summary{padding:30px 10px 0;margin-bottom:65px}.product-shell .collection{padding:90px 0 115px}}
+@media(max-width:480px){.shell.product-shell{padding:0 15px}.product-shell .detail-area{margin-top:70px}.product-shell .editorial-summary{padding:20px 0 0}}
 </style></head>
 <body>
 <header class="site-header"><div class="shell header-in">
 <a href="index.html" class="site-logo" aria-label="히어로즈 오브 코리아 홈"><img src="assets/heroes-of-korea-logo.svg" alt="HEROES OF KOREA"></a>
 <nav class="nav"><a href="perfume.html" aria-current="page">Perfume</a><a href="lifestyle.html">Lifestyle</a><a href="press.html">Press</a><a href="about.html">About Us</a><a href="global.html">Global</a></nav>
 <a class="header-right" href="perfume.html">전체 향수 보기</a></div></header>
-<main class="shell">
+<main class="shell product-shell">
 <div class="breadcrumb"><a href="index.html">홈</a> &nbsp;·&nbsp; <a href="perfume.html">향수</a> &nbsp;·&nbsp; <span id="crumb">제품</span></div>
 <section class="product-layout" aria-label="상품 상세">
 <div class="gallery"><div class="main-shot"><img id="main-img" alt="향수 제품 이미지"></div>
@@ -103,7 +116,7 @@ document.getElementById('thumb-cutout').src=item.cutout;
 const mainImg=document.getElementById('main-img');
 function showImage(type){mainImg.src=type==='cutout'?item.cutout:item.main;mainImg.alt=item.name+' '+(type==='cutout'?'제품 단독 컷':'메인 제품 이미지');document.querySelectorAll('.thumb').forEach(b=>b.classList.toggle('active',b.dataset.image===type))}
 document.querySelectorAll('.thumb').forEach(b=>b.addEventListener('click',()=>showImage(b.dataset.image)));
-showImage('cutout');
+showImage('main');
 function updateQty(){document.getElementById('qty').textContent=qty;document.getElementById('total').textContent=(qty*item.price).toLocaleString('ko-KR')+'원'}
 document.getElementById('increase').addEventListener('click',()=>{qty=Math.min(99,qty+1);updateQty()});
 document.getElementById('decrease').addEventListener('click',()=>{qty=Math.max(1,qty-1);updateQty()});
