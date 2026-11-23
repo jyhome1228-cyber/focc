@@ -150,6 +150,28 @@ updateQty();
 document.getElementById('copy-link').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);document.getElementById('copy-link').textContent='COPIED'}catch(e){window.prompt('상품 링크를 복사하세요',location.href)}});
 // Editorial content is supplied only where product notes have been verified.
 const editorialContent={
+ 'kim-hongdo':{
+  title:'Kim Hongdo',
+  subtitle:'A fragrance of focus and artistic imagination.',
+  family:'Spicy Woody · Maehwa & Ink',
+  story:'Inspired by the artistic vision of Kim Hongdo, this fragrance brings together the clarity of maehwa and the quiet depth of Korean ink. Cinnamon, clove and dill enliven the opening. A calm accord of ink and green tea unfolds before cedarwood, vetiver and tobacco leave a refined woody trail.',
+  notes:{top:'Maehwa, Cinnamon, Clove, Dill',middle:'Korean Ink, Green Tea',base:'Cedarwood, Vetiver, Tobacco'}
+ },
+ 'heo-nanseolheon':{
+  title:'Heo Nanseolheon',
+  subtitle:'A fragrance of poetic sensitivity and quiet presence.',
+  family:'Green Floral · Jasmine & Hay',
+  story:'Inspired by the poetic sensitivity of Heo Nanseolheon, this green floral fragrance opens with cool eucalyptus and gentle jasmine. Rose, orchid and orange blossom form a delicate floral heart. Hay and moss linger softly, leaving a natural, skin-close impression.',
+  notes:{top:'English Jasmine, Chinese Eucalyptus',middle:'Bulgarian Rose, Orchid, Orange Blossom',base:'Hay, Moss'}
+ },
+ 'shin-saimdang':{
+  title:'Shin Saimdang',
+  subtitle:'A fragrance of bright energy and gentle confidence.',
+  family:'Citrus · Grapefruit & Orange Blossom',
+  story:'Inspired by the artistic sensibility of Shin Saimdang, this fragrance begins with vivid grapefruit, Italian lemon and bergamot. Orange blossom and jasmine bring a soft floral heart, while sandalwood, American cedarwood and white musk create a warm, balanced finish.',
+  notes:{top:'Grapefruit, Italian Lemon, Bergamot',middle:'Orange Blossom, Jasmine',base:'Sandalwood, American Cedarwood, White Musk'}
+ },
+
  jeongjo:{
   title:'Jeongjo the Great',
   subtitle:'A fragrance of vision and warmth.',
@@ -185,7 +207,7 @@ if(editorial){
  ['top','middle','base'].forEach(k=>document.getElementById('notes-'+k).textContent=editorial.notes[k]);
 }else{document.querySelector('.editorial-summary').classList.add('is-pending')}
 const detail=document.getElementById('detail-content');
-const publishedDetails={jeongjo:'products/jeongjo.html','jang-bogo':'products/jang-bogo.html','kim-gu':'products/kim-gu.html'};
+const publishedDetails={jeongjo:'products/jeongjo.html','jang-bogo':'products/jang-bogo.html','kim-gu':'products/kim-gu.html','kim-hongdo':'products/kim-hongdo.html','heo-nanseolheon':'products/heo-nanseolheon.html','shin-saimdang':'products/shin-saimdang.html'};
 if(publishedDetails[item.id]){
  const frame=document.createElement('iframe');frame.className='editorial-frame';frame.title=item.name+' 향수 상세 콘텐츠';frame.loading='lazy';frame.setAttribute('scrolling','no');frame.style.overflow='hidden';frame.src=publishedDetails[item.id]+'?embed=1';detail.appendChild(frame);
  frame.addEventListener('load',()=>{
