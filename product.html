@@ -150,6 +150,21 @@ updateQty();
 document.getElementById('copy-link').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);document.getElementById('copy-link').textContent='COPIED'}catch(e){window.prompt('상품 링크를 복사하세요',location.href)}});
 // Editorial content is supplied only where product notes have been verified.
 const editorialContent={
+ 'yi-sunsin':{
+  title:'Yi Sunshin',
+  subtitle:'A fragrance of calm strength and clarity.',
+  family:'Aqua · Acqua & Cypress',
+  story:'Inspired by the calm resolve and enduring leadership of Admiral Yi Sunshin, this aqua fragrance evokes a moment of clarity after a demanding day. A fresh accord of acqua, Italian lemon and bergamot opens the composition. Cypress and geranium bring a peaceful green heart, while coconut, moss, cedarwood and patchouli leave a gentle, grounded finish.',
+  notes:{top:'Acqua, Italian Lemon, Bergamot',middle:'Cypress, Geranium',base:'Coconut, Moss, Cedarwood, Patchouli'}
+ },
+ sejong:{
+  title:'Sejong the Great',
+  subtitle:'A fragrance of wisdom and gentle leadership.',
+  family:'Woody · Sandalwood & Vetiver',
+  story:'Inspired by the wisdom and compassionate leadership of King Sejong, this woody eau de parfum is built around the warmth of Indian sandalwood. Vetiver lends a quiet green depth before amber, cedarwood and patchouli bring a lasting sense of grounded elegance.',
+  notes:{top:'Indian Sandalwood',middle:'Vetiver',base:'Amber, Cedarwood, Patchouli'}
+ },
+
  'kim-hongdo':{
   title:'Kim Hongdo',
   subtitle:'A fragrance of focus and artistic imagination.',
@@ -207,7 +222,7 @@ if(editorial){
  ['top','middle','base'].forEach(k=>document.getElementById('notes-'+k).textContent=editorial.notes[k]);
 }else{document.querySelector('.editorial-summary').classList.add('is-pending')}
 const detail=document.getElementById('detail-content');
-const publishedDetails={jeongjo:'products/jeongjo.html','jang-bogo':'products/jang-bogo.html','kim-gu':'products/kim-gu.html','kim-hongdo':'products/kim-hongdo.html','heo-nanseolheon':'products/heo-nanseolheon.html','shin-saimdang':'products/shin-saimdang.html'};
+const publishedDetails={jeongjo:'products/jeongjo.html','jang-bogo':'products/jang-bogo.html','kim-gu':'products/kim-gu.html','kim-hongdo':'products/kim-hongdo.html','heo-nanseolheon':'products/heo-nanseolheon.html','shin-saimdang':'products/shin-saimdang.html','yi-sunsin':'products/yi-sunsin.html',sejong:'products/sejong.html'};
 if(publishedDetails[item.id]){
  const frame=document.createElement('iframe');frame.className='editorial-frame';frame.title=item.name+' 향수 상세 콘텐츠';frame.loading='lazy';frame.setAttribute('scrolling','no');frame.style.overflow='hidden';frame.src=publishedDetails[item.id]+'?embed=1';detail.appendChild(frame);
  frame.addEventListener('load',()=>{
