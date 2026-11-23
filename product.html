@@ -150,6 +150,14 @@ updateQty();
 document.getElementById('copy-link').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);document.getElementById('copy-link').textContent='COPIED'}catch(e){window.prompt('상품 링크를 복사하세요',location.href)}});
 // Editorial content is supplied only where product notes have been verified.
 const editorialContent={
+ 'heo-jun':{
+  title:'Heo Jun',
+  subtitle:'A fragrance of balance and quiet expertise.',
+  family:'Woody · Palo Santo & Herb',
+  story:'Inspired by the physician Heo Jun and his enduring concern for people, this woody eau de parfum finds harmony in herbs and warm woods. Palo santo, bergamot and mint bring a clear opening, followed by geranium, rose and ISO E Super. Cedarwood, patchouli and an ink accord lend a grounded, tranquil finish.',
+  notes:{top:'Palo Santo, Italian Bergamot, Mint, Herbs',middle:'Egyptian Geranium, ISO E Super, Rose',base:'American Cedarwood, Patchouli, Ink'}
+ },
+
  'yi-sunsin':{
   title:'Yi Sunshin',
   subtitle:'A fragrance of calm strength and clarity.',
@@ -222,7 +230,7 @@ if(editorial){
  ['top','middle','base'].forEach(k=>document.getElementById('notes-'+k).textContent=editorial.notes[k]);
 }else{document.querySelector('.editorial-summary').classList.add('is-pending')}
 const detail=document.getElementById('detail-content');
-const publishedDetails={jeongjo:'products/jeongjo.html','jang-bogo':'products/jang-bogo.html','kim-gu':'products/kim-gu.html','kim-hongdo':'products/kim-hongdo.html','heo-nanseolheon':'products/heo-nanseolheon.html','shin-saimdang':'products/shin-saimdang.html','yi-sunsin':'products/yi-sunsin.html',sejong:'products/sejong.html'};
+const publishedDetails={jeongjo:'products/jeongjo.html','jang-bogo':'products/jang-bogo.html','kim-gu':'products/kim-gu.html','kim-hongdo':'products/kim-hongdo.html','heo-nanseolheon':'products/heo-nanseolheon.html','shin-saimdang':'products/shin-saimdang.html','yi-sunsin':'products/yi-sunsin.html',sejong:'products/sejong.html','heo-jun':'products/heo-jun.html'};
 if(publishedDetails[item.id]){
  const frame=document.createElement('iframe');frame.className='editorial-frame';frame.title=item.name+' 향수 상세 콘텐츠';frame.loading='lazy';frame.setAttribute('scrolling','no');frame.style.overflow='hidden';frame.src=publishedDetails[item.id]+'?embed=1';detail.appendChild(frame);
  frame.addEventListener('load',()=>{
