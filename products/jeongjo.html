@@ -7,8 +7,8 @@
 :root{--ink:#222;--text:#444;--muted:#777;--line:#dedede}
 *{box-sizing:border-box}html,body{background:#fff;color:var(--ink);padding:0;margin:0;max-width:100%;overflow-x:hidden}
 body{font-family:'Noto Sans KR',sans-serif;-webkit-font-smoothing:antialiased;letter-spacing:-.025em}h1,h2,h3,p,figure,blockquote{margin:0}img{display:block;max-width:100%}
-.magazine{width:100%;max-width:none;margin:0 auto;padding:0 0 64px}
-.section{padding:106px clamp(16px,4.5vw,72px);border-bottom:1px solid #ebebeb}
+.magazine{width:100%;max-width:1000px;margin:0 auto;padding:0 0 90px;background:#fff}
+.section{padding:135px 64px;border-bottom:1px solid #ebebeb}
 .eyebrow{font:500 12px/1.5 'DM Sans',sans-serif;letter-spacing:.11em;color:#888}
 .heading{font-weight:400;font-size:clamp(29px,3.5vw,44px);line-height:1.4;letter-spacing:-.065em;word-break:keep-all}
 .copy{font-size:14px;line-height:2.2;color:#555;font-weight:300;word-break:keep-all}
@@ -18,12 +18,12 @@ body{font-family:'Noto Sans KR',sans-serif;-webkit-font-smoothing:antialiased;le
 .intro .copy:first-child{margin-bottom:17px}
 .intro .copy+.copy{margin-top:23px}
 .ingredient-editorial{display:grid;grid-template-columns:.92fr 1.08fr;align-items:stretch;padding-top:0;padding-bottom:0;gap:0}
-.ingredient-editorial .photo{min-height:465px;overflow:hidden}
+.ingredient-editorial .photo{min-height:505px;overflow:hidden}
 .ingredient-editorial .photo img{height:100%;width:100%;object-fit:cover}
-.ingredient-editorial .words{padding:clamp(50px,5vw,92px) clamp(25px,4.5vw,78px);display:flex;flex-direction:column;justify-content:center}
+.ingredient-editorial .words{padding:92px 58px;display:flex;flex-direction:column;justify-content:center}
 .ingredient-editorial h2{margin:17px 0 25px}
 .ingredient-editorial p+p{margin-top:17px}
-.scent-visual{padding-top:115px;padding-bottom:118px}
+.scent-visual{padding-top:145px;padding-bottom:150px}
 .scent-visual .heading{margin:16px 0 18px}
 .scent-visual .desc{max-width:700px}
 .scent-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:43px}
@@ -32,7 +32,7 @@ body{font-family:'Noto Sans KR',sans-serif;-webkit-font-smoothing:antialiased;le
 .scent-gallery figcaption{padding:13px 0 0}
 .scent-gallery strong{font:500 14px/1.6 'DM Sans',sans-serif}
 .scent-gallery small{display:block;margin-top:4px;font-size:12px;color:#858585}
-.notes{padding-top:113px;padding-bottom:125px}
+.notes{padding-top:140px;padding-bottom:155px}
 .notes-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:38px}
 .notes-head .heading{margin-top:15px}
 .notes-head p{font-size:13px;color:#888;text-align:right;line-height:1.7}
@@ -41,42 +41,49 @@ body{font-family:'Noto Sans KR',sans-serif;-webkit-font-smoothing:antialiased;le
 .note-row h3{font:400 clamp(24px,2.4vw,32px)/1.35 Georgia,serif}
 .note-row .ingredients{font-size:15px;line-height:1.95}
 .note-row .effect{font-size:13px;line-height:2;color:#838383}
-.interlude{text-align:center;padding:125px clamp(16px,5vw,80px) 137px}
+.interlude{text-align:center;padding:155px 60px 165px}
 .interlude blockquote{font-size:clamp(22px,3vw,34px);line-height:1.85;font-weight:400;letter-spacing:-.075em;word-break:keep-all}
 .interlude .eyebrow{margin-bottom:23px}.interlude-en{font:400 15px/1.8 'DM Sans',sans-serif;color:#777;margin-top:23px;letter-spacing:.015em}.heritage-enlead{font:400 15px/1.8 'DM Sans',sans-serif;color:#666;margin:12px 0 30px}
-.heritage{padding-top:115px;padding-bottom:125px}
+.heritage{padding-top:150px;padding-bottom:155px}
 .heritage .heading{margin:17px 0 25px;font-size:clamp(27px,3vw,39px)}
 .heritage .lead{max-width:940px}
 .heritage-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px;margin-top:53px}
 .heritage-grid article{padding-top:22px;border-top:1px solid #ccc}
 .heritage-en{display:block;font:500 11px/1.5 'DM Sans',sans-serif;color:#888;letter-spacing:.08em;margin-bottom:18px}.heritage-grid h3{font-weight:500;font-size:19px;margin-bottom:15px;letter-spacing:-.045em}
 .heritage-grid p{font-size:13px;line-height:2;color:#666;font-weight:300;word-break:keep-all}.heritage-grid p+p{margin-top:14px}
-.product-focus{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(36px,6vw,100px);align-items:center;padding-top:75px;padding-bottom:82px}
+.product-focus{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:75px;align-items:center;padding-top:145px;padding-bottom:150px}
 .product-focus .bottle{display:flex;align-items:center;justify-content:center;min-height:380px}
 .product-focus .bottle img{max-height:370px;width:auto;max-width:88%;object-fit:contain}
 .product-focus h2{margin:17px 0 22px}
 .product-focus .detail{margin-top:34px;border-top:1px solid #ddd;padding-top:18px;display:grid;grid-template-columns:135px 1fr;gap:20px;font-size:12px;color:#777}
 .product-focus .detail strong{font-weight:400;color:#222}
-.product-specs{padding-top:77px;padding-bottom:88px}
+.product-specs{padding-top:120px;padding-bottom:135px}
 .product-specs h2{margin:0 0 28px}
 .product-specs .specs{border-top:1px solid #d6d6d6}
 .product-specs .spec{display:grid;grid-template-columns:200px 1fr;gap:30px;padding:18px 0;border-bottom:1px solid #e5e5e5;font-size:13px;line-height:1.9}
 .product-specs .spec span{color:#888}
 .product-specs .caution{font-size:11px;line-height:1.9;color:#999;margin-top:23px}
-.endline{text-align:center;padding:65px 20px 55px;color:#555;font-size:14px;line-height:2.05}
+.endline{text-align:center;padding:85px 20px 80px;color:#555;font-size:14px;line-height:2.05}
 @media(max-width:750px){
-.section{padding:58px 15px}.intro,.ingredient-editorial,.product-focus{grid-template-columns:1fr;gap:24px}
+.section{padding:78px 20px}.intro,.ingredient-editorial,.product-focus{grid-template-columns:1fr;gap:24px}
 .ingredient-editorial{padding-top:0;padding-bottom:0}.ingredient-editorial .photo{height:250px;min-height:0}.ingredient-editorial .words{padding:45px 15px 55px}
 .scent-gallery{gap:8px;margin-top:28px}.scent-gallery img{height:170px}.scent-gallery strong{font-size:12px}.scent-gallery small{font-size:11px}
 .notes-head{display:block}.notes-head p{text-align:left;margin-top:8px}
 .note-row{grid-template-columns:90px 1fr;gap:14px;padding:24px 0}.note-row .effect{grid-column:2}.note-row .ingredients{font-size:13px}
-.interlude{padding:65px 15px}
+.interlude{padding:95px 20px}
 .heritage-grid{grid-template-columns:1fr;gap:22px;margin-top:33px}
 .product-focus .bottle{min-height:0}.product-focus .bottle img{max-height:270px}
 .product-specs .spec{grid-template-columns:110px 1fr;gap:14px}
 .copy{font-size:13px}
 }
+
+/* Shared 1000px e-commerce detail canvas */
+.detail-hero{width:100%;background:#fff;padding:0;margin:0;overflow:hidden}
+.detail-hero img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
+@media(min-width:751px){.section.ingredient-editorial{padding:0}.ingredient-editorial .photo{min-height:505px}}
+@media(max-width:750px){.magazine{max-width:100%}.detail-hero img{aspect-ratio:1/1;object-fit:cover}.section{padding-left:20px;padding-right:20px}.section.ingredient-editorial{padding:0}.ingredient-editorial .words{padding:58px 20px}.scent-visual{padding-top:84px;padding-bottom:88px}.notes{padding-top:84px;padding-bottom:95px}.heritage{padding-top:85px;padding-bottom:92px}.product-focus{padding-top:82px;padding-bottom:92px}.product-specs{padding-top:80px;padding-bottom:90px}}
 </style></head><body><main class="magazine">
+<figure class="detail-hero"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261123-002451-fbc73a40-1a78-4ab1-b0e1-8fd967738821-67b57c36.webp" alt="정조대왕 오 드 퍼퓸 50ml 메인 이미지" fetchpriority="high"></figure>
 <section class="section intro">
 <div><p class="eyebrow">THE STORY BEHIND THE SCENT</p><h2 class="heading">정조대왕, 지성과 따뜻함이 공존하는 향.</h2></div>
 <div><p class="copy">조선의 르네상스를 열었던 정조대왕. 개혁을 향한 신념과 학문을 향한 열정, 사람을 대하는 따뜻한 시선은 한 인물 안에 공존했던 서로 다른 매력입니다. 히어로즈 오브 코리아는 그의 총명함과 인간적인 면모를 로즈와 오우드가 조화되는 우디 플로럴 향으로 해석했습니다.</p>
