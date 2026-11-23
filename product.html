@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="히어로즈 오브 코리아 오 드 퍼퓸 컬렉션. 한국의 인물과 이야기를 향으로 기록합니다.">
+<title>오 드 퍼퓸 — HEROES OF KOREA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1b1b1b;--soft:#727272;--line:#e4e4e4;--bg:#fff;--content:1440px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans','Noto Sans KR',sans-serif;-webkit-font-smoothing:antialiased}img{display:block;max-width:100%}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}button:disabled{cursor:not-allowed}a:focus-visible,button:focus-visible{outline:2px solid #222;outline-offset:4px}
+.shell{max-width:var(--content);margin:auto;padding:0 36px}
+.site-header{height:90px;border-bottom:1px solid var(--line);background:#fff}.header-in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:100%;gap:22px}.site-logo img{width:182px}.nav{display:flex;gap:35px;align-items:center;font-size:13px}.nav a:hover,.back:hover{opacity:.55}.header-right{justify-self:end;font-size:12px}.breadcrumb{color:#888;font-size:12px;padding:28px 0 40px}
+.product-layout{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);align-items:start;gap:clamp(44px,6vw,95px)}
+.gallery{min-width:0}.main-shot{background:#f5f4f2;aspect-ratio:1;overflow:hidden}.main-shot img{width:100%;height:100%;object-fit:cover}.gallery-thumbs{display:flex;gap:12px;margin-top:14px}.thumb{width:85px;height:85px;border:1px solid transparent;padding:0;background:#f4f3f1}.thumb.active{border-color:#222}.thumb img{height:100%;width:100%;object-fit:contain}
+.purchase{padding:6px 0 0;position:sticky;top:32px}.purchase h1{font-size:clamp(27px,2.2vw,38px);font-weight:500;letter-spacing:-.055em;margin:0 0 16px}.subtitle{font-size:13px;line-height:1.9;color:#757575;margin-bottom:41px}.price{font-size:27px;font-weight:500;letter-spacing:-.03em;margin:0 0 38px}.specs{margin:0;border-top:1px solid var(--line)}.specs>div{display:grid;grid-template-columns:125px 1fr;gap:16px;border-bottom:1px solid var(--line);padding:18px 0;font-size:13px;line-height:1.7}.specs dt{color:#888}.specs dd{margin:0}.quantity-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:28px 0;border-bottom:1px solid var(--line);font-size:13px}.stepper{display:flex;align-items:center;border:1px solid #ddd}.stepper button{width:39px;height:36px;border:0;background:#fff;font-size:19px}.stepper span{display:inline-grid;place-items:center;width:44px;height:36px;border-inline:1px solid #ddd;font-size:13px}.total{display:flex;align-items:baseline;justify-content:space-between;margin:28px 0 29px}.total strong{font-size:28px;font-weight:500;letter-spacing:-.045em}.total small{font-size:12px;color:#999;font-weight:400}.actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.actions button{height:56px;border:1px solid #222;background:#fff;font-size:12px}.actions .primary{grid-column:1/-1;background:#171717;color:#fff}.actions button:disabled{opacity:.48}.status{margin:17px 0 0;color:#777;font-size:12px;line-height:1.8}
+.detail-area{margin-top:110px}.tabs{display:flex;justify-content:center;gap:clamp(35px,6vw,92px);border-bottom:1px solid var(--line)}.tabs button{padding:0 0 23px;border:0;border-bottom:2px solid transparent;background:transparent;font-size:14px;color:#8a8a8a}.tabs button[aria-selected="true"]{color:#161616;border-bottom-color:#161616}.tab-panel{padding:65px 0 100px;min-height:260px}.tab-panel[hidden]{display:none}.editorial-frame{width:100%;border:0;display:block;min-height:600px;background:#fff}.default-detail{max-width:940px;margin:auto;text-align:center}.default-detail h2{font-size:30px;font-weight:400;letter-spacing:-.045em;margin:45px 0 14px}.default-detail p{font-size:14px;color:#777;line-height:2;margin:0 auto 65px}.default-detail img{max-width:570px;width:100%;margin:auto}.empty-panel{text-align:center;color:#777;font-size:14px;line-height:2.3;padding:80px 0}
+.collection{border-top:1px solid var(--line);padding:75px 0 115px}.collection h2{font-size:25px;font-weight:500;margin:0 0 32px;letter-spacing:-.04em}.collection-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 18px}.collection-grid a{display:block}.collection-grid img{width:100%;aspect-ratio:1;object-fit:cover;background:#f5f4f2;transition:transform .3s}.collection-grid a:hover img{transform:scale(1.02)}.collection-grid p{font-size:13px;margin:12px 0 0}
+.site-footer{border-top:1px solid var(--line);padding:50px 0 65px}.footer-in{display:flex;align-items:center;justify-content:space-between;gap:30px}.footer-in img{width:168px}.footer-in p{font-size:11px;color:#777;line-height:1.8;text-align:right}
+@media(max-width:850px){.site-header{height:72px}.site-logo img{width:148px}.header-in{grid-template-columns:1fr auto}.nav{display:none}.product-layout{grid-template-columns:1fr;gap:35px}.purchase{position:static}.shell{padding:0 20px}.breadcrumb{padding:22px 0 25px}.detail-area{margin-top:75px}.collection-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tab-panel{padding:45px 0 65px}.footer-in{align-items:flex-start}.footer-in p{max-width:240px}}
+@media(max-width:480px){.gallery-thumbs{gap:8px}.thumb{width:68px;height:68px}.purchase h1{font-size:27px}.actions button{height:50px}.tabs{gap:20px;justify-content:space-between}.tabs button{font-size:12px}.collection-grid{gap:20px 11px}.footer-in{flex-direction:column}.footer-in p{text-align:left}.specs>div{grid-template-columns:105px 1fr}}
+</style></head>
+<body>
+<header class="site-header"><div class="shell header-in">
+<a href="index.html" class="site-logo" aria-label="히어로즈 오브 코리아 홈"><img src="assets/heroes-of-korea-logo.svg" alt="HEROES OF KOREA"></a>
+<nav class="nav"><a href="perfume.html" aria-current="page">Perfume</a><a href="lifestyle.html">Lifestyle</a><a href="press.html">Press</a><a href="about.html">About Us</a><a href="global.html">Global</a></nav>
+<a class="header-right" href="perfume.html">전체 향수 보기</a></div></header>
+<main class="shell">
+<div class="breadcrumb"><a href="index.html">홈</a> &nbsp;·&nbsp; <a href="perfume.html">향수</a> &nbsp;·&nbsp; <span id="crumb">제품</span></div>
+<section class="product-layout" aria-label="상품 상세">
+<div class="gallery"><div class="main-shot"><img id="main-img" alt="향수 제품 이미지"></div>
+<div class="gallery-thumbs"><button type="button" class="thumb active" data-image="main" aria-label="메인 이미지 보기"><img id="thumb-main" alt=""></button>
+<button type="button" class="thumb" data-image="cutout" aria-label="제품 단독 이미지 보기"><img id="thumb-cutout" alt=""></button></div></div>
+<div class="purchase"><h1 id="product-name"></h1><div class="subtitle">HEROES OF KOREA EAU DE PARFUM · 50ml</div>
+<p class="price" id="price"></p>
+<dl class="specs"><div><dt>제품 유형</dt><dd>오 드 퍼퓸</dd></div><div><dt>용량</dt><dd>50ml</dd></div><div><dt>배송 및 교환</dt><dd>공식 판매처 정책에 따릅니다.</dd></div></dl>
+<div class="quantity-row"><span id="option-name"></span><div class="stepper"><button type="button" id="decrease" aria-label="수량 줄이기">−</button><span id="qty">1</span><button type="button" id="increase" aria-label="수량 늘리기">+</button></div></div>
+<div class="total"><span>TOTAL</span><strong id="total"></strong></div>
+<div class="actions"><button class="primary" type="button" disabled aria-label="구매 연결 준비 중">BUY IT NOW</button><button type="button" disabled>CART</button><button type="button" id="copy-link">SHARE</button></div>
+<p class="status">현재 제품페이지 디자인을 적용 중입니다. 실제 구매 및 장바구니는 공식 쇼핑몰 연결 후 이용할 수 있습니다.</p>
+</div></section>
+<section class="detail-area" id="details">
+<div class="tabs" role="tablist" aria-label="상세 정보"><button role="tab" type="button" data-tab="detail" aria-selected="true">Detail</button><button role="tab" type="button" data-tab="review" aria-selected="false">Review</button><button role="tab" type="button" data-tab="qa" aria-selected="false">Q&amp;A</button><button role="tab" type="button" data-tab="delivery" aria-selected="false">Delivery</button></div>
+<div id="panel-detail" class="tab-panel" role="tabpanel"><div id="detail-content"></div></div>
+<div id="panel-review" class="tab-panel" role="tabpanel" hidden><div class="empty-panel">상품 리뷰는 공식 쇼핑몰 연결 후 제공됩니다.</div></div>
+<div id="panel-qa" class="tab-panel" role="tabpanel" hidden><div class="empty-panel">상품 문의는 공식 쇼핑몰 연결 후 이용할 수 있습니다.</div></div>
+<div id="panel-delivery" class="tab-panel" role="tabpanel" hidden><div class="empty-panel">배송 및 교환·반품의 최종 조건은 실제 주문 시 공식 판매처 안내를 확인해 주세요.</div></div>
+</section>
+<section class="collection"><h2>향수 컬렉션</h2><div class="collection-grid" id="related-products"></div></section>
+</main><footer class="site-footer"><div class="shell footer-in"><a href="index.html"><img src="assets/heroes-of-korea-logo.svg" alt="HEROES OF KOREA"></a><p>HEROES OF KOREA<br>한국의 인물과 이야기를 향으로 기록합니다.</p></div></footer>
+<script>
+const catalog=[{"id":"kim-gu","name":"김구","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232608-image-addb9162.webp","cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234904-image-1c9d03ce.webp","price":89000},{"id":"kim-hongdo","name":"김홍도","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232608-image-e85ebb1f.webp","cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234904-image-aca3e07c.webp","price":89000},{"id":"sejong","name":"세종대왕","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232608-image-e85c14ec.webp","cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234905-image-423d21df.webp","price":89000},{"id":"shin-saimdang","name":"신사임당","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232609-image-103f25da.webp","cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234905-image-6cbae0f5.webp","price":89000},{"id":"yi-sunsin","name":"이순신","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232609-image-337e3afc.webp","cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234905-image-228f2ceb.webp","price":89000},{"id":"jang-bogo","name":"장보고","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232609-image-9c29409e.webp","cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234905-image-913fc6ec.webp","price":89000},{"id":"jeongjo","name":"정조대왕","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261123-002451-fbc73a40-1a78-4ab1-b0e1-8fd967738821-67b57c36.webp","cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261123-002450-3794001f-fdf4-4b4e-ac3e-4180dbcd66fe-8ae6698b.webp","price":89000},{"id":"heo-nanseolheon","name":"허난설헌","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232610-image-d2e03b47.webp","cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234906-image-e7488ffa.webp","price":89000},{"id":"heo-jun","name":"허준","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232610-image-109f2355.webp","cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234906-image-73f81987.webp","price":89000}];
+const id=new URLSearchParams(location.search).get('id')||'jeongjo';
+const item=catalog.find(p=>p.id===id)||catalog.find(p=>p.id==='jeongjo');
+let qty=1;
+document.title=item.name+' 오 드 퍼퓸 — HEROES OF KOREA';
+document.getElementById('crumb').textContent=item.name;
+document.getElementById('product-name').textContent=item.name+' EDP 50ml';
+document.getElementById('option-name').textContent=item.name+' EDP 50ml';
+document.getElementById('price').textContent=item.price.toLocaleString('ko-KR')+'원';
+document.getElementById('thumb-main').src=item.main;
+document.getElementById('thumb-cutout').src=item.cutout;
+const mainImg=document.getElementById('main-img');
+function showImage(type){mainImg.src=type==='cutout'?item.cutout:item.main;mainImg.alt=item.name+' '+(type==='cutout'?'제품 단독 컷':'메인 제품 이미지');document.querySelectorAll('.thumb').forEach(b=>b.classList.toggle('active',b.dataset.image===type))}
+document.querySelectorAll('.thumb').forEach(b=>b.addEventListener('click',()=>showImage(b.dataset.image)));
+showImage('main');
+function updateQty(){document.getElementById('qty').textContent=qty;document.getElementById('total').textContent=(qty*item.price).toLocaleString('ko-KR')+'원'}
+document.getElementById('increase').addEventListener('click',()=>{qty=Math.min(99,qty+1);updateQty()});
+document.getElementById('decrease').addEventListener('click',()=>{qty=Math.max(1,qty-1);updateQty()});
+updateQty();
+document.getElementById('copy-link').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);document.getElementById('copy-link').textContent='COPIED'}catch(e){window.prompt('상품 링크를 복사하세요',location.href)}});
+const detail=document.getElementById('detail-content');
+if(item.id==='jeongjo'){
+ const frame=document.createElement('iframe');frame.className='editorial-frame';frame.title='정조대왕 향수 상세 콘텐츠';frame.loading='lazy';frame.src='products/jeongjo.html';detail.appendChild(frame);
+ frame.addEventListener('load',()=>{try{const h=frame.contentDocument.documentElement;const resize=()=>{frame.style.height=Math.max(h.scrollHeight,700)+'px'};resize();new ResizeObserver(resize).observe(h)}catch(e){frame.style.height='7000px'}});
+}else{
+ const el=document.createElement('div');el.className='default-detail';const h=document.createElement('h2');h.textContent=item.name+' 오 드 퍼퓸';const p=document.createElement('p');p.textContent='제품별 향의 구성과 인물 스토리를 정리하고 있습니다. 상세 콘텐츠가 확정되면 같은 레이아웃에 반영됩니다.';const img=document.createElement('img');img.src=item.cutout;img.alt=item.name+' 제품 이미지';el.append(h,p,img);detail.appendChild(el);
+}
+document.querySelectorAll('[data-tab]').forEach(btn=>btn.addEventListener('click',()=>{
+document.querySelectorAll('[data-tab]').forEach(b=>b.setAttribute('aria-selected',String(b===btn)));
+document.querySelectorAll('.tab-panel').forEach(p=>p.hidden=p.id!=='panel-'+btn.dataset.tab);
+}));
+const related=document.getElementById('related-products');
+catalog.filter(p=>p.id!==item.id).forEach(p=>{const a=document.createElement('a');a.href='product.html?id='+encodeURIComponent(p.id);const img=document.createElement('img');img.src=p.main;img.loading='lazy';img.alt=p.name+' 향수';const label=document.createElement('p');label.textContent=p.name+' EDP 50ml';a.append(img,label);related.appendChild(a)});
+</script></body></html>
