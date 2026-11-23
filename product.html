@@ -117,12 +117,28 @@
  .product-shell .editorial-summary{padding-inline:4px}
  .product-shell .collection-description{font-size:12px}
 }
+
+/* FOCC shared six-category navigation */
+.site-header{position:relative;z-index:25}
+.header-in{position:relative}
+.site-header .nav{gap:clamp(11px,1.5vw,24px);font-size:clamp(11px,1vw,13px);white-space:nowrap}
+.mobile-category-toggle,.mobile-category-nav{display:none}
+@media(max-width:950px){
+ .site-header .nav{display:none}
+ .site-header .header-right{display:none}
+ .site-header .header-in{display:grid;grid-template-columns:minmax(0,1fr) auto}
+ .mobile-category-toggle{display:block;grid-column:2;grid-row:1;border:0;background:transparent;font-size:24px;min-width:44px;min-height:44px;line-height:1;cursor:pointer}
+ .mobile-category-nav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;z-index:30;background:#fff;border-top:1px solid #eee;box-shadow:0 10px 20px #0001;padding:12px 20px 22px}
+ .mobile-category-nav a{font-size:14px;padding:14px 0;border-bottom:1px solid #eee;min-height:44px}
+}
 </style></head>
 <body>
 <header class="site-header"><div class="shell header-in">
 <a href="index.html" class="site-logo" aria-label="히어로즈 오브 코리아 홈"><img src="assets/heroes-of-korea-logo.svg" alt="HEROES OF KOREA"></a>
-<nav class="nav"><a href="perfume.html" aria-current="page">Perfume</a><a href="lifestyle.html">Lifestyle</a><a href="press.html">Press</a><a href="about.html">About Us</a><a href="global.html">Global</a></nav>
-<a class="header-right" href="perfume.html">전체 향수 보기</a></div></header>
+<nav class="nav" aria-label="주 메뉴"><a href="perfume.html" aria-current="page">Beauty &amp; Perfume</a><a href="lifestyle.html">Lifestyle</a><a href="furniture.html">Furniture</a><a href="fnb.html">F&amp;B</a><a href="fashion.html">Fashion</a><a href="about.html">About Us</a></nav>
+<a class="header-right" href="perfume.html">전체 향수 보기</a>
+<button class="mobile-category-toggle" id="category-toggle" type="button" aria-controls="category-mobile-nav" aria-expanded="false" aria-label="메뉴 열기">☰</button>
+<nav class="mobile-category-nav" id="category-mobile-nav" aria-label="모바일 메뉴"><a href="perfume.html" aria-current="page">Beauty &amp; Perfume</a><a href="lifestyle.html">Lifestyle</a><a href="furniture.html">Furniture</a><a href="fnb.html">F&amp;B</a><a href="fashion.html">Fashion</a><a href="about.html">About Us</a></nav></div></header>
 <main class="shell product-shell">
 <div class="breadcrumb"><a href="index.html">홈</a> &nbsp;·&nbsp; <a href="perfume.html">향수</a> &nbsp;·&nbsp; <span id="crumb">제품</span></div>
 <section class="product-layout" aria-label="상품 상세">
@@ -164,6 +180,7 @@
 </section>
 </main><footer class="site-footer"><div class="shell footer-in"><a href="index.html"><img src="assets/heroes-of-korea-logo.svg" alt="HEROES OF KOREA"></a><p>HEROES OF KOREA<br>한국의 인물과 이야기를 향으로 기록합니다.</p></div></footer>
 <script>
+(function(){const t=document.getElementById('category-toggle'),n=document.getElementById('category-mobile-nav');if(!t||!n)return;t.addEventListener('click',()=>{const expanded=n.classList.toggle('open');t.setAttribute('aria-expanded',String(expanded));t.textContent=expanded?'×':'☰'});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');t.setAttribute('aria-expanded','false');t.textContent='☰'}))})();
 const catalog=[{"id":"kim-gu","name":"김구","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232608-image-addb9162.webp","cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234904-image-1c9d03ce.webp","price":89000},{"id":"kim-hongdo","name":"김홍도","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232608-image-e85ebb1f.webp","cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234904-image-aca3e07c.webp","price":89000},{"id":"sejong","name":"세종대왕","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232608-image-e85c14ec.webp","cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234905-image-423d21df.webp","price":89000},{"id":"shin-saimdang","name":"신사임당","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232609-image-103f25da.webp","cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234905-image-6cbae0f5.webp","price":89000},{"id":"yi-sunsin","name":"이순신","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232609-image-337e3afc.webp","cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234905-image-228f2ceb.webp","price":89000},{"id":"jang-bogo","name":"장보고","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232609-image-9c29409e.webp","cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234905-image-913fc6ec.webp","price":89000},{"id":"jeongjo","name":"정조대왕","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261123-002451-fbc73a40-1a78-4ab1-b0e1-8fd967738821-67b57c36.webp","cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261123-002450-3794001f-fdf4-4b4e-ac3e-4180dbcd66fe-8ae6698b.webp","price":89000},{"id":"heo-nanseolheon","name":"허난설헌","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232610-image-d2e03b47.webp","cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234906-image-e7488ffa.webp","price":89000},{"id":"heo-jun","name":"허준","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232610-image-109f2355.webp","cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234906-image-73f81987.webp","price":89000}];
 const id=new URLSearchParams(location.search).get('id')||'jeongjo';
 const item=catalog.find(p=>p.id===id)||catalog.find(p=>p.id==='jeongjo');
