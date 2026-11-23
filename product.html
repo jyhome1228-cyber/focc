@@ -81,6 +81,42 @@
 .product-shell .editorial-head h2{font-size:32px}
 .product-shell .editorial-copy p{font-size:14px}
 }
+
+/* Final 9-product mobile layout safeguard */
+@media(max-width:600px){
+ html,body{max-width:100%;overflow-x:clip}
+ .shell.product-shell{width:100%;padding-inline:16px}
+ .product-shell .breadcrumb{padding:18px 0 24px;font-size:11px}
+ .product-shell .product-layout{grid-template-columns:minmax(0,1fr);gap:25px}
+ .product-shell .gallery,.product-shell .purchase{min-width:0;width:100%}
+ .product-shell .main-shot{width:100%;aspect-ratio:1/1}
+ .product-shell .purchase h1{font-size:27px;line-height:1.45;overflow-wrap:anywhere}
+ .product-shell .purchase .subtitle{margin-bottom:25px;line-height:1.65}
+ .product-shell .purchase .specs>div{grid-template-columns:92px minmax(0,1fr);gap:15px}
+ .product-shell .quantity-row{gap:8px}
+ .product-shell .quantity-row>span{min-width:0;overflow-wrap:anywhere}
+ .product-shell .total strong{font-size:25px}
+ .product-shell .detail-area{margin-top:65px}
+ .product-shell .tabs{gap:8px;justify-content:space-between;overflow:visible}
+ .product-shell .tabs button{font-size:11px;min-width:0;white-space:nowrap;padding-bottom:17px}
+ .product-shell .tab-panel{padding:26px 0 60px}
+ .product-shell .editorial-summary{padding:50px 10px 25px;margin-bottom:26px}
+ .product-shell .editorial-head h2{font-size:30px;overflow-wrap:anywhere}
+ .product-shell .editorial-grid{grid-template-columns:minmax(0,1fr);gap:24px}
+ .product-shell .editorial-copy,.product-shell .editorial-notes{min-width:0;width:100%}
+ .product-shell .editorial-meta{grid-template-columns:110px minmax(0,1fr);gap:12px}
+ .product-shell .editorial-frame{width:100%;max-width:100%;min-width:0;display:block}
+ .product-shell .collection{padding:70px 0 95px}
+ .product-shell .collection-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 12px}
+ .product-shell .collection-grid a,.product-shell .collection-grid .collection-visual{min-width:0}
+ .product-shell .collection-grid small{font-size:10px}
+}
+@media(max-width:360px){
+ .shell.product-shell{padding-inline:12px}
+ .product-shell .purchase h1{font-size:24px}
+ .product-shell .editorial-summary{padding-inline:4px}
+ .product-shell .collection-description{font-size:12px}
+}
 </style></head>
 <body>
 <header class="site-header"><div class="shell header-in">
