@@ -425,6 +425,59 @@ html,body{overflow-x:clip}
 .hok26-collection{padding-top:clamp(75px,6vw,105px);padding-bottom:clamp(90px,7vw,125px)}
 .hok26-section-head h2{font-size:clamp(26px,2.5vw,36px)}
 @media(max-width:600px){.hok26-hero{padding-top:50px;padding-bottom:65px}.hok26-hero-image{height:310px}.hok26-collection{padding-top:65px;padding-bottom:85px}}
+
+
+/* 2026-11-23 mobile audit: safe layout and navigation */
+@media(max-width:700px){
+ html,body{max-width:100%;overflow-x:clip}
+ .wrap{max-width:100%;min-width:0;overflow-x:clip}
+ .header,.header-main,.footer,.footer-wrap{max-width:100%;min-width:0}
+ .header-main{grid-template-columns:minmax(0,1fr) auto!important;column-gap:12px!important}
+ .header-logo{min-width:0}
+ .header-logo img{max-width:min(45vw,175px);height:auto}
+ .mobile-toggle{position:relative;z-index:12;min-width:42px;min-height:42px;justify-self:end;grid-column:2}
+ .mobile-nav{max-width:100%;overflow-wrap:anywhere}
+ .footer-wrap{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .footer-wrap>div{min-width:0;overflow-wrap:anywhere}
+ img{max-width:100%}
+}
+@media(max-width:380px){
+ .header-logo img{max-width:155px}
+ .footer-wrap{gap:20px 12px!important}
+}
+
+
+/* Preserve the original Heroes editorial hero; refine its phone layout only */
+@media(max-width:700px){
+ .hero{max-width:100%;overflow:hidden}
+ .hero-top{min-height:0!important;padding:34px 17px 26px!important}
+ .hero-word{font-size:clamp(48px,12.4vw,88px)!important;line-height:1!important;overflow-wrap:normal}
+ .hero-emblem img{width:clamp(90px,26vw,145px)!important;height:auto}
+ .story-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .story-cell{min-width:0;overflow:hidden}
+ .story-cell.hero-identity,.story-cell.hero-copy{height:auto!important;min-height:230px!important;padding:21px 16px!important}
+ .story-cell.hero-copy p{font-size:clamp(13px,3.9vw,17px)!important;line-height:1.35}
+ .story-cell.hero-copy .hero-copy-sub{font-size:11px!important;line-height:1.75;overflow-wrap:anywhere}
+ .story-cell.story-photo{grid-column:1/-1!important;height:clamp(300px,95vw,500px)!important;min-height:0!important;padding:0!important}
+ .story-cell.story-photo img{width:100%;height:100%;object-fit:cover;object-position:center}
+ .story-band{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+ .story-band>div{min-width:0}
+ .hok26-collection{padding:65px 16px 85px!important}
+ .hok26-section-head{display:block}
+ .hok26-section-head>p{text-align:left;margin-top:13px}
+ .hok26-product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:28px 12px}
+ .hok26-product-image{width:100%;aspect-ratio:1}
+ .hok26-product-image img{width:100%;height:100%;object-fit:cover}
+ .hok26-product-meta{display:block!important;min-width:0}
+ .hok26-product-meta h3{font-size:14px}
+ .hok26-product-meta span{display:block;margin-top:5px;font-size:10px;overflow-wrap:anywhere}
+}
+@media(max-width:380px){
+ .story-cell.hero-identity,.story-cell.hero-copy{min-height:210px!important;padding:16px 12px!important}
+ .story-cell.hero-copy p{font-size:13px!important}
+ .hok26-product-grid{gap:22px 10px}
+}
+
 </style></head>
 <body>
 <div id="intro-screen" class="intro-screen" aria-label="Heroes of Korea 브랜드 오프닝" role="status">
