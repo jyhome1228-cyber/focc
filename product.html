@@ -56,6 +56,31 @@
 @media(max-width:1020px){.shell.product-shell{width:100%;padding:0 20px}}
 @media(max-width:850px){.product-shell .product-layout{grid-template-columns:1fr;gap:35px}.product-shell .detail-area{margin-top:90px}.product-shell .editorial-summary{padding:30px 10px 0;margin-bottom:65px}.product-shell .collection{padding:90px 0 115px}}
 @media(max-width:480px){.shell.product-shell{padding:0 15px}.product-shell .detail-area{margin-top:70px}.product-shell .editorial-summary{padding:20px 0 0}}
+
+/* Editorial sequence: full image, then English fragrance portrait */
+.product-shell .detail-feature-image{margin:0;width:100%;max-width:1000px;overflow:hidden;background:#fff}
+.product-shell .detail-feature-image img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
+.product-shell .editorial-summary{padding:80px 48px 35px;margin-bottom:50px;max-width:1000px}
+.product-shell .editorial-head{margin-bottom:52px}
+.editorial-issue{font:500 11px/1.6 'DM Sans',sans-serif;letter-spacing:.15em;color:#777;margin:0 0 18px}
+.product-shell .editorial-head h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(31px,3.4vw,38px);font-weight:400;line-height:1.2;letter-spacing:-.04em}
+.product-shell .editorial-head .editorial-sub{font-family:Georgia,'Times New Roman',serif;font-size:15px;margin-top:14px;line-height:1.6}
+.product-shell .editorial-grid{grid-template-columns:minmax(0,1.12fr) minmax(0,.85fr) minmax(0,.72fr);gap:36px;align-items:center}
+.editorial-copy-heading{font:600 12px/1.5 'DM Sans',sans-serif;letter-spacing:.06em;margin:0 0 22px}
+.product-shell .editorial-copy p{font:400 14px/1.9 'DM Sans',sans-serif;letter-spacing:0;color:#424242}
+.product-shell .editorial-bottle img{max-height:285px}
+.product-shell .editorial-notes h3{font-size:12px;letter-spacing:.05em}
+.product-shell .editorial-notes .note-block h4{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-weight:400;font-size:15px}
+.product-shell .editorial-notes .note-block p{font:400 12px/1.65 'DM Sans',sans-serif;letter-spacing:0}
+.product-shell .editorial-meta{margin-top:50px;padding-top:20px}
+@media(max-width:850px){
+.product-shell .editorial-summary{padding:60px 16px 25px;margin-bottom:35px}
+.product-shell .editorial-grid{grid-template-columns:1fr;gap:27px}
+.product-shell .editorial-bottle{grid-row:1}.product-shell .editorial-bottle img{max-height:245px}
+.product-shell .editorial-head{margin-bottom:32px}
+.product-shell .editorial-head h2{font-size:32px}
+.product-shell .editorial-copy p{font-size:14px}
+}
 </style></head>
 <body>
 <header class="site-header"><div class="shell header-in">
@@ -79,10 +104,11 @@
 <section class="detail-area" id="details">
 <div class="tabs" role="tablist" aria-label="상세 정보"><button role="tab" type="button" data-tab="detail" aria-selected="true">Detail</button><button role="tab" type="button" data-tab="review" aria-selected="false">Review</button><button role="tab" type="button" data-tab="qa" aria-selected="false">Q&amp;A</button><button role="tab" type="button" data-tab="delivery" aria-selected="false">Delivery</button></div>
 <div id="panel-detail" class="tab-panel" role="tabpanel">
+<figure class="detail-feature-image" aria-label="향수 메인 비주얼"><img id="detail-feature-img" alt="" loading="lazy"></figure>
 <section class="editorial-summary" aria-labelledby="editorial-title">
-<div class="editorial-head"><h2 id="editorial-title"></h2><p id="editorial-sub" class="editorial-sub"></p></div>
+<div class="editorial-head"><p class="editorial-issue">EAU DE PARFUM</p><h2 id="editorial-title"></h2><p id="editorial-sub" class="editorial-sub"></p></div>
 <div class="editorial-grid">
-<div class="editorial-copy"><p id="editorial-story"></p></div>
+<div class="editorial-copy"><h3 class="editorial-copy-heading">THE FRAGRANCE</h3><p id="editorial-story"></p></div>
 <figure class="editorial-bottle"><img id="editorial-cutout" alt="" loading="lazy"></figure>
 <div class="editorial-notes" id="editorial-notes"><h3>KEY NOTES</h3>
 <div class="note-block"><h4>Top</h4><p id="notes-top"></p></div>
@@ -125,25 +151,28 @@ document.getElementById('copy-link').addEventListener('click',async()=>{try{awai
 // Editorial content is supplied only where product notes have been verified.
 const editorialContent={
  jeongjo:{
-  subtitle:'총명함과 따뜻함이 함께 머무는 향.',
+  title:'Jeongjo the Great',
+  subtitle:'A fragrance of vision and warmth.',
   family:'Rose & Oud · Woody Floral',
-  story:'개혁을 향한 단단한 의지와 사람을 향한 깊은 애정을 함께 지녔던 정조대왕. 히어로즈 오브 코리아는 그의 지성과 인간적인 온기를 섬세한 장미와 깊은 오우드의 조화로 풀어냈습니다. 시트러스와 베리의 맑은 첫인상은 피오니와 향신료의 부드러운 분위기로 이어지고, 마지막에는 묵직한 나무의 잔향이 천천히 남습니다.',
-  notes:{top:'불가리안 레몬, 라즈베리, 체리, 로즈, 베르가못',middle:'피오니, 클로브, 시나몬',base:'오우드, 인도네시안 패출리, 샌달우드, 시더우드'}
+  story:'Inspired by the clarity of King Jeongjo’s vision and his compassion for people, this fragrance brings together the elegance of rose and the depth of oud. Bright citrus and berries open the composition, followed by gentle florals and warm spice. A refined woody trail lingers softly on the skin.',
+  notes:{top:'Bulgarian Lemon, Raspberry, Cherry, Rose, Bergamot',middle:'Peony, Clove, Cinnamon',base:'Oud, Indonesian Patchouli, Sandalwood, Cedarwood'}
  }
 };
 const editorial=editorialContent[item.id];
-document.getElementById('editorial-title').textContent=item.name+' 오 드 퍼퓸';
+document.getElementById('editorial-title').textContent=editorial?.title||item.name+' Eau de Parfum';
+document.getElementById('detail-feature-img').src=item.main;
+document.getElementById('detail-feature-img').alt=item.name+' 오 드 퍼퓸 메인 비주얼';
 document.getElementById('editorial-cutout').src=item.cutout;
 document.getElementById('editorial-cutout').alt=item.name+' 오 드 퍼퓸 제품 단독 이미지';
-document.getElementById('editorial-sub').textContent=editorial?.subtitle||'한국의 인물과 이야기를 향으로 기록합니다.';
-document.getElementById('editorial-story').textContent=editorial?.story||'각 인물의 향에 담긴 이야기와 노트를 준비하고 있습니다. 상품별 상세 정보는 자료가 확인되는 대로 이곳에 반영됩니다.';
+document.getElementById('editorial-sub').textContent=editorial?.subtitle||'A fragrance inspired by a Korean story.';
+document.getElementById('editorial-story').textContent=editorial?.story||'A scent inspired by the spirit and story of a remarkable figure. The full fragrance composition and editorial narrative will be introduced here.';
 if(editorial){
  document.getElementById('editorial-family').textContent=editorial.family;
  ['top','middle','base'].forEach(k=>document.getElementById('notes-'+k).textContent=editorial.notes[k]);
 }else{document.querySelector('.editorial-summary').classList.add('is-pending')}
 const detail=document.getElementById('detail-content');
 if(item.id==='jeongjo'){
- const frame=document.createElement('iframe');frame.className='editorial-frame';frame.title='정조대왕 향수 상세 콘텐츠';frame.loading='lazy';frame.setAttribute('scrolling','no');frame.style.overflow='hidden';frame.src='products/jeongjo.html';detail.appendChild(frame);
+ const frame=document.createElement('iframe');frame.className='editorial-frame';frame.title='정조대왕 향수 상세 콘텐츠';frame.loading='lazy';frame.setAttribute('scrolling','no');frame.style.overflow='hidden';frame.src='products/jeongjo.html?embed=1';detail.appendChild(frame);
  frame.addEventListener('load',()=>{
   try{
    const doc=frame.contentDocument,root=doc.documentElement,body=doc.body;
