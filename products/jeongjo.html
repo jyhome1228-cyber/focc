@@ -1,76 +1,133 @@
-<!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>정조대왕 향의 이야기 — HEROES OF KOREA</title>
+<!doctype html><html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>정조대왕 오 드 퍼퓸 | HEROES OF KOREA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#222;--muted:#686868;--line:#dedede}
-*{box-sizing:border-box}html,body{margin:0;padding:0;width:100%;background:#fff;color:var(--ink)}
-body{font-family:'Noto Sans KR',sans-serif;-webkit-font-smoothing:antialiased;letter-spacing:-.035em}
-h1,h2,h3,p,figure,blockquote{margin:0}img{max-width:100%;display:block}
-.magazine{width:min(100%,980px);margin:auto;padding:8px 22px 80px}
-.essay{display:grid;grid-template-columns:1fr 1.1fr;column-gap:9%;align-items:start;border-top:1px solid var(--line);padding:80px 0 95px}
-.essay-heading h2{font-weight:400;font-size:clamp(27px,3.2vw,39px);line-height:1.48;letter-spacing:-.07em;word-break:keep-all}
-.essay-body p{font-size:14px;line-height:2.15;font-weight:300;color:#4b4b4b;word-break:keep-all}
-.essay-body p+p{margin-top:22px}
-.pullquote{border-block:1px solid var(--line);padding:55px 6%;text-align:center}
-.pullquote p{font-size:clamp(20px,2.4vw,29px);font-weight:400;line-height:1.85;letter-spacing:-.055em;word-break:keep-all}
-.structure{padding:93px 0 86px}
-.structure-heading{margin-bottom:43px;display:flex;align-items:baseline;justify-content:space-between;gap:28px}
-.structure-heading h2{font-size:clamp(26px,3vw,36px);letter-spacing:-.06em;font-weight:400}
-.structure-heading p{font-size:12px;color:#777;line-height:1.7;text-align:right}
-.note{border-top:1px solid var(--line);display:grid;grid-template-columns:145px minmax(190px,1fr) minmax(130px,.8fr);gap:20px;padding:27px 0}
-.note:last-child{border-bottom:1px solid var(--line)}
-.note h3{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:25px;letter-spacing:-.035em}
-.note .ingredients{font-size:14px;line-height:1.85;font-weight:400}
-.note .impression{font-size:13px;line-height:1.85;color:#777;font-weight:300}
-.heritage{padding:80px 0;border-top:1px solid var(--line)}
-.heritage h2{font-size:clamp(26px,3vw,36px);font-weight:400;line-height:1.45;letter-spacing:-.06em;margin-bottom:25px}
-.heritage>.intro{max-width:720px;color:#555;font-size:14px;line-height:2.05;font-weight:300}
-.heritage-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:49px}
-.heritage-grid article{padding-top:19px;border-top:1px solid #ddd}
-.heritage-grid h3{font-size:17px;font-weight:500;margin-bottom:17px}
-.heritage-grid p{font-size:13px;color:#777;font-weight:300;line-height:2}
-.closing{display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1.1fr);gap:65px;align-items:center;padding:50px 0 75px;border-top:1px solid var(--line)}
-.closing img{height:290px;width:100%;object-fit:contain}
-.closing h2{font-size:clamp(25px,2.8vw,33px);font-weight:400;line-height:1.55;margin-bottom:20px;letter-spacing:-.06em}
-.closing p{font-size:14px;line-height:2.05;color:#555;font-weight:300}
-@media(max-width:700px){
-.magazine{padding:0 10px 50px}
-.essay{grid-template-columns:1fr;gap:26px;padding:52px 0 65px}
-.essay-body p{font-size:13px}
-.pullquote{padding:37px 5%}
-.structure{padding:65px 0}.structure-heading{display:block;margin-bottom:30px}.structure-heading p{text-align:left;margin-top:8px}
-.note{grid-template-columns:75px 1fr;gap:10px 15px;padding:23px 0}
-.note h3{font-size:21px}.note .ingredients{font-size:13px}.note .impression{grid-column:2;font-size:12px}
-.heritage{padding:58px 0}.heritage-grid{grid-template-columns:1fr;gap:18px;margin-top:32px}
-.closing{grid-template-columns:1fr;gap:18px;padding:45px 0}.closing img{height:230px}.closing h2{font-size:26px}
+:root{--ink:#222;--text:#444;--muted:#777;--line:#dedede}
+*{box-sizing:border-box}html,body{background:#fff;color:var(--ink);padding:0;margin:0;max-width:100%;overflow-x:hidden}
+body{font-family:'Noto Sans KR',sans-serif;-webkit-font-smoothing:antialiased;letter-spacing:-.025em}h1,h2,h3,p,figure,blockquote{margin:0}img{display:block;max-width:100%}
+.magazine{width:100%;max-width:none;margin:0 auto;padding:0 0 64px}
+.section{padding:85px clamp(16px,4.5vw,72px);border-bottom:1px solid #ebebeb}
+.eyebrow{font:500 11px/1.5 'DM Sans',sans-serif;letter-spacing:.11em;color:#888}
+.heading{font-weight:400;font-size:clamp(29px,3.5vw,44px);line-height:1.4;letter-spacing:-.065em;word-break:keep-all}
+.copy{font-size:14px;line-height:2.2;color:#555;font-weight:300;word-break:keep-all}
+.copy+p{margin-top:19px}
+.intro{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(40px,7vw,125px);align-items:start;border-top:1px solid #dedede}
+.intro h2{margin-top:18px}
+.intro .copy:first-child{margin-bottom:17px}
+.intro .copy+.copy{margin-top:23px}
+.ingredient-editorial{display:grid;grid-template-columns:.92fr 1.08fr;align-items:stretch;padding-top:0;padding-bottom:0;gap:0}
+.ingredient-editorial .photo{min-height:400px;overflow:hidden}
+.ingredient-editorial .photo img{height:100%;width:100%;object-fit:cover}
+.ingredient-editorial .words{padding:clamp(50px,5vw,92px) clamp(25px,4.5vw,78px);display:flex;flex-direction:column;justify-content:center}
+.ingredient-editorial h2{margin:17px 0 25px}
+.ingredient-editorial p+p{margin-top:17px}
+.scent-visual{padding-top:80px;padding-bottom:88px}
+.scent-visual .heading{margin:16px 0 18px}
+.scent-visual .desc{max-width:700px}
+.scent-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:43px}
+.scent-gallery figure{min-width:0}
+.scent-gallery img{width:100%;height:clamp(160px,25vw,330px);object-fit:cover}
+.scent-gallery figcaption{padding:13px 0 0}
+.scent-gallery strong{font:500 14px/1.6 'DM Sans',sans-serif}
+.scent-gallery small{display:block;margin-top:4px;font-size:12px;color:#858585}
+.notes{padding-top:86px;padding-bottom:92px}
+.notes-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:38px}
+.notes-head .heading{margin-top:15px}
+.notes-head p{font-size:13px;color:#888;text-align:right;line-height:1.7}
+.note-row{display:grid;grid-template-columns:175px minmax(0,1.15fr) minmax(0,.85fr);gap:25px;border-top:1px solid #d4d4d4;padding:29px 0}
+.note-row:last-child{border-bottom:1px solid #d4d4d4}
+.note-row h3{font:400 clamp(24px,2.4vw,32px)/1.35 Georgia,serif}
+.note-row .ingredients{font-size:15px;line-height:1.95}
+.note-row .effect{font-size:13px;line-height:2;color:#838383}
+.interlude{text-align:center;padding:95px clamp(16px,5vw,80px) 110px}
+.interlude blockquote{font-size:clamp(22px,3vw,34px);line-height:1.85;font-weight:400;letter-spacing:-.075em;word-break:keep-all}
+.interlude .eyebrow{margin-bottom:23px}
+.heritage{padding-top:95px;padding-bottom:100px}
+.heritage .heading{margin:17px 0 24px}
+.heritage .lead{max-width:940px}
+.heritage-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px;margin-top:53px}
+.heritage-grid article{padding-top:22px;border-top:1px solid #ccc}
+.heritage-grid h3{font-weight:500;font-size:18px;margin-bottom:15px}
+.heritage-grid p{font-size:13px;line-height:2.1;color:#777;font-weight:300;word-break:keep-all}
+.product-focus{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(36px,6vw,100px);align-items:center;padding-top:75px;padding-bottom:82px}
+.product-focus .bottle{display:flex;align-items:center;justify-content:center;min-height:380px}
+.product-focus .bottle img{max-height:370px;width:auto;max-width:88%;object-fit:contain}
+.product-focus h2{margin:17px 0 22px}
+.product-focus .detail{margin-top:34px;border-top:1px solid #ddd;padding-top:18px;display:grid;grid-template-columns:135px 1fr;gap:20px;font-size:12px;color:#777}
+.product-focus .detail strong{font-weight:400;color:#222}
+.product-specs{padding-top:77px;padding-bottom:88px}
+.product-specs h2{margin:0 0 28px}
+.product-specs .specs{border-top:1px solid #d6d6d6}
+.product-specs .spec{display:grid;grid-template-columns:200px 1fr;gap:30px;padding:18px 0;border-bottom:1px solid #e5e5e5;font-size:13px;line-height:1.9}
+.product-specs .spec span{color:#888}
+.product-specs .caution{font-size:11px;line-height:1.9;color:#999;margin-top:23px}
+.endline{text-align:center;padding:65px 20px 55px;color:#555;font-size:14px;line-height:2.05}
+@media(max-width:750px){
+.section{padding:58px 15px}.intro,.ingredient-editorial,.product-focus{grid-template-columns:1fr;gap:24px}
+.ingredient-editorial{padding-top:0;padding-bottom:0}.ingredient-editorial .photo{height:250px;min-height:0}.ingredient-editorial .words{padding:45px 15px 55px}
+.scent-gallery{gap:8px;margin-top:28px}.scent-gallery img{height:170px}.scent-gallery strong{font-size:12px}.scent-gallery small{font-size:11px}
+.notes-head{display:block}.notes-head p{text-align:left;margin-top:8px}
+.note-row{grid-template-columns:90px 1fr;gap:14px;padding:24px 0}.note-row .effect{grid-column:2}.note-row .ingredients{font-size:13px}
+.interlude{padding:65px 15px}
+.heritage-grid{grid-template-columns:1fr;gap:22px;margin-top:33px}
+.product-focus .bottle{min-height:0}.product-focus .bottle img{max-height:270px}
+.product-specs .spec{grid-template-columns:110px 1fr;gap:14px}
+.copy{font-size:13px}
 }
-</style></head>
-<body><main class="magazine">
-<section class="essay" aria-labelledby="story-title">
-<div class="essay-heading"><h2 id="story-title">정조대왕의 지성과 온기를 담은 향.</h2></div>
-<div class="essay-body">
-<p>조선 후기의 변화를 이끈 정조대왕은 학문을 중시하면서도 백성의 삶에 관심을 기울였던 군주였습니다. 그의 강인한 의지와 섬세한 감각은 서로 다른 성격의 향이 조화를 이루는 방식으로 표현됩니다.</p>
-<p>첫 향에서는 레몬과 베르가못의 산뜻함에 라즈베리와 체리의 생기가 더해집니다. 시간이 지나면 피오니와 향신료가 부드럽게 겹쳐지고, 마지막에는 오우드와 샌달우드의 깊은 나무 향이 차분한 여운을 남깁니다.</p>
-</div></section>
-<div class="pullquote"><p>처음에는 선명하게 다가오고,<br>시간이 흐를수록 깊어지는 향.</p></div>
-<section class="structure" aria-labelledby="note-title">
-<div class="structure-heading"><h2 id="note-title">향의 구성</h2><p>Woody Floral · Rose &amp; Oud</p></div>
-<div class="note"><h3>Top</h3><p class="ingredients">불가리안 레몬, 라즈베리, 체리, 로즈, 베르가못</p><p class="impression">시트러스와 베리의 맑고 생기 있는 시작.</p></div>
-<div class="note"><h3>Middle</h3><p class="ingredients">피오니, 클로브, 시나몬</p><p class="impression">플로럴의 부드러움에 더해진 은은한 향신료.</p></div>
-<div class="note"><h3>Base</h3><p class="ingredients">오우드, 인도네시안 패출리, 샌달우드, 시더우드</p><p class="impression">단단하고 차분하게 이어지는 우디의 잔향.</p></div>
+</style></head><body><main class="magazine">
+<section class="section intro">
+<div><p class="eyebrow">THE STORY BEHIND THE SCENT</p><h2 class="heading">정조대왕, 지성과 따뜻함이 공존하는 향.</h2></div>
+<div><p class="copy">조선의 르네상스를 열었던 정조대왕. 개혁을 향한 신념과 학문을 향한 열정, 사람을 대하는 따뜻한 시선은 한 인물 안에 공존했던 서로 다른 매력입니다. 히어로즈 오브 코리아는 그의 총명함과 인간적인 면모를 로즈와 오우드가 조화되는 우디 플로럴 향으로 해석했습니다.</p>
+<p class="copy">시트러스와 베리가 만들어내는 밝은 첫인상, 꽃과 향신료가 더하는 부드러운 온기, 그리고 깊고 차분한 우드의 잔향까지. 향이 피부 위에서 천천히 변화하는 시간에 정조대왕의 여러 면모를 담았습니다.</p></div>
 </section>
-<section class="heritage" aria-labelledby="heritage-title">
-<h2 id="heritage-title">향에 담긴 정조대왕의 이야기.</h2>
-<p class="intro">히어로즈 오브 코리아는 역사적 인물의 삶을 그대로 재현하기보다, 그 인물에게서 발견한 가치와 분위기를 향의 감각으로 풀어냅니다. 정조대왕의 학문에 대한 열정과 개혁 정신, 문화에 대한 관심은 이 향수의 출발점이 되었습니다.</p>
+<section class="section ingredient-editorial">
+<figure class="photo"><img src="https://focc2023.cafe24.com/PP_detail/Jeongjo_Detail_cafe24/sebastian-schuster-hCM6gnaF7BQ-unsplash_oudwood.jpg" alt="깊이 있는 우드의 질감을 표현한 향기 이미지" loading="lazy"></figure>
+<div class="words"><p class="eyebrow">ROSE &amp; OUD</p><h2 class="heading">밝게 시작해, 깊은 여운으로 남습니다.</h2>
+<p class="copy">장미는 섬세하고 명료한 인상을 전하고, 오우드는 시간이 지날수록 깊어지는 분위기를 만듭니다. 서로 대비되는 두 향의 성격이 만나 차분한 균형을 완성합니다.</p>
+<p class="copy">첫 순간의 상큼함과 잔향의 따뜻함이 자연스럽게 이어져, 계절과 성별에 얽매이지 않고 각자의 방식으로 즐길 수 있는 향입니다.</p></div>
+</section>
+<section class="section scent-visual">
+<p class="eyebrow">THE INGREDIENTS</p><h2 class="heading">향을 이루는 세 가지 인상.</h2><p class="copy desc">로즈와 오우드를 중심으로 산뜻한 과일 향, 부드러운 플로럴, 묵직한 우디가 순서대로 펼쳐집니다. 각 노트의 원료를 통해 향이 가진 감각을 조금 더 가까이 살펴볼 수 있습니다.</p>
+<div class="scent-gallery">
+<figure><img src="https://focc2023.cafe24.com/PP_detail/Jeongjo_Detail_cafe24/mandira-banik-HviXF1Gc3bs-unsplash_cherry.jpg" alt="체리 원료 연출 이미지" loading="lazy"><figcaption><strong>Fruity</strong><small>Cherry · Raspberry · Citrus</small></figcaption></figure>
+<figure><img src="https://focc2023.cafe24.com/PP_detail/Jeongjo_Detail_cafe24/daiga-ellaby-4qN8yPewMs0-unsplash_peony.jpg" alt="피오니 플로럴 연출 이미지" loading="lazy"><figcaption><strong>Floral</strong><small>Peony · Rose</small></figcaption></figure>
+<figure><img src="https://focc2023.cafe24.com/PP_detail/Jeongjo_Detail_cafe24/sebastian-schuster-hCM6gnaF7BQ-unsplash_oudwood.jpg" alt="오우드 우디 연출 이미지" loading="lazy"><figcaption><strong>Woody</strong><small>Oud · Sandalwood · Cedarwood</small></figcaption></figure>
+</div>
+</section>
+<section class="section notes">
+<div class="notes-head"><div><p class="eyebrow">FRAGRANCE NOTES</p><h2 class="heading">시간에 따라 달라지는 향의 표정.</h2></div><p>Woody Floral<br>Rose &amp; Oud</p></div>
+<div class="note-row"><h3>Top Note</h3><p class="ingredients">불가리안 레몬, 라즈베리, 체리, 로즈, 베르가못</p><p class="effect">레몬과 베리의 상큼하고 청량한 첫인상. 정조대왕의 생기와 총명함을 밝게 표현합니다.</p></div>
+<div class="note-row"><h3>Middle Note</h3><p class="ingredients">피오니, 클로브, 시나몬</p><p class="effect">꽃향기의 부드러움과 은은한 스파이스가 만나 따뜻함과 세련된 품격을 더합니다.</p></div>
+<div class="note-row"><h3>Base Note</h3><p class="ingredients">오우드, 인도네시안 패출리, 샌달우드, 시더우드</p><p class="effect">깊고 단단한 나무의 향이 차분하게 오래 남으며 온화한 여운을 이어갑니다.</p></div>
+</section>
+<section class="interlude"><p class="eyebrow">THE IMPRESSION</p><blockquote>총명함은 선명하게,<br>따뜻함은 오래도록.</blockquote></section>
+<section class="section heritage">
+<p class="eyebrow">THE HERITAGE</p><h2 class="heading">향에 담긴 정조대왕의 이야기.</h2>
+<p class="copy lead">정조대왕의 정신을 향으로 기억하는 것은 역사를 그대로 재현하는 일이 아닙니다. 한 시대를 이끌었던 인물에게서 발견한 가치를 오늘의 감각으로 풀어내는 일입니다. 그의 학문에 대한 열정과 개혁 정신, 문화와 예술에 대한 관심은 이 향수가 가진 서사의 출발점이 되었습니다.</p>
 <div class="heritage-grid">
-<article><h3>수원 화성</h3><p>새로운 도시를 구상하고 건설한 정조의 실천적인 개혁 정신을 보여주는 유산입니다.</p></article>
-<article><h3>규장각</h3><p>학문을 장려하고 인재를 육성하는 데 힘썼던 정조의 지적 리더십을 상징합니다.</p></article>
-<article><h3>문화와 예술</h3><p>학문과 문화예술을 함께 중시했던 시대의 면모를 오늘의 향으로 새롭게 해석합니다.</p></article>
+<article><h3>수원 화성</h3><p>정조의 도시 계획과 개혁 정신을 보여주는 대표적인 문화유산입니다. 새로운 시대를 향한 구상과 실천이 함께 담긴 공간으로 기억됩니다.</p></article>
+<article><h3>규장각</h3><p>학문을 장려하고 인재를 모아 지식을 넓히기 위해 설치한 기관입니다. 제도와 지적 리더십을 중시했던 정조의 면모를 보여줍니다.</p></article>
+<article><h3>문화와 예술</h3><p>학문뿐 아니라 문화예술의 진흥에도 관심을 기울였던 정조의 시대. 그의 다양한 면모를 향이라는 또 다른 언어로 해석합니다.</p></article>
 </div></section>
-<section class="closing">
-<img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261123-002450-3794001f-fdf4-4b4e-ac3e-4180dbcd66fe-8ae6698b.webp" alt="정조대왕 오 드 퍼퓸 50ml 제품" loading="lazy">
-<div><h2>일상에 남는 정조대왕의 향.</h2><p>로즈의 섬세한 인상과 오우드의 깊은 잔향이 조화를 이루는 우디 플로럴 오 드 퍼퓸입니다. 은은한 변화를 천천히 즐기며 자신의 일상에 어울리는 방식으로 사용해 보세요.</p></div>
+<section class="section product-focus">
+<figure class="bottle"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261123-002450-3794001f-fdf4-4b4e-ac3e-4180dbcd66fe-8ae6698b.webp" alt="정조대왕 오 드 퍼퓸 정면 제품컷" loading="lazy"></figure>
+<div><p class="eyebrow">EAU DE PARFUM</p><h2 class="heading">정조대왕 오 드 퍼퓸.</h2>
+<p class="copy">세련된 장미와 깊이 있는 오우드를 중심으로 부드러운 꽃향과 우디의 잔향이 이어집니다. 향이 만들어내는 대비와 균형을 일상 속에서 경험해 보세요.</p>
+<div class="detail"><span>SCENT FAMILY</span><strong>Woody Floral · Rose &amp; Oud</strong></div>
+<div class="detail"><span>FOR EVERYONE</span><strong>Genderless · All Seasons</strong></div></div>
 </section>
+<section class="section product-specs">
+<p class="eyebrow">PRODUCT INFORMATION</p><h2 class="heading">제품 정보.</h2>
+<div class="specs">
+<div class="spec"><span>제품명</span><strong>정조대왕 오 드 퍼퓸</strong></div>
+<div class="spec"><span>향 계열</span><strong>우디 플로럴 (Woody Floral)</strong></div>
+<div class="spec"><span>주요 향</span><strong>로즈 · 오우드 (Rose &amp; Oud)</strong></div>
+<div class="spec"><span>제품 타입</span><strong>오 드 퍼퓸 (Eau de Parfum)</strong></div>
+<div class="spec"><span>사용 대상</span><strong>젠더리스 · 사계절</strong></div>
+<div class="spec"><span>지속 시간</span><strong>원본 자료 기준 약 7시간 이상이며 사용 환경에 따라 달라질 수 있습니다.</strong></div>
+</div><p class="caution">※ 용량, 전성분, 제조·판매업자 등의 법정 표기사항은 최종 제품 자료 확인 후 반영해야 합니다.</p>
+</section>
+<div class="endline">한국의 인물과 이야기를 오늘의 향으로 다시 만납니다.</div>
 </main></body></html>
