@@ -131,6 +131,16 @@
  .mobile-category-nav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;z-index:30;background:#fff;border-top:1px solid #eee;box-shadow:0 10px 20px #0001;padding:12px 20px 22px}
  .mobile-category-nav a{font-size:14px;padding:14px 0;border-bottom:1px solid #eee;min-height:44px}
 }
+
+/* Tablet navigation for the expanded six-category menu */
+@media(min-width:951px) and (max-width:1160px){
+ .site-header .nav{display:none!important}
+ .site-header .header-right{display:none!important}
+ .site-header .header-in{display:grid;grid-template-columns:minmax(0,1fr) auto}
+ .site-header .mobile-category-toggle{display:block;grid-column:2;grid-row:1;border:0;background:transparent;font-size:24px;min-width:44px;min-height:44px}
+ .site-header .mobile-category-nav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;z-index:30;background:#fff;border-top:1px solid #eee;box-shadow:0 10px 20px #0001;padding:12px 20px 22px}
+ .site-header .mobile-category-nav a{font-size:14px;padding:14px 0;border-bottom:1px solid #eee;min-height:44px}
+}
 </style></head>
 <body>
 <header class="site-header"><div class="shell header-in">
