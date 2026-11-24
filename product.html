@@ -141,6 +141,9 @@
  .site-header .mobile-category-nav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;z-index:30;background:#fff;border-top:1px solid #eee;box-shadow:0 10px 20px #0001;padding:12px 20px 22px}
  .site-header .mobile-category-nav a{font-size:14px;padding:14px 0;border-bottom:1px solid #eee;min-height:44px}
 }
+
+/* Revised product tabs retain readable tap targets at 320–430px */
+@media(max-width:600px){.product-shell .tabs{gap:5px;justify-content:space-between}.product-shell .tabs button{font-size:10px;line-height:1.35;white-space:normal;text-align:center;flex:1;min-height:48px;padding:8px 2px 11px}.product-shell .editorial-notes .note-block h4{font-size:13px}}
 </style></head>
 <body>
 <header class="site-header"><div class="shell header-in">
@@ -155,16 +158,16 @@
 <div class="gallery"><div class="main-shot"><img id="main-img" alt="향수 제품 이미지"></div>
 <div class="gallery-thumbs"><button type="button" class="thumb active" data-image="main" aria-label="메인 이미지 보기"><img id="thumb-main" alt=""></button>
 <button type="button" class="thumb" data-image="cutout" aria-label="제품 단독 이미지 보기"><img id="thumb-cutout" alt=""></button></div></div>
-<div class="purchase"><h1 id="product-name"></h1><div class="subtitle">HEROES OF KOREA EAU DE PARFUM · 50ml</div>
+<div class="purchase"><h1 id="product-name"></h1><div class="subtitle">HEROES OF KOREA EAU DE PARFUM · 50 mL</div>
 <p class="price" id="price"></p>
-<dl class="specs"><div><dt>제품 유형</dt><dd>오 드 퍼퓸</dd></div><div><dt>용량</dt><dd>50ml</dd></div><div><dt>배송 및 교환</dt><dd>공식 판매처 정책에 따릅니다.</dd></div></dl>
+<dl class="specs"><div><dt>제품 유형</dt><dd>오 드 퍼퓸</dd></div><div><dt>용량</dt><dd>50 mL</dd></div><div><dt>배송 및 교환</dt><dd>공식 판매처 정책에 따릅니다.</dd></div></dl>
 <div class="quantity-row"><span id="option-name"></span><div class="stepper"><button type="button" id="decrease" aria-label="수량 줄이기">−</button><span id="qty">1</span><button type="button" id="increase" aria-label="수량 늘리기">+</button></div></div>
-<div class="total"><span>TOTAL</span><strong id="total"></strong></div>
-<div class="actions"><button class="primary" type="button" disabled aria-label="구매 연결 준비 중">BUY IT NOW</button><button type="button" disabled>CART</button><button type="button" id="copy-link">SHARE</button></div>
+<div class="total"><span>Total Price</span><strong id="total"></strong></div>
+<div class="actions"><button class="primary" type="button" disabled aria-label="구매 연결 준비 중">Buy Now</button><button type="button" disabled>Add to Cart</button><button type="button" id="copy-link">Share</button></div>
 <p class="status">현재 제품페이지 디자인을 적용 중입니다. 실제 구매 및 장바구니는 공식 쇼핑몰 연결 후 이용할 수 있습니다.</p>
 </div></section>
 <section class="detail-area" id="details">
-<div class="tabs" role="tablist" aria-label="상세 정보"><button role="tab" type="button" data-tab="detail" aria-selected="true">Detail</button><button role="tab" type="button" data-tab="review" aria-selected="false">Review</button><button role="tab" type="button" data-tab="qa" aria-selected="false">Q&amp;A</button><button role="tab" type="button" data-tab="delivery" aria-selected="false">Delivery</button></div>
+<div class="tabs" role="tablist" aria-label="상세 정보"><button role="tab" type="button" data-tab="detail" aria-selected="true">Product Details</button><button role="tab" type="button" data-tab="review" aria-selected="false">Reviews</button><button role="tab" type="button" data-tab="qa" aria-selected="false">Q&amp;A</button><button role="tab" type="button" data-tab="delivery" aria-selected="false">Shipping &amp; Returns</button></div>
 <div id="panel-detail" class="tab-panel" role="tabpanel">
 <figure class="detail-feature-image" aria-label="향수 메인 비주얼"><img id="detail-feature-img" alt="" loading="lazy"></figure>
 <section class="editorial-summary" aria-labelledby="editorial-title">
@@ -172,12 +175,12 @@
 <div class="editorial-grid">
 <div class="editorial-copy"><h3 class="editorial-copy-heading">THE FRAGRANCE</h3><p id="editorial-story"></p></div>
 <figure class="editorial-bottle"><img id="editorial-cutout" alt="" loading="lazy"></figure>
-<div class="editorial-notes" id="editorial-notes"><h3>KEY NOTES</h3>
-<div class="note-block"><h4>Top</h4><p id="notes-top"></p></div>
-<div class="note-block"><h4>Middle</h4><p id="notes-middle"></p></div>
-<div class="note-block"><h4>Base</h4><p id="notes-base"></p></div>
+<div class="editorial-notes" id="editorial-notes"><h3>Fragrance Notes</h3>
+<div class="note-block"><h4>Top Notes</h4><p id="notes-top"></p></div>
+<div class="note-block"><h4>Heart Notes</h4><p id="notes-middle"></p></div>
+<div class="note-block"><h4>Base Notes</h4><p id="notes-base"></p></div>
 </div></div>
-<div class="editorial-meta"><span>SCENT FAMILY</span><span id="editorial-family"></span></div>
+<div class="editorial-meta"><span>Fragrance Family</span><span id="editorial-family"></span></div>
 </section><div id="detail-content"></div></div>
 <div id="panel-review" class="tab-panel" role="tabpanel" hidden><div class="empty-panel">상품 리뷰는 공식 쇼핑몰 연결 후 제공됩니다.</div></div>
 <div id="panel-qa" class="tab-panel" role="tabpanel" hidden><div class="empty-panel">상품 문의는 공식 쇼핑몰 연결 후 이용할 수 있습니다.</div></div>
@@ -185,7 +188,7 @@
 </section>
 <section class="collection" aria-labelledby="collection-heading">
 <div class="collection-head"><div><p class="collection-eyebrow">THE FRAGRANCE ARCHIVE</p><h2 id="collection-heading">향수 컬렉션.</h2></div>
-<p class="collection-description">Nine lives, nine distinct impressions.<br>한국의 인물과 시대를 오늘의 향으로 만나보세요.</p></div>
+<p class="collection-description">Every scent holds a story.<br>모든 향에는 하나의 이야기가 담겨 있습니다.</p></div>
 <div class="collection-grid" id="related-products"></div>
 </section>
 </main><footer class="site-footer"><div class="shell footer-in"><a href="index.html"><img src="assets/heroes-of-korea-logo.svg" alt="HEROES OF KOREA"></a><p>HEROES OF KOREA<br>한국의 인물과 이야기를 향으로 기록합니다.</p></div></footer>
@@ -197,8 +200,8 @@ const item=catalog.find(p=>p.id===id)||catalog.find(p=>p.id==='jeongjo');
 let qty=1;
 document.title=item.name+' 오 드 퍼퓸 — HEROES OF KOREA';
 document.getElementById('crumb').textContent=item.name;
-document.getElementById('product-name').textContent=item.name+' EDP 50ml';
-document.getElementById('option-name').textContent=item.name+' EDP 50ml';
+document.getElementById('product-name').textContent=item.name+' EDP 50 mL';
+document.getElementById('option-name').textContent=item.name+' EDP 50 mL';
 document.getElementById('price').textContent=item.price.toLocaleString('ko-KR')+'원';
 document.getElementById('thumb-main').src=item.main;
 document.getElementById('thumb-cutout').src=item.cutout;
@@ -317,5 +320,5 @@ document.querySelectorAll('[data-tab]').forEach(b=>b.setAttribute('aria-selected
 document.querySelectorAll('.tab-panel').forEach(p=>p.hidden=p.id!=='panel-'+btn.dataset.tab);
 }));
 const related=document.getElementById('related-products');
-catalog.forEach(p=>{const a=document.createElement('a');a.href='product.html?id='+encodeURIComponent(p.id);if(p.id===item.id)a.setAttribute('aria-current','page');const visual=document.createElement('span');visual.className='collection-visual';const img=document.createElement('img');img.src=p.main;img.loading='lazy';img.alt=p.name+' 향수';const label=document.createElement('p');label.textContent=p.name+' 오 드 퍼퓸';const meta=document.createElement('small');meta.textContent='EAU DE PARFUM · 50 ML';visual.appendChild(img);a.append(visual,label,meta);related.appendChild(a)});
+catalog.forEach(p=>{const a=document.createElement('a');a.href='product.html?id='+encodeURIComponent(p.id);if(p.id===item.id)a.setAttribute('aria-current','page');const visual=document.createElement('span');visual.className='collection-visual';const img=document.createElement('img');img.src=p.main;img.loading='lazy';img.alt=p.name+' 향수';const label=document.createElement('p');label.textContent=p.name+' 오 드 퍼퓸';const meta=document.createElement('small');meta.textContent='EAU DE PARFUM · 50 mL';visual.appendChild(img);a.append(visual,label,meta);related.appendChild(a)});
 </script></body></html>
