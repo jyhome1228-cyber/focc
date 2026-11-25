@@ -258,6 +258,41 @@ html.embedded .detail-hero{display:none!important}html.embedded .editorial-campa
  .magazine>.scent-visual{padding-top:44px!important}
  .magazine>.scent-visual .new-ingredient-grid{gap:7px!important}
 }
+
+/* HOK QA: align the bottoms of every three-column fragrance image */
+.magazine>.scent-visual .new-ingredient-grid{
+ display:grid!important;
+ grid-template-columns:repeat(3,minmax(0,1fr))!important;
+ align-items:stretch!important;
+ gap:12px!important;
+}
+.magazine>.scent-visual .new-ingredient-grid figure{
+ display:block!important;
+ width:100%!important;
+ min-width:0!important;
+ margin:0!important;
+ padding:0!important;
+ aspect-ratio:1/1!important;
+ height:auto!important;
+ overflow:hidden!important;
+ background:#fff!important;
+}
+.magazine>.scent-visual .new-ingredient-grid figure>img{
+ display:block!important;
+ width:100%!important;
+ height:100%!important;
+ min-height:0!important;
+ max-height:none!important;
+ aspect-ratio:1/1!important;
+ object-fit:cover!important;
+ object-position:center!important;
+}
+@media(max-width:750px){
+ .magazine>.scent-visual .new-ingredient-grid{gap:7px!important}
+}
+@media(max-width:400px){
+ .magazine>.scent-visual .new-ingredient-grid{gap:5px!important}
+}
 </style></head><body><main class="magazine">
 <figure class="detail-hero"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232608-image-e85c14ec.webp" alt="세종대왕 오 드 퍼퓸 제품 대표컷" fetchpriority="high"></figure>
 <section class="section intro"><div><p class="eyebrow">THE STORY BEHIND THE SCENT</p><h2 class="heading">세종대왕, 향으로 남긴 이야기.</h2></div><div><p class="copy">세종대왕의 온화한 리더십과 조용한 자신감에서 영감을 받아 따뜻한 나무 향으로 풀어낸 오 드 퍼퓸입니다. 샌달우드를 중심으로 베티버가 이어지고 앰버·시더우드·패출리가 깊은 잔향을 더합니다.</p><p class="copy">햇볕을 머금은 듯한 샌달우드의 부드러운 첫인상과 베티버의 잔잔한 풀잎 향, 단단한 우디의 마무리가 한 사람의 포용력과 신념을 향으로 표현합니다.</p></div></section>
