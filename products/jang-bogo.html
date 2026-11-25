@@ -258,6 +258,41 @@ html.embedded .detail-hero{display:none!important}html.embedded .editorial-campa
  .magazine>.scent-visual{padding-top:44px!important}
  .magazine>.scent-visual .new-ingredient-grid{gap:7px!important}
 }
+
+/* HOK QA: align the bottoms of every three-column fragrance image */
+.magazine>.scent-visual .new-ingredient-grid{
+ display:grid!important;
+ grid-template-columns:repeat(3,minmax(0,1fr))!important;
+ align-items:stretch!important;
+ gap:12px!important;
+}
+.magazine>.scent-visual .new-ingredient-grid figure{
+ display:block!important;
+ width:100%!important;
+ min-width:0!important;
+ margin:0!important;
+ padding:0!important;
+ aspect-ratio:1/1!important;
+ height:auto!important;
+ overflow:hidden!important;
+ background:#fff!important;
+}
+.magazine>.scent-visual .new-ingredient-grid figure>img{
+ display:block!important;
+ width:100%!important;
+ height:100%!important;
+ min-height:0!important;
+ max-height:none!important;
+ aspect-ratio:1/1!important;
+ object-fit:cover!important;
+ object-position:center!important;
+}
+@media(max-width:750px){
+ .magazine>.scent-visual .new-ingredient-grid{gap:7px!important}
+}
+@media(max-width:400px){
+ .magazine>.scent-visual .new-ingredient-grid{gap:5px!important}
+}
 </style></head><body><main class="magazine">
 <figure class="detail-hero"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232609-image-9c29409e.webp" alt="장보고 오 드 퍼퓸 제품 대표컷" fetchpriority="high"></figure>
 <section class="section intro"><div><p class="eyebrow">THE STORY BEHIND THE SCENT</p><h2 class="heading">장보고, 바다를 향한 개척 정신을 담은 향.</h2></div><div><p class="copy">해상왕 장보고에게서 영감을 받은 오 드 퍼퓸입니다. 거대한 바다를 향해 나아간 그의 개척 정신과 자유로움, 그리고 불확실함 속에서도 자신의 길을 만들어 가던 용기를 향으로 담았습니다.</p><p class="copy">팔로산토와 세이지의 산뜻하고 맑은 허벌 우디 향으로 시작됩니다. 로즈가 중심을 잡고 시더우드와 샌달우드, 토바코, 헤이의 따뜻한 잔향이 이어지는 우디 계열의 향수입니다.</p></div></section>
