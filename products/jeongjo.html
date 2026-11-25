@@ -341,6 +341,41 @@ html.embedded .detail-hero{display:none!important}html.embedded .editorial-campa
  .magazine>.endline{padding:23px var(--detail-gutter) 28px!important}
 }
 @media(max-width:400px){.magazine{--detail-gutter:16px}}
+
+/* HOK QA: align the bottoms of every three-column fragrance image */
+.magazine>.scent-visual .new-ingredient-grid{
+ display:grid!important;
+ grid-template-columns:repeat(3,minmax(0,1fr))!important;
+ align-items:stretch!important;
+ gap:12px!important;
+}
+.magazine>.scent-visual .new-ingredient-grid figure{
+ display:block!important;
+ width:100%!important;
+ min-width:0!important;
+ margin:0!important;
+ padding:0!important;
+ aspect-ratio:1/1!important;
+ height:auto!important;
+ overflow:hidden!important;
+ background:#fff!important;
+}
+.magazine>.scent-visual .new-ingredient-grid figure>img{
+ display:block!important;
+ width:100%!important;
+ height:100%!important;
+ min-height:0!important;
+ max-height:none!important;
+ aspect-ratio:1/1!important;
+ object-fit:cover!important;
+ object-position:center!important;
+}
+@media(max-width:750px){
+ .magazine>.scent-visual .new-ingredient-grid{gap:7px!important}
+}
+@media(max-width:400px){
+ .magazine>.scent-visual .new-ingredient-grid{gap:5px!important}
+}
 </style></head><body><main class="magazine">
 <figure class="detail-hero"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232609-image-bd940268.webp" alt="정조대왕 오 드 퍼퓸을 손에 든 제품컷" fetchpriority="high"></figure>
 <section class="section intro">
