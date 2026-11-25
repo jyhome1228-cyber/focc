@@ -177,6 +177,20 @@
 .gallery-thumbs .thumb{flex:0 0 85px;max-width:85px}
 #panel-detail>.editorial-summary{padding-top:60px}
 @media(max-width:600px){.gallery-thumbs .thumb{flex-basis:70px;max-width:70px!important}#panel-detail>.editorial-summary{padding-top:45px}}
+
+/* Align product editorial, closing section and related archive to common interior grid */
+.product-shell{max-width:1000px}
+.product-shell #panel-detail{padding-bottom:28px!important}
+.product-shell .editorial-summary{padding-left:64px!important;padding-right:64px!important;margin-bottom:35px!important}
+.product-shell .collection{padding:70px 64px 95px!important;margin:0;border-top:1px solid #e6e6e6}
+.product-shell .collection-head{gap:24px}
+.product-shell .collection-grid{width:100%}
+@media(max-width:750px){
+ .product-shell .editorial-summary{padding-left:20px!important;padding-right:20px!important}
+ .product-shell .collection{padding:54px 20px 75px!important}
+ .product-shell #panel-detail{padding-bottom:12px!important}
+}
+@media(max-width:400px){.product-shell .editorial-summary{padding-left:16px!important;padding-right:16px!important}.product-shell .collection{padding-left:16px!important;padding-right:16px!important}}
 </style></head>
 <body>
 <header class="site-header"><div class="shell header-in">
