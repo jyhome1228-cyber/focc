@@ -289,6 +289,58 @@ html.embedded .detail-hero{display:none!important}html.embedded .editorial-campa
  .magazine>.endline{padding:26px 20px 32px!important}
 }
 @media(max-width:400px){.magazine>.section{padding-left:16px!important;padding-right:16px!important}.magazine>.legacy-editorial-story>.words{padding-left:16px!important;padding-right:16px!important}}
+
+/* JEONGJO EDITORIAL MASTER V2 — one-column visuals, consistent content edges */
+.magazine{--detail-gutter:64px;--detail-section-gap:62px;width:100%!important;max-width:1000px!important;padding-bottom:0!important}
+.magazine>.section{width:100%!important;max-width:none!important;margin:0!important;padding:var(--detail-section-gap) var(--detail-gutter)!important;box-sizing:border-box}
+.magazine>.detail-hero{margin:0!important;width:100%!important}
+.magazine>.intro{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:44px;padding-top:65px!important;padding-bottom:65px!important}
+.magazine>.legacy-editorial-story{display:flex!important;flex-direction:column;gap:0!important;width:100%!important;max-width:100%!important;margin:0!important;padding:0 var(--detail-gutter)!important;border-top:0!important;border-bottom:0!important;align-items:stretch!important}
+.magazine>.legacy-editorial-story>.photo{height:auto!important;min-height:0!important;max-height:none!important;width:100%!important;margin:0!important;overflow:hidden}
+.magazine>.legacy-editorial-story>.photo img{display:block;width:100%!important;height:auto!important;min-height:0!important;max-height:470px!important;aspect-ratio:16/9;object-fit:cover;object-position:center}
+.magazine>.legacy-editorial-story>.words{width:100%!important;max-width:none!important;min-width:0;padding:31px 0 44px!important;display:block!important}
+.magazine>.legacy-editorial-story .words .heading{margin:12px 0 20px!important}
+.magazine>.legacy-editorial-story .words .copy{max-width:760px}
+.magazine>.scent-visual{padding-top:55px!important;padding-bottom:72px!important}
+.magazine>.scent-visual .new-ingredient-grid{gap:12px!important;margin-top:32px!important}
+.magazine>.notes{padding-top:63px!important;padding-bottom:64px!important}
+.magazine>.interlude{padding:70px var(--detail-gutter) 76px!important;margin:0!important;min-height:0!important}
+.magazine>.interlude blockquote{font-size:clamp(23px,2.8vw,30px);line-height:1.7}
+.magazine>.heritage{padding-top:63px!important;padding-bottom:69px!important}
+.magazine>.heritage .heading{margin:14px 0 28px!important}
+.magazine .heritage-story-layout{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;width:100%;margin:0 0 35px!important}
+.magazine .heritage-story-layout>.heritage-story-photo{display:block;width:100%;margin:0!important;min-width:0;overflow:hidden}
+.magazine .heritage-story-photo img{display:block;width:100%!important;height:auto!important;max-height:480px!important;aspect-ratio:16/9;object-fit:cover;object-position:center 46%}
+.magazine .heritage-story-copy{width:100%;max-width:760px;padding:26px 0 0!important;margin:0!important}
+.magazine .heritage-story-copy .heritage-enlead{margin:0 0 12px!important}
+.magazine .heritage-grid{width:100%;gap:24px!important;margin-top:32px!important}
+.magazine>.product-focus{display:flex!important;flex-direction:column!important;align-items:stretch!important;width:100%;gap:0!important;padding-top:64px!important;padding-bottom:66px!important}
+.magazine>.product-focus>.product-focus-packshot{display:block;width:100%!important;min-width:0;margin:0!important;overflow:hidden}
+.magazine>.product-focus .product-focus-packshot img{display:block;width:100%!important;height:auto!important;max-height:480px!important;aspect-ratio:16/9;object-fit:cover;object-position:center}
+.magazine>.product-focus>div{width:100%!important;max-width:none!important;margin:0!important;padding:28px 0 0!important;min-width:0}
+.magazine>.product-focus>div .copy{max-width:760px}
+.magazine>.product-focus .detail{max-width:760px;margin-top:20px}
+.magazine>.product-specs{padding-top:62px!important;padding-bottom:55px!important}
+.magazine>.product-specs .spec{grid-template-columns:165px minmax(0,1fr)}
+.magazine>.endline{width:100%;padding:25px var(--detail-gutter) 28px!important;margin:0!important;border-top:0!important;line-height:1.8}
+@media(max-width:750px){
+ .magazine{--detail-gutter:20px;--detail-section-gap:47px}
+ .magazine>.intro{grid-template-columns:minmax(0,1fr);gap:22px;padding-top:49px!important;padding-bottom:48px!important}
+ .magazine>.legacy-editorial-story>.photo img,.magazine .heritage-story-photo img,.magazine>.product-focus .product-focus-packshot img{aspect-ratio:4/3;max-height:370px!important}
+ .magazine>.legacy-editorial-story>.words{padding:26px 0 30px!important}
+ .magazine>.scent-visual{padding-top:45px!important;padding-bottom:53px!important}
+ .magazine>.notes{padding-top:48px!important;padding-bottom:54px!important}
+ .magazine>.interlude{padding:55px var(--detail-gutter) 61px!important}
+ .magazine>.heritage{padding-top:48px!important;padding-bottom:54px!important}
+ .magazine .heritage-story-copy{padding-top:23px!important}
+ .magazine .heritage-grid{grid-template-columns:minmax(0,1fr);gap:19px!important;margin-top:28px!important}
+ .magazine>.product-focus{padding-top:50px!important;padding-bottom:54px!important}
+ .magazine>.product-focus>div{padding-top:24px!important}
+ .magazine>.product-specs{padding-top:49px!important;padding-bottom:48px!important}
+ .magazine>.product-specs .spec{grid-template-columns:104px minmax(0,1fr);gap:12px}
+ .magazine>.endline{padding:23px var(--detail-gutter) 28px!important}
+}
+@media(max-width:400px){.magazine{--detail-gutter:16px}}
 </style></head><body><main class="magazine">
 <figure class="detail-hero"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232609-image-bd940268.webp" alt="정조대왕 오 드 퍼퓸을 손에 든 제품컷" fetchpriority="high"></figure>
 <section class="section intro">
