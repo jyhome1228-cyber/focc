@@ -180,6 +180,63 @@ html.embedded .detail-hero{display:none!important}html.embedded .editorial-campa
  .magazine>.legacy-heritage-gallery{padding:0 20px 70px;gap:9px}
 }
 @media(max-width:400px){.magazine>.section{padding-left:16px;padding-right:16px}.magazine .new-ingredient-grid{gap:5px!important}}
+/* HOK EDITORIAL MASTER V2 — approved Jeongjo one-column visual system */
+.magazine{--detail-gutter:64px;--detail-section-gap:62px;width:100%!important;max-width:1000px!important;padding-bottom:0!important}
+.magazine>.section{width:100%!important;max-width:none!important;margin:0!important;padding:var(--detail-section-gap) var(--detail-gutter)!important;box-sizing:border-box}
+.magazine>.detail-hero{margin:0!important;width:100%!important}
+.magazine>.intro{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:44px;padding-top:65px!important;padding-bottom:65px!important}
+.magazine>.legacy-editorial-story{display:flex!important;flex-direction:column;gap:0!important;width:100%!important;max-width:100%!important;margin:0!important;padding:0 var(--detail-gutter)!important;border-top:0!important;border-bottom:0!important;align-items:stretch!important}
+.magazine>.legacy-editorial-story>.photo{height:auto!important;min-height:0!important;max-height:none!important;width:100%!important;margin:0!important;overflow:hidden}
+.magazine>.legacy-editorial-story>.photo img{display:block;width:100%!important;height:auto!important;min-height:0!important;max-height:470px!important;aspect-ratio:16/9;object-fit:cover;object-position:center}
+.magazine>.legacy-editorial-story>.words{width:100%!important;max-width:none!important;min-width:0;padding:31px 0 44px!important;display:block!important}
+.magazine>.legacy-editorial-story .words .heading{margin:12px 0 20px!important}
+.magazine>.legacy-editorial-story .words .copy{max-width:760px}
+.magazine>.scent-visual{padding-top:55px!important;padding-bottom:72px!important}
+.magazine>.scent-visual .new-ingredient-grid{gap:12px!important;margin-top:32px!important}
+.magazine>.notes{padding-top:63px!important;padding-bottom:64px!important}
+.magazine>.interlude{padding:70px var(--detail-gutter) 76px!important;margin:0!important;min-height:0!important}
+.magazine>.interlude blockquote{font-size:clamp(23px,2.8vw,30px);line-height:1.7}
+.magazine>.heritage{padding-top:63px!important;padding-bottom:69px!important}
+.magazine>.heritage .heading{margin:14px 0 28px!important}
+.magazine .heritage-story-layout{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;width:100%;margin:0 0 35px!important}
+.magazine .heritage-story-layout>.heritage-story-photo{display:block;width:100%;margin:0!important;min-width:0;overflow:hidden}
+.magazine .heritage-story-photo img{display:block;width:100%!important;height:auto!important;max-height:480px!important;aspect-ratio:16/9;object-fit:cover;object-position:center 46%}
+.magazine .heritage-story-copy{width:100%;max-width:760px;padding:26px 0 0!important;margin:0!important}
+.magazine .heritage-story-copy .heritage-enlead{margin:0 0 12px!important}
+.magazine .heritage-grid{width:100%;gap:24px!important;margin-top:32px!important}
+.magazine>.product-focus{display:flex!important;flex-direction:column!important;align-items:stretch!important;width:100%;gap:0!important;padding-top:64px!important;padding-bottom:66px!important}
+.magazine>.product-focus>.product-focus-packshot{display:block;width:100%!important;min-width:0;margin:0!important;overflow:hidden}
+.magazine>.product-focus .product-focus-packshot img{display:block;width:100%!important;height:auto!important;max-height:480px!important;aspect-ratio:16/9;object-fit:cover;object-position:center}
+.magazine>.product-focus>div{width:100%!important;max-width:none!important;margin:0!important;padding:28px 0 0!important;min-width:0}
+.magazine>.product-focus>div .copy{max-width:760px}
+.magazine>.product-focus .detail{max-width:760px;margin-top:20px}
+.magazine>.product-specs{padding-top:62px!important;padding-bottom:55px!important}
+.magazine>.product-specs .spec{grid-template-columns:165px minmax(0,1fr)}
+.magazine>.endline{width:100%;padding:25px var(--detail-gutter) 28px!important;margin:0!important;border-top:0!important;line-height:1.8}
+@media(max-width:750px){
+ .magazine{--detail-gutter:20px;--detail-section-gap:47px}
+ .magazine>.intro{grid-template-columns:minmax(0,1fr);gap:22px;padding-top:49px!important;padding-bottom:48px!important}
+ .magazine>.legacy-editorial-story>.photo img,.magazine .heritage-story-photo img,.magazine>.product-focus .product-focus-packshot img{aspect-ratio:4/3;max-height:370px!important}
+ .magazine>.legacy-editorial-story>.words{padding:26px 0 30px!important}
+ .magazine>.scent-visual{padding-top:45px!important;padding-bottom:53px!important}
+ .magazine>.notes{padding-top:48px!important;padding-bottom:54px!important}
+ .magazine>.interlude{padding:55px var(--detail-gutter) 61px!important}
+ .magazine>.heritage{padding-top:48px!important;padding-bottom:54px!important}
+ .magazine .heritage-story-copy{padding-top:23px!important}
+ .magazine .heritage-grid{grid-template-columns:minmax(0,1fr);gap:19px!important;margin-top:28px!important}
+ .magazine>.product-focus{padding-top:50px!important;padding-bottom:54px!important}
+ .magazine>.product-focus>div{padding-top:24px!important}
+ .magazine>.product-specs{padding-top:49px!important;padding-bottom:48px!important}
+ .magazine>.product-specs .spec{grid-template-columns:104px minmax(0,1fr);gap:12px}
+ .magazine>.endline{padding:23px var(--detail-gutter) 28px!important}
+}
+@media(max-width:400px){.magazine{--detail-gutter:16px}}
+
+/* Additional visual supplied for this fragrance; subordinate to the main product/heritage imagery */
+.magazine>.new-story-hero{width:calc(100% - (var(--detail-gutter) * 2))!important;margin:10px var(--detail-gutter) 0!important;height:clamp(200px,29vw,310px)!important;overflow:hidden;background:#f6f4f1}
+.magazine>.new-story-hero img{display:block;width:100%!important;height:100%!important;max-width:100%!important;object-fit:cover!important;object-position:center}
+.magazine>.scent-visual{padding-top:45px!important}
+@media(max-width:750px){.magazine>.new-story-hero{height:clamp(165px,52vw,245px)!important;margin-top:8px!important}.magazine>.scent-visual{padding-top:36px!important}}
 </style></head><body><main class="magazine">
 <figure class="detail-hero"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232609-image-337e3afc.webp" alt="이순신 오 드 퍼퓸 제품 대표컷" fetchpriority="high"></figure>
 <section class="section intro"><div><p class="eyebrow">THE STORY BEHIND THE SCENT</p><h2 class="heading">이순신, 향으로 남긴 이야기.</h2></div><div><p class="copy">이순신 장군의 흔들리지 않는 평정심과 조용한 리더십에서 영감을 받은 아쿠아 계열 오 드 퍼퓸입니다. 전투 같은 하루가 끝나고 일상을 차분히 정돈하는 순간의 향을 표현했습니다.</p><p class="copy">깨끗한 아쿠아 노트에 이태리산 레몬과 베르가못이 더해져 상쾌하게 시작됩니다. 사이프러스와 제라늄이 중심을 잡아주고, 코코넛과 모스, 시더우드와 패출리가 부드러운 여운을 남깁니다.</p></div></section>
@@ -188,8 +245,7 @@ html.embedded .detail-hero{display:none!important}html.embedded .editorial-campa
 <section class="section scent-visual"><p class="eyebrow">THE INGREDIENTS</p><h2 class="heading">향을 이루는 세 가지 인상.</h2><p class="copy desc">첫 향부터 잔향까지, 서로 다른 향의 요소가 하나의 흐름으로 이어집니다.</p><div class="scent-gallery new-ingredient-grid"><figure><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090328-2-06b1b0ca.webp" alt="이순신 향의 구성 이미지 1" loading="lazy" decoding="async"></figure><figure><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090329-3-401a8713.webp" alt="이순신 향의 구성 이미지 2" loading="lazy" decoding="async"></figure><figure><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090329-4-a13ecf82.webp" alt="이순신 향의 구성 이미지 3" loading="lazy" decoding="async"></figure></div></section>
 <section class="section notes"><div class="notes-head"><div><p class="eyebrow">FRAGRANCE NOTES</p><h2 class="heading">시간에 따라 달라지는 향의 표정.</h2></div><p>Aqua · Acqua &amp; Cypress</p></div><div class="note-row"><h3>Top Note</h3><p class="ingredients">아쿠아, 이태리산 레몬, 베르가못</p><p class="effect">깨끗한 아쿠아와 시트러스가 비누처럼 산뜻하고 맑게 시작됩니다.</p></div><div class="note-row"><h3>Middle Note</h3><p class="ingredients">사이프러스, 제라늄</p><p class="effect">푸르고 고요한 사이프러스와 은은한 제라늄이 차분한 중심을 만듭니다.</p></div><div class="note-row"><h3>Base Note</h3><p class="ingredients">코코넛, 모스, 시더우드, 패출리</p><p class="effect">부드러운 코코넛과 모스, 안정적인 나무 향이 잔잔하게 이어집니다.</p></div></section>
 <section class="interlude"><p class="eyebrow">A PORTRAIT IN SCENT</p><blockquote>조용한 평정심을 담아.<br>깨끗한 향으로 남다.</blockquote><p class="interlude-en">A sense of calm, carried through the day.</p></section>
-<section class="section heritage"><p class="eyebrow">THE HERITAGE</p><h2 class="heading">이순신 장군의 이야기를 향으로.</h2><p class="heritage-enlead">History, interpreted through fragrance.</p><p class="copy lead">이순신 장군에게서 발견한 절제된 용기와 흔들리지 않는 책임감을 오늘의 아쿠아 향으로 풀어냈습니다. 기존 자료는 『난중일기』에 담긴 일상과 리더의 무게를 향의 이야기와 연결합니다.</p><div class="heritage-grid"><article><span class="heritage-en">CALM LEADERSHIP</span><h3>침착한 리더십.</h3><p>큰일 앞에서도 중심을 잃지 않는 모습에서 향의 차분한 성격을 떠올렸습니다.</p><p>상쾌한 아쿠아와 정돈된 그린 노트가 조용한 존재감을 전합니다.</p></article><article><span class="heritage-en">NANJUNG ILGI · ADMIRAL YI'S WAR DIARY</span><h3>난중일기의 기록.</h3><p>『난중일기』에 기록된 하루하루의 고뇌와 책임을 오늘의 일상에 비추어 봅니다.</p><p>복잡한 하루를 마치고 평온함을 되찾는 순간을 향의 분위기로 표현했습니다.</p></article><article><span class="heritage-en">A CLEAR HORIZON</span><h3>수평선의 고요함.</h3><p>사이프러스와 제라늄, 모스와 나무 향이 긴장 뒤에 찾아오는 평온을 그립니다.</p><p>자신의 호흡과 마음을 다시 정돈하고 싶은 때에 어울리는 향입니다.</p></article></div></section>
-<div class="legacy-heritage-gallery" aria-label="이순신 스토리 이미지 갤러리"><figure><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-023114-2-851d4ccf.webp" alt="이순신 브랜드 스토리 이미지 2" loading="lazy" decoding="async"></figure><figure><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-023114-3-292dfacf.webp" alt="이순신 브랜드 스토리 이미지 3" loading="lazy" decoding="async"></figure></div>
-<section class="section product-focus"><div><p class="eyebrow">EAU DE PARFUM</p><h2 class="heading">이순신 오 드 퍼퓸.</h2><p class="copy">맑은 아쿠아와 이탈리아산 레몬, 베르가못의 상쾌함이 사이프러스·제라늄으로 이어지고, 코코넛·모스·시더우드·패출리로 부드럽게 마무리되는 젠더리스 아쿠아 오 드 퍼퓸입니다.</p><div class="detail"><span>SCENT FAMILY</span><strong>Aqua · Acqua &amp; Cypress</strong></div><div class="detail"><span>FOR EVERYONE</span><strong>Genderless · All Seasons</strong></div></div></section>
+<section class="section heritage"><p class="eyebrow">THE HERITAGE</p><h2 class="heading">이순신 장군의 이야기를 향으로.</h2><div class="heritage-story-layout"><figure class="heritage-story-photo"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-023114-2-851d4ccf.webp" alt="이순신 브랜드 스토리 사진" loading="lazy" decoding="async"></figure><div class="heritage-story-copy"><p class="heritage-enlead">History, interpreted through fragrance.</p><p class="copy lead">이순신 장군에게서 발견한 절제된 용기와 흔들리지 않는 책임감을 오늘의 아쿠아 향으로 풀어냈습니다. 기존 자료는 『난중일기』에 담긴 일상과 리더의 무게를 향의 이야기와 연결합니다.</p></div></div><div class="heritage-grid"><article><span class="heritage-en">CALM LEADERSHIP</span><h3>침착한 리더십.</h3><p>큰일 앞에서도 중심을 잃지 않는 모습에서 향의 차분한 성격을 떠올렸습니다.</p><p>상쾌한 아쿠아와 정돈된 그린 노트가 조용한 존재감을 전합니다.</p></article><article><span class="heritage-en">NANJUNG ILGI · ADMIRAL YI'S WAR DIARY</span><h3>난중일기의 기록.</h3><p>『난중일기』에 기록된 하루하루의 고뇌와 책임을 오늘의 일상에 비추어 봅니다.</p><p>복잡한 하루를 마치고 평온함을 되찾는 순간을 향의 분위기로 표현했습니다.</p></article><article><span class="heritage-en">A CLEAR HORIZON</span><h3>수평선의 고요함.</h3><p>사이프러스와 제라늄, 모스와 나무 향이 긴장 뒤에 찾아오는 평온을 그립니다.</p><p>자신의 호흡과 마음을 다시 정돈하고 싶은 때에 어울리는 향입니다.</p></article></div></section>
+<section class="section product-focus"><figure class="product-focus-packshot"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-023114-3-292dfacf.webp" alt="이순신 향수 브랜드 에디토리얼 사진" loading="lazy" decoding="async"></figure><div><p class="eyebrow">EAU DE PARFUM</p><h2 class="heading">이순신 오 드 퍼퓸.</h2><p class="copy">맑은 아쿠아와 이탈리아산 레몬, 베르가못의 상쾌함이 사이프러스·제라늄으로 이어지고, 코코넛·모스·시더우드·패출리로 부드럽게 마무리되는 젠더리스 아쿠아 오 드 퍼퓸입니다.</p><div class="detail"><span>SCENT FAMILY</span><strong>Aqua · Acqua &amp; Cypress</strong></div><div class="detail"><span>FOR EVERYONE</span><strong>Genderless · All Seasons</strong></div></div></section>
 <section class="section product-specs"><p class="eyebrow">PRODUCT INFORMATION</p><h2 class="heading">제품 정보.</h2><div class="specs"><div class="spec"><span>제품명</span><strong>이순신 오 드 퍼퓸</strong></div><div class="spec"><span>향 계열</span><strong>Aqua · Acqua &amp; Cypress</strong></div><div class="spec"><span>제품 타입</span><strong>Eau de Parfum</strong></div><div class="spec"><span>용량</span><strong>50ml</strong></div><div class="spec"><span>추천 사용</span><strong>Genderless · All Seasons</strong></div><div class="spec"><span>지속 시간</span><strong>원본 자료에는 5시간 이상 및 6~8시간 이상으로 표기가 달라 지속시간 확인이 필요합니다.</strong></div></div><p class="caution">※ 전성분, 제조·판매 정보와 최종 제품 표시사항은 확정 자료로 검수한 후 반영해야 합니다.</p></section>
 <div class="endline">한국의 인물과 이야기를 오늘의 향으로 다시 만납니다.</div></main></body></html>
