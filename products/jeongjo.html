@@ -198,6 +198,34 @@ html.embedded .detail-hero{display:none!important}html.embedded .editorial-campa
  .magazine>.scent-visual{padding-top:77px;padding-bottom:88px}
 }
 @media(max-width:400px){.magazine>.new-story-hero{width:calc(100% - 32px);margin:0 16px}.magazine>.legacy-editorial-story{width:calc(100% - 32px)!important;margin:0 16px}}
+
+/* Jeongjo secondary scent photograph: restrained editorial landscape, not another hero */
+.magazine>.new-story-hero{
+ width:calc(100% - 128px)!important;
+ margin:34px 64px 0!important;
+ height:clamp(260px,34vw,350px)!important;
+ overflow:hidden;
+ background:#f4f1ed;
+}
+.magazine>.new-story-hero img{
+ width:100%!important;
+ height:100%!important;
+ max-width:none!important;
+ object-fit:cover!important;
+ object-position:center 53%!important;
+}
+.magazine>.scent-visual{padding-top:76px!important}
+@media(max-width:750px){
+ .magazine>.new-story-hero{
+  width:calc(100% - 40px)!important;
+  margin:24px 20px 0!important;
+  height:clamp(190px,53vw,290px)!important;
+ }
+ .magazine>.scent-visual{padding-top:62px!important}
+}
+@media(max-width:400px){
+ .magazine>.new-story-hero{width:calc(100% - 32px)!important;margin-left:16px!important;margin-right:16px!important}
+}
 </style></head><body><main class="magazine">
 <figure class="detail-hero"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-023226-2-74cfd5a4.webp" alt="정조대왕 오 드 퍼퓸을 손에 든 제품컷" fetchpriority="high"></figure>
 <section class="section intro">
