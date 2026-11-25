@@ -257,6 +257,38 @@ html.embedded .detail-hero{display:none!important}html.embedded .editorial-campa
  .magazine>.product-specs .spec{grid-template-columns:105px minmax(0,1fr);gap:12px}
 }
 @media(max-width:400px){.magazine>.section{padding-left:16px!important;padding-right:16px!important}}
+
+/* Jeongjo final width and spacing corrections: no repeated rose/oud banner */
+.magazine{width:100%;max-width:1000px;margin:0 auto;padding-bottom:0!important}
+.magazine>.detail-hero{width:100%;margin:0}
+.magazine>.section{width:100%;max-width:100%;padding-left:64px!important;padding-right:64px!important}
+.magazine>.legacy-editorial-story{
+ width:100%!important;max-width:100%!important;
+ margin:0!important;display:grid!important;
+ grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+ border-top:1px solid #ededed;border-bottom:1px solid #ededed;
+}
+.magazine>.legacy-editorial-story>.photo{height:430px!important;min-height:0!important}
+.magazine>.legacy-editorial-story>.photo img{height:100%!important;min-height:0!important;object-fit:cover;object-position:center}
+.magazine>.legacy-editorial-story>.words{padding:36px 52px!important}
+.magazine>.scent-visual{padding-top:84px!important;padding-bottom:95px!important}
+.magazine>.notes{padding-top:94px!important;padding-bottom:100px!important}
+.magazine>.interlude{padding-top:85px!important;padding-bottom:88px!important}
+.magazine>.heritage{padding-top:80px!important;padding-bottom:82px!important}
+.magazine>.product-focus{padding-top:80px!important;padding-bottom:85px!important}
+.magazine>.product-specs{padding-top:82px!important;padding-bottom:85px!important}
+.magazine>.endline{padding:32px 64px 35px!important;border-top:0;text-align:center;font-size:12px}
+@media(max-width:750px){
+ .magazine>.section{padding-left:20px!important;padding-right:20px!important}
+ .magazine>.legacy-editorial-story{grid-template-columns:minmax(0,1fr)!important}
+ .magazine>.legacy-editorial-story>.photo{height:auto!important;max-height:340px!important}
+ .magazine>.legacy-editorial-story>.photo img{width:100%;height:auto!important;max-height:340px;aspect-ratio:4/3;object-fit:cover}
+ .magazine>.legacy-editorial-story>.words{padding:36px 20px 48px!important}
+ .magazine>.interlude{padding:65px 20px 70px!important}
+ .magazine>.product-specs{padding-top:67px!important;padding-bottom:70px!important}
+ .magazine>.endline{padding:26px 20px 32px!important}
+}
+@media(max-width:400px){.magazine>.section{padding-left:16px!important;padding-right:16px!important}.magazine>.legacy-editorial-story>.words{padding-left:16px!important;padding-right:16px!important}}
 </style></head><body><main class="magazine">
 <figure class="detail-hero"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232609-image-bd940268.webp" alt="정조대왕 오 드 퍼퓸을 손에 든 제품컷" fetchpriority="high"></figure>
 <section class="section intro">
@@ -270,7 +302,6 @@ html.embedded .detail-hero{display:none!important}html.embedded .editorial-campa
 <p class="copy">장미는 섬세하고 명료한 인상을 전하고, 오우드는 시간이 지날수록 깊어지는 분위기를 만듭니다. 서로 대비되는 두 향의 성격이 만나 차분한 균형을 완성합니다.</p>
 <p class="copy">첫 순간의 상큼함과 잔향의 따뜻함이 자연스럽게 이어져, 계절과 성별에 얽매이지 않고 각자의 방식으로 즐길 수 있는 향입니다.</p></div>
 </section>
-<figure class="new-story-hero"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090500-1-1993892a.webp" alt="정조대왕 향의 콘셉트 이미지" loading="lazy" decoding="async"></figure>
 <section class="section scent-visual">
 <p class="eyebrow">THE INGREDIENTS</p><h2 class="heading">향을 이루는 세 가지 인상.</h2><p class="copy desc">로즈와 오우드를 중심으로 산뜻한 과일 향, 부드러운 플로럴, 묵직한 우디가 순서대로 펼쳐집니다. 각 노트의 원료를 통해 향이 가진 감각을 조금 더 가까이 살펴볼 수 있습니다.</p>
 <div class="scent-gallery new-ingredient-grid"><figure><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090500-2-c5f455c5.webp" alt="정조대왕 향의 구성 이미지 1" loading="lazy" decoding="async"></figure><figure><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090500-3-507d249e.webp" alt="정조대왕 향의 구성 이미지 2" loading="lazy" decoding="async"></figure><figure><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090501-4-53300e9d.webp" alt="정조대왕 향의 구성 이미지 3" loading="lazy" decoding="async"></figure></div>
