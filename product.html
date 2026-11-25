@@ -170,6 +170,13 @@
 .product-shell .editorial-summary{width:100%;max-width:1000px;margin-left:auto;margin-right:auto;box-sizing:border-box}
 .product-shell .editorial-frame{width:100%;max-width:1000px;display:block;margin:0 auto}
 @media(max-width:700px){.product-shell .editorial-summary{padding-left:20px;padding-right:20px}.product-shell #panel-detail{padding-left:0;padding-right:0}}
+
+/* 2026-11-25: product photography only in commerce gallery, no duplicate full-width image */
+.gallery-thumbs .thumb[hidden]{display:none!important}
+.gallery-thumbs{flex-wrap:wrap;align-items:center}
+.gallery-thumbs .thumb{flex:0 0 85px;max-width:85px}
+#panel-detail>.editorial-summary{padding-top:60px}
+@media(max-width:600px){.gallery-thumbs .thumb{flex-basis:70px;max-width:70px!important}#panel-detail>.editorial-summary{padding-top:45px}}
 </style></head>
 <body>
 <header class="site-header"><div class="shell header-in">
@@ -182,8 +189,10 @@
 <div class="breadcrumb"><a href="index.html">홈</a> &nbsp;·&nbsp; <a href="perfume.html">향수</a> &nbsp;·&nbsp; <span id="crumb">제품</span></div>
 <section class="product-layout" aria-label="상품 상세">
 <div class="gallery"><div class="main-shot"><img id="main-img" alt="향수 제품 이미지"></div>
-<div class="gallery-thumbs"><button type="button" class="thumb active" data-image="main" aria-label="기존 제품 이미지 보기"><img id="thumb-main" alt=""></button>
-<button type="button" class="thumb" data-image="cutout" aria-label="제품 단독컷 보기"><img id="thumb-cutout" alt=""></button></div></div>
+<div class="gallery-thumbs"><button type="button" class="thumb active" data-image="main" aria-label="제품 대표 이미지 보기"><img id="thumb-main" alt=""></button>
+<button type="button" class="thumb thumb-campaign" data-image="hand" aria-label="손에 든 제품 이미지 보기" hidden><img id="thumb-hand" alt=""></button>
+<button type="button" class="thumb thumb-campaign" data-image="box" aria-label="박스와 제품 이미지 보기" hidden><img id="thumb-box" alt=""></button>
+<button type="button" class="thumb" data-image="cutout" aria-label="제품 누끼 이미지 보기"><img id="thumb-cutout" alt=""></button></div></div>
 <div class="purchase"><h1 id="product-name"></h1><div class="subtitle">HEROES OF KOREA EAU DE PARFUM · 50 mL</div>
 <p class="price" id="price"></p>
 <dl class="specs"><div><dt>제품 유형</dt><dd>오 드 퍼퓸</dd></div><div><dt>용량</dt><dd>50 mL</dd></div><div><dt>배송 및 교환</dt><dd>공식 판매처 정책에 따릅니다.</dd></div></dl>
@@ -195,7 +204,6 @@
 <section class="detail-area" id="details">
 <div class="tabs" role="tablist" aria-label="상세 정보"><button role="tab" type="button" data-tab="detail" aria-selected="true">Product Details</button><button role="tab" type="button" data-tab="review" aria-selected="false">Reviews</button><button role="tab" type="button" data-tab="qa" aria-selected="false">Q&amp;A</button><button role="tab" type="button" data-tab="delivery" aria-selected="false">Shipping &amp; Returns</button></div>
 <div id="panel-detail" class="tab-panel" role="tabpanel">
-<figure class="detail-feature-image" aria-label="향수 메인 비주얼"><img id="detail-feature-img" alt="" loading="lazy"></figure>
 <section class="editorial-summary" aria-labelledby="editorial-title">
 <div class="editorial-head"><p class="editorial-issue">EAU DE PARFUM</p><h2 id="editorial-title"></h2><p id="editorial-sub" class="editorial-sub"></p></div>
 <div class="editorial-grid">
@@ -220,7 +228,7 @@
 </main><footer class="site-footer"><div class="shell footer-in"><a href="index.html"><img src="assets/heroes-of-korea-logo.svg" alt="HEROES OF KOREA"></a><p>HEROES OF KOREA<br>한국의 인물과 이야기를 향으로 기록합니다.</p></div></footer>
 <script>
 (function(){const t=document.getElementById('category-toggle'),n=document.getElementById('category-mobile-nav');if(!t||!n)return;t.addEventListener('click',()=>{const expanded=n.classList.toggle('open');t.setAttribute('aria-expanded',String(expanded));t.textContent=expanded?'×':'☰'});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');t.setAttribute('aria-expanded','false');t.textContent='☰'}))})();
-const catalog=[{"id":"kim-gu","name":"김구","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-011159-image-6b4c7f68.webp","price":89000,"cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234904-image-1c9d03ce.webp","detailHero":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090000-1-ee89c439.webp"},{"id":"kim-hongdo","name":"김홍도","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232608-image-e85ebb1f.webp","price":89000,"cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234904-image-aca3e07c.webp","detailHero":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090136-1-446245e7.webp"},{"id":"sejong","name":"세종대왕","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232608-image-e85c14ec.webp","price":89000,"cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234905-image-423d21df.webp","detailHero":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090216-1-6c3a83ea.webp"},{"id":"shin-saimdang","name":"신사임당","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232609-image-103f25da.webp","price":89000,"cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234905-image-6cbae0f5.webp","detailHero":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090254-1-7ef43d2f.webp"},{"id":"yi-sunsin","name":"이순신","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232609-image-337e3afc.webp","price":89000,"cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234905-image-228f2ceb.webp","detailHero":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090328-1-2b03c6e3.webp"},{"id":"jang-bogo","name":"장보고","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232609-image-9c29409e.webp","price":89000,"cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234905-image-913fc6ec.webp","detailHero":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090431-1-a9281981.webp"},{"id":"jeongjo","name":"정조대왕","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261123-002451-fbc73a40-1a78-4ab1-b0e1-8fd967738821-67b57c36.webp","price":89000,"cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261123-002450-3794001f-fdf4-4b4e-ac3e-4180dbcd66fe-8ae6698b.webp","detailHero":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090500-1-1993892a.webp"},{"id":"heo-nanseolheon","name":"허난설헌","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232610-image-d2e03b47.webp","price":89000,"cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234906-image-e7488ffa.webp","detailHero":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090529-1-e7b7949f.webp"},{"id":"heo-jun","name":"허준","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232610-image-109f2355.webp","price":89000,"cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234906-image-73f81987.webp","detailHero":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090619-1-61deda69.webp"}];
+const catalog=[{"id":"kim-gu","name":"김구","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-011159-image-6b4c7f68.webp","price":89000,"cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234904-image-1c9d03ce.webp","detailHero":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090000-1-ee89c439.webp"},{"id":"kim-hongdo","name":"김홍도","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232608-image-e85ebb1f.webp","price":89000,"cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234904-image-aca3e07c.webp","detailHero":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090136-1-446245e7.webp"},{"id":"sejong","name":"세종대왕","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232608-image-e85c14ec.webp","price":89000,"cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234905-image-423d21df.webp","detailHero":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090216-1-6c3a83ea.webp"},{"id":"shin-saimdang","name":"신사임당","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232609-image-103f25da.webp","price":89000,"cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234905-image-6cbae0f5.webp","detailHero":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090254-1-7ef43d2f.webp"},{"id":"yi-sunsin","name":"이순신","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232609-image-337e3afc.webp","price":89000,"cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234905-image-228f2ceb.webp","detailHero":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090328-1-2b03c6e3.webp"},{"id":"jang-bogo","name":"장보고","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232609-image-9c29409e.webp","price":89000,"cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234905-image-913fc6ec.webp","detailHero":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090431-1-a9281981.webp"},{"id":"jeongjo","name":"정조대왕","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261123-002451-fbc73a40-1a78-4ab1-b0e1-8fd967738821-67b57c36.webp","price":89000,"cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261123-002450-3794001f-fdf4-4b4e-ac3e-4180dbcd66fe-8ae6698b.webp","detailHero":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090500-1-1993892a.webp","hand":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-023226-2-74cfd5a4.webp","box":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-023227-3-dd9b64df.webp"},{"id":"heo-nanseolheon","name":"허난설헌","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232610-image-d2e03b47.webp","price":89000,"cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234906-image-e7488ffa.webp","detailHero":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090529-1-e7b7949f.webp"},{"id":"heo-jun","name":"허준","main":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232610-image-109f2355.webp","price":89000,"cutout":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-234906-image-73f81987.webp","detailHero":"https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090619-1-61deda69.webp"}];
 const id=new URLSearchParams(location.search).get('id')||'jeongjo';
 const item=catalog.find(p=>p.id===id)||catalog.find(p=>p.id==='jeongjo');
 let qty=1;
@@ -231,8 +239,18 @@ document.getElementById('option-name').textContent=item.name+' EDP 50 mL';
 document.getElementById('price').textContent=item.price.toLocaleString('ko-KR')+'원';
 document.getElementById('thumb-main').src=item.main;
 document.getElementById('thumb-cutout').src=item.cutout;
+if(item.hand&&item.box){
+ document.getElementById('thumb-hand').src=item.hand;
+ document.getElementById('thumb-box').src=item.box;
+ document.querySelectorAll('.thumb-campaign').forEach(b=>b.hidden=false);
+}
 const mainImg=document.getElementById('main-img');
-function showImage(type){const images={main:item.main,cutout:item.cutout};mainImg.src=images[type]||item.main;mainImg.alt=item.name+' '+(type==='cutout'?'제품 단독컷':'기존 제품 대표 이미지');document.querySelectorAll('.thumb').forEach(b=>b.classList.toggle('active',b.dataset.image===type))}
+function showImage(type){
+ const images={main:item.main,hand:item.hand,box:item.box,cutout:item.cutout};
+ mainImg.src=images[type]||item.main;
+ mainImg.alt=item.name+' '+({main:'제품 대표 이미지',hand:'손에 든 향수 제품컷',box:'박스와 함께 있는 향수 제품컷',cutout:'제품 누끼컷'}[type]||'제품 이미지');
+ document.querySelectorAll('.thumb').forEach(b=>b.classList.toggle('active',b.dataset.image===type));
+}
 document.querySelectorAll('.thumb').forEach(b=>b.addEventListener('click',()=>showImage(b.dataset.image)));
 showImage('main');
 function updateQty(){document.getElementById('qty').textContent=qty;document.getElementById('total').textContent=(qty*item.price).toLocaleString('ko-KR')+'원'}
@@ -311,8 +329,6 @@ const editorialContent={
 };
 const editorial=editorialContent[item.id];
 document.getElementById('editorial-title').textContent=editorial?.title||item.name+' Eau de Parfum';
-document.getElementById('detail-feature-img').src=item.main;
-document.getElementById('detail-feature-img').alt=item.name+' 오 드 퍼퓸 메인 비주얼';
 
 document.getElementById('editorial-sub').textContent=editorial?.subtitle||'A fragrance inspired by a Korean story.';
 document.getElementById('editorial-story').textContent=editorial?.story||'A scent inspired by the spirit and story of a remarkable figure. The full fragrance composition and editorial narrative will be introduced here.';
