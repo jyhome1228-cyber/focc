@@ -180,6 +180,63 @@ html.embedded .detail-hero{display:none!important}html.embedded .editorial-campa
  .magazine>.legacy-heritage-gallery{padding:0 20px 70px;gap:9px}
 }
 @media(max-width:400px){.magazine>.section{padding-left:16px;padding-right:16px}.magazine .new-ingredient-grid{gap:5px!important}}
+/* HOK EDITORIAL MASTER V2 — approved Jeongjo one-column visual system */
+.magazine{--detail-gutter:64px;--detail-section-gap:62px;width:100%!important;max-width:1000px!important;padding-bottom:0!important}
+.magazine>.section{width:100%!important;max-width:none!important;margin:0!important;padding:var(--detail-section-gap) var(--detail-gutter)!important;box-sizing:border-box}
+.magazine>.detail-hero{margin:0!important;width:100%!important}
+.magazine>.intro{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:44px;padding-top:65px!important;padding-bottom:65px!important}
+.magazine>.legacy-editorial-story{display:flex!important;flex-direction:column;gap:0!important;width:100%!important;max-width:100%!important;margin:0!important;padding:0 var(--detail-gutter)!important;border-top:0!important;border-bottom:0!important;align-items:stretch!important}
+.magazine>.legacy-editorial-story>.photo{height:auto!important;min-height:0!important;max-height:none!important;width:100%!important;margin:0!important;overflow:hidden}
+.magazine>.legacy-editorial-story>.photo img{display:block;width:100%!important;height:auto!important;min-height:0!important;max-height:470px!important;aspect-ratio:16/9;object-fit:cover;object-position:center}
+.magazine>.legacy-editorial-story>.words{width:100%!important;max-width:none!important;min-width:0;padding:31px 0 44px!important;display:block!important}
+.magazine>.legacy-editorial-story .words .heading{margin:12px 0 20px!important}
+.magazine>.legacy-editorial-story .words .copy{max-width:760px}
+.magazine>.scent-visual{padding-top:55px!important;padding-bottom:72px!important}
+.magazine>.scent-visual .new-ingredient-grid{gap:12px!important;margin-top:32px!important}
+.magazine>.notes{padding-top:63px!important;padding-bottom:64px!important}
+.magazine>.interlude{padding:70px var(--detail-gutter) 76px!important;margin:0!important;min-height:0!important}
+.magazine>.interlude blockquote{font-size:clamp(23px,2.8vw,30px);line-height:1.7}
+.magazine>.heritage{padding-top:63px!important;padding-bottom:69px!important}
+.magazine>.heritage .heading{margin:14px 0 28px!important}
+.magazine .heritage-story-layout{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;width:100%;margin:0 0 35px!important}
+.magazine .heritage-story-layout>.heritage-story-photo{display:block;width:100%;margin:0!important;min-width:0;overflow:hidden}
+.magazine .heritage-story-photo img{display:block;width:100%!important;height:auto!important;max-height:480px!important;aspect-ratio:16/9;object-fit:cover;object-position:center 46%}
+.magazine .heritage-story-copy{width:100%;max-width:760px;padding:26px 0 0!important;margin:0!important}
+.magazine .heritage-story-copy .heritage-enlead{margin:0 0 12px!important}
+.magazine .heritage-grid{width:100%;gap:24px!important;margin-top:32px!important}
+.magazine>.product-focus{display:flex!important;flex-direction:column!important;align-items:stretch!important;width:100%;gap:0!important;padding-top:64px!important;padding-bottom:66px!important}
+.magazine>.product-focus>.product-focus-packshot{display:block;width:100%!important;min-width:0;margin:0!important;overflow:hidden}
+.magazine>.product-focus .product-focus-packshot img{display:block;width:100%!important;height:auto!important;max-height:480px!important;aspect-ratio:16/9;object-fit:cover;object-position:center}
+.magazine>.product-focus>div{width:100%!important;max-width:none!important;margin:0!important;padding:28px 0 0!important;min-width:0}
+.magazine>.product-focus>div .copy{max-width:760px}
+.magazine>.product-focus .detail{max-width:760px;margin-top:20px}
+.magazine>.product-specs{padding-top:62px!important;padding-bottom:55px!important}
+.magazine>.product-specs .spec{grid-template-columns:165px minmax(0,1fr)}
+.magazine>.endline{width:100%;padding:25px var(--detail-gutter) 28px!important;margin:0!important;border-top:0!important;line-height:1.8}
+@media(max-width:750px){
+ .magazine{--detail-gutter:20px;--detail-section-gap:47px}
+ .magazine>.intro{grid-template-columns:minmax(0,1fr);gap:22px;padding-top:49px!important;padding-bottom:48px!important}
+ .magazine>.legacy-editorial-story>.photo img,.magazine .heritage-story-photo img,.magazine>.product-focus .product-focus-packshot img{aspect-ratio:4/3;max-height:370px!important}
+ .magazine>.legacy-editorial-story>.words{padding:26px 0 30px!important}
+ .magazine>.scent-visual{padding-top:45px!important;padding-bottom:53px!important}
+ .magazine>.notes{padding-top:48px!important;padding-bottom:54px!important}
+ .magazine>.interlude{padding:55px var(--detail-gutter) 61px!important}
+ .magazine>.heritage{padding-top:48px!important;padding-bottom:54px!important}
+ .magazine .heritage-story-copy{padding-top:23px!important}
+ .magazine .heritage-grid{grid-template-columns:minmax(0,1fr);gap:19px!important;margin-top:28px!important}
+ .magazine>.product-focus{padding-top:50px!important;padding-bottom:54px!important}
+ .magazine>.product-focus>div{padding-top:24px!important}
+ .magazine>.product-specs{padding-top:49px!important;padding-bottom:48px!important}
+ .magazine>.product-specs .spec{grid-template-columns:104px minmax(0,1fr);gap:12px}
+ .magazine>.endline{padding:23px var(--detail-gutter) 28px!important}
+}
+@media(max-width:400px){.magazine{--detail-gutter:16px}}
+
+/* Additional visual supplied for this fragrance; subordinate to the main product/heritage imagery */
+.magazine>.new-story-hero{width:calc(100% - (var(--detail-gutter) * 2))!important;margin:10px var(--detail-gutter) 0!important;height:clamp(200px,29vw,310px)!important;overflow:hidden;background:#f6f4f1}
+.magazine>.new-story-hero img{display:block;width:100%!important;height:100%!important;max-width:100%!important;object-fit:cover!important;object-position:center}
+.magazine>.scent-visual{padding-top:45px!important}
+@media(max-width:750px){.magazine>.new-story-hero{height:clamp(165px,52vw,245px)!important;margin-top:8px!important}.magazine>.scent-visual{padding-top:36px!important}}
 </style></head><body><main class="magazine">
 <figure class="detail-hero"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232610-image-109f2355.webp" alt="허준 오 드 퍼퓸 제품 대표컷" fetchpriority="high"></figure>
 <section class="section intro"><div><p class="eyebrow">THE STORY BEHIND THE SCENT</p><h2 class="heading">허준, 고요한 균형을 향으로 기록하다.</h2></div><div><p class="copy">조선의 의학자 허준의 정신에서 영감을 받은 허브 우디 오 드 퍼퓸입니다. 몸과 마음의 균형을 중시하는 태도와 사람을 향한 관심을 팔로산토와 허브, 로즈와 우드가 조화되는 향으로 풀어냈습니다.</p><p class="copy">상쾌하고 따뜻한 팔로산토와 베르가못, 민트가 첫인상을 만들고, 제라늄과 로즈, ISO E Super가 부드럽게 이어집니다. 시더우드와 패출리, 먹의 차분한 인상이 오래도록 여운을 남깁니다.</p></div></section>
@@ -188,9 +245,8 @@ html.embedded .detail-hero{display:none!important}html.embedded .editorial-campa
 <section class="section scent-visual"><p class="eyebrow">THE INGREDIENTS</p><h2 class="heading">자연의 결을 담은 세 가지 인상.</h2><p class="copy desc">허브의 맑음, 플로럴한 균형, 그리고 나무의 깊이. 각 원료의 다른 인상이 조화롭게 이어집니다.</p><div class="scent-gallery new-ingredient-grid"><figure><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090619-2-9641bb87.webp" alt="허준 향의 구성 이미지 1" loading="lazy" decoding="async"></figure><figure><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090620-3-e8a37068.webp" alt="허준 향의 구성 이미지 2" loading="lazy" decoding="async"></figure><figure><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090620-4-e99aa0db.webp" alt="허준 향의 구성 이미지 3" loading="lazy" decoding="async"></figure></div></section>
 <section class="section notes"><div class="notes-head"><div><p class="eyebrow">FRAGRANCE NOTES</p><h2 class="heading">시간에 따라 부드럽게 전개되는 향.</h2></div><p>Woody<br>Palo Santo &amp; Herb</p></div><div class="note-row"><h3>Top Note</h3><p class="ingredients">팔로산토, 이탈리안 베르가못, 민트, 허브</p><p class="effect">상쾌하면서도 따뜻한 숲의 공기처럼 맑고 고요한 첫인상을 만듭니다.</p></div><div class="note-row"><h3>Middle Note</h3><p class="ingredients">이집트산 제라늄, ISO E Super, 로즈</p><p class="effect">섬세한 플로럴과 부드러운 우디 감각이 조화롭게 중심을 잡아줍니다.</p></div><div class="note-row"><h3>Base Note</h3><p class="ingredients">어메리칸 시더우드, 패출리, 먹</p><p class="effect">차분하고 단단한 나무의 향이 절제된 여운으로 이어집니다.</p></div></section>
 <section class="interlude"><p class="eyebrow">A PORTRAIT IN SCENT</p><blockquote>맑은 시작과 조용한 균형.<br>일상에 머무는 따뜻한 나무의 향.</blockquote><p class="interlude-en">A quiet harmony of nature and thought.</p></section>
-<section class="section heritage"><p class="eyebrow">THE HERITAGE</p><h2 class="heading">허준의 정신을 오늘의 향으로.</h2><p class="heritage-enlead">History, interpreted through fragrance.</p><p class="copy lead">허준 오 드 퍼퓸은 인물의 삶과 정신을 오늘의 후각적 언어로 해석합니다. 한국의 역사적 인물에게서 발견한 가치에 인천의 모빌리티 스타트업 버디비(Birdybee)의 협업 스토리를 더했습니다.</p><div class="heritage-grid"><article><span class="heritage-en">A LIFE DEVOTED TO HEALING</span><h3>허준의 정신.</h3><p>백성의 삶과 건강을 위해 헌신했던 허준의 의학적 정신에서 향의 이야기가 출발합니다.</p><p>조용한 전문성과 절제된 품격을 자연의 우디 향으로 표현했습니다.</p></article><article><span class="heritage-en">BIRDYBEE COLLABORATION</span><h3>버디비와의 협업.</h3><p>허준 오 드 퍼퓸은 인천의 모빌리티 스타트업 버디비(Birdybee)와의 협업으로 탄생했습니다.</p><p>이동의 편의와 일상의 리듬을 고민해온 버디비의 철학을 향의 균형과 연결했습니다.</p></article><article><span class="heritage-en">A SENSE OF BALANCE</span><h3>일상의 균형.</h3><p>맑은 허브의 시작과 부드러운 플로럴, 묵직한 우디 잔향이 하나의 흐름을 이룹니다.</p><p>바쁜 일상 속에서 마음을 가다듬고 차분한 분위기를 찾는 순간에 어울립니다.</p></article></div></section>
-<div class="legacy-heritage-gallery" aria-label="허준 스토리 이미지 갤러리"><figure><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-023231-2-a0277dd4.webp" alt="허준 브랜드 스토리 이미지 2" loading="lazy" decoding="async"></figure><figure><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-023231-3-c8e6b4e6.webp" alt="허준 브랜드 스토리 이미지 3" loading="lazy" decoding="async"></figure></div>
-<section class="section product-focus"><div><p class="eyebrow">EAU DE PARFUM</p><h2 class="heading">허준 오 드 퍼퓸.</h2><p class="copy">팔로산토와 허브의 맑은 시작, 로즈와 제라늄의 부드러운 중심, 시더우드와 패출리의 깊은 잔향을 담았습니다. 조용하고 절제된 향을 선호하는 일상에 어울리는 우디 오 드 퍼퓸입니다.</p><div class="detail"><span>SCENT FAMILY</span><strong>Woody · Palo Santo &amp; Herb</strong></div><div class="detail"><span>FOR EVERYONE</span><strong>Genderless · All Seasons</strong></div></div></section>
+<section class="section heritage"><p class="eyebrow">THE HERITAGE</p><h2 class="heading">허준의 정신을 오늘의 향으로.</h2><div class="heritage-story-layout"><figure class="heritage-story-photo"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-023231-2-a0277dd4.webp" alt="허준 브랜드 스토리 사진" loading="lazy" decoding="async"></figure><div class="heritage-story-copy"><p class="heritage-enlead">History, interpreted through fragrance.</p><p class="copy lead">허준 오 드 퍼퓸은 인물의 삶과 정신을 오늘의 후각적 언어로 해석합니다. 한국의 역사적 인물에게서 발견한 가치에 인천의 모빌리티 스타트업 버디비(Birdybee)의 협업 스토리를 더했습니다.</p></div></div><div class="heritage-grid"><article><span class="heritage-en">A LIFE DEVOTED TO HEALING</span><h3>허준의 정신.</h3><p>백성의 삶과 건강을 위해 헌신했던 허준의 의학적 정신에서 향의 이야기가 출발합니다.</p><p>조용한 전문성과 절제된 품격을 자연의 우디 향으로 표현했습니다.</p></article><article><span class="heritage-en">BIRDYBEE COLLABORATION</span><h3>버디비와의 협업.</h3><p>허준 오 드 퍼퓸은 인천의 모빌리티 스타트업 버디비(Birdybee)와의 협업으로 탄생했습니다.</p><p>이동의 편의와 일상의 리듬을 고민해온 버디비의 철학을 향의 균형과 연결했습니다.</p></article><article><span class="heritage-en">A SENSE OF BALANCE</span><h3>일상의 균형.</h3><p>맑은 허브의 시작과 부드러운 플로럴, 묵직한 우디 잔향이 하나의 흐름을 이룹니다.</p><p>바쁜 일상 속에서 마음을 가다듬고 차분한 분위기를 찾는 순간에 어울립니다.</p></article></div></section>
+<section class="section product-focus"><figure class="product-focus-packshot"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-023231-3-c8e6b4e6.webp" alt="허준 향수 브랜드 에디토리얼 사진" loading="lazy" decoding="async"></figure><div><p class="eyebrow">EAU DE PARFUM</p><h2 class="heading">허준 오 드 퍼퓸.</h2><p class="copy">팔로산토와 허브의 맑은 시작, 로즈와 제라늄의 부드러운 중심, 시더우드와 패출리의 깊은 잔향을 담았습니다. 조용하고 절제된 향을 선호하는 일상에 어울리는 우디 오 드 퍼퓸입니다.</p><div class="detail"><span>SCENT FAMILY</span><strong>Woody · Palo Santo &amp; Herb</strong></div><div class="detail"><span>FOR EVERYONE</span><strong>Genderless · All Seasons</strong></div></div></section>
 <section class="section product-specs"><p class="eyebrow">PRODUCT INFORMATION</p><h2 class="heading">제품 정보.</h2><div class="specs">
 <div class="spec"><span>제품명</span><strong>허준 오 드 퍼퓸</strong></div><div class="spec"><span>향 계열</span><strong>Woody · Palo Santo &amp; Herb</strong></div><div class="spec"><span>제품 타입</span><strong>Eau de Parfum</strong></div><div class="spec"><span>용량</span><strong>50ml</strong></div><div class="spec"><span>추천 사용</span><strong>Genderless · All Seasons</strong></div><div class="spec"><span>지속 시간</span><strong>원본 자료에 7시간 이상과 6~8시간 이상 표기가 혼재합니다. 최종 확인이 필요합니다.</strong></div>
 </div><p class="caution">※ 전성분과 제조·판매 정보 및 최종 제품 표시사항은 확정된 자료와 대조 후 반영해야 합니다.</p></section><div class="endline">한국의 인물과 이야기를 오늘의 향으로 다시 만납니다.</div>
