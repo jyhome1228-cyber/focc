@@ -258,6 +258,41 @@ html.embedded .detail-hero{display:none!important}html.embedded .editorial-campa
  .magazine>.scent-visual{padding-top:44px!important}
  .magazine>.scent-visual .new-ingredient-grid{gap:7px!important}
 }
+
+/* HOK QA: align the bottoms of every three-column fragrance image */
+.magazine>.scent-visual .new-ingredient-grid{
+ display:grid!important;
+ grid-template-columns:repeat(3,minmax(0,1fr))!important;
+ align-items:stretch!important;
+ gap:12px!important;
+}
+.magazine>.scent-visual .new-ingredient-grid figure{
+ display:block!important;
+ width:100%!important;
+ min-width:0!important;
+ margin:0!important;
+ padding:0!important;
+ aspect-ratio:1/1!important;
+ height:auto!important;
+ overflow:hidden!important;
+ background:#fff!important;
+}
+.magazine>.scent-visual .new-ingredient-grid figure>img{
+ display:block!important;
+ width:100%!important;
+ height:100%!important;
+ min-height:0!important;
+ max-height:none!important;
+ aspect-ratio:1/1!important;
+ object-fit:cover!important;
+ object-position:center!important;
+}
+@media(max-width:750px){
+ .magazine>.scent-visual .new-ingredient-grid{gap:7px!important}
+}
+@media(max-width:400px){
+ .magazine>.scent-visual .new-ingredient-grid{gap:5px!important}
+}
 </style></head><body><main class="magazine">
 <figure class="detail-hero"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232609-image-337e3afc.webp" alt="이순신 오 드 퍼퓸 제품 대표컷" fetchpriority="high"></figure>
 <section class="section intro"><div><p class="eyebrow">THE STORY BEHIND THE SCENT</p><h2 class="heading">이순신, 향으로 남긴 이야기.</h2></div><div><p class="copy">이순신 장군의 흔들리지 않는 평정심과 조용한 리더십에서 영감을 받은 아쿠아 계열 오 드 퍼퓸입니다. 전투 같은 하루가 끝나고 일상을 차분히 정돈하는 순간의 향을 표현했습니다.</p><p class="copy">깨끗한 아쿠아 노트에 이태리산 레몬과 베르가못이 더해져 상쾌하게 시작됩니다. 사이프러스와 제라늄이 중심을 잡아주고, 코코넛과 모스, 시더우드와 패출리가 부드러운 여운을 남깁니다.</p></div></section>
