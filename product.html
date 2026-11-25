@@ -191,6 +191,12 @@
  .product-shell #panel-detail{padding-bottom:12px!important}
 }
 @media(max-width:400px){.product-shell .editorial-summary{padding-left:16px!important;padding-right:16px!important}.product-shell .collection{padding-left:16px!important;padding-right:16px!important}}
+
+/* Product Details: show the exact same primary product photograph as gallery thumbnail 1 */
+.product-shell #panel-detail>.detail-feature-image{display:block;width:100%;max-width:1000px;margin:0 auto;background:#fff;overflow:hidden}
+.product-shell #panel-detail>.detail-feature-image img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:1/1;object-fit:contain}
+.product-shell #panel-detail>.editorial-summary{margin-top:0}
+@media(max-width:750px){.product-shell #panel-detail>.detail-feature-image{width:100%}}
 </style></head>
 <body>
 <header class="site-header"><div class="shell header-in">
@@ -218,6 +224,7 @@
 <section class="detail-area" id="details">
 <div class="tabs" role="tablist" aria-label="상세 정보"><button role="tab" type="button" data-tab="detail" aria-selected="true">Product Details</button><button role="tab" type="button" data-tab="review" aria-selected="false">Reviews</button><button role="tab" type="button" data-tab="qa" aria-selected="false">Q&amp;A</button><button role="tab" type="button" data-tab="delivery" aria-selected="false">Shipping &amp; Returns</button></div>
 <div id="panel-detail" class="tab-panel" role="tabpanel">
+<figure class="detail-feature-image" aria-label="제품 대표 이미지"><img id="detail-feature-img" alt="" loading="lazy" decoding="async"></figure>
 <section class="editorial-summary" aria-labelledby="editorial-title">
 <div class="editorial-head"><p class="editorial-issue">EAU DE PARFUM</p><h2 id="editorial-title"></h2><p id="editorial-sub" class="editorial-sub"></p></div>
 <div class="editorial-grid">
@@ -347,6 +354,8 @@ const editorialContent={
  }
 };
 const editorial=editorialContent[item.id];
+document.getElementById('detail-feature-img').src=item.main;
+document.getElementById('detail-feature-img').alt=item.name+' 오 드 퍼퓸 제품 대표 이미지';
 document.getElementById('editorial-title').textContent=editorial?.title||item.name+' Eau de Parfum';
 
 document.getElementById('editorial-sub').textContent=editorial?.subtitle||'A fragrance inspired by a Korean story.';
