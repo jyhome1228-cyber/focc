@@ -258,6 +258,41 @@ html.embedded .detail-hero{display:none!important}html.embedded .editorial-campa
  .magazine>.scent-visual{padding-top:44px!important}
  .magazine>.scent-visual .new-ingredient-grid{gap:7px!important}
 }
+
+/* HOK QA: align the bottoms of every three-column fragrance image */
+.magazine>.scent-visual .new-ingredient-grid{
+ display:grid!important;
+ grid-template-columns:repeat(3,minmax(0,1fr))!important;
+ align-items:stretch!important;
+ gap:12px!important;
+}
+.magazine>.scent-visual .new-ingredient-grid figure{
+ display:block!important;
+ width:100%!important;
+ min-width:0!important;
+ margin:0!important;
+ padding:0!important;
+ aspect-ratio:1/1!important;
+ height:auto!important;
+ overflow:hidden!important;
+ background:#fff!important;
+}
+.magazine>.scent-visual .new-ingredient-grid figure>img{
+ display:block!important;
+ width:100%!important;
+ height:100%!important;
+ min-height:0!important;
+ max-height:none!important;
+ aspect-ratio:1/1!important;
+ object-fit:cover!important;
+ object-position:center!important;
+}
+@media(max-width:750px){
+ .magazine>.scent-visual .new-ingredient-grid{gap:7px!important}
+}
+@media(max-width:400px){
+ .magazine>.scent-visual .new-ingredient-grid{gap:5px!important}
+}
 </style></head><body><main class="magazine">
 <figure class="detail-hero"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232609-image-103f25da.webp" alt="신사임당 오 드 퍼퓸 제품 대표컷" fetchpriority="high"></figure>
 <section class="section intro"><div><p class="eyebrow">THE STORY BEHIND THE SCENT</p><h2 class="heading">신사임당, 향으로 남기는 새로운 기록.</h2></div><div><p class="copy">신사임당의 예술적 감각과 차분하지만 분명한 존재감을 상큼한 시트러스 향으로 표현했습니다. 자몽과 부드러운 오렌지 꽃의 조화가 밝고 따뜻한 인상을 전합니다.</p><p class="copy">그레이프프루트와 이태리산 레몬, 베르가못이 산뜻하게 시작됩니다. 오렌지 블라썸과 재스민의 플로럴이 이어지고, 샌달우드와 시더우드, 화이트 머스크가 부드럽고 안정된 잔향을 남깁니다.</p></div></section>
