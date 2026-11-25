@@ -180,6 +180,63 @@ html.embedded .detail-hero{display:none!important}html.embedded .editorial-campa
  .magazine>.legacy-heritage-gallery{padding:0 20px 70px;gap:9px}
 }
 @media(max-width:400px){.magazine>.section{padding-left:16px;padding-right:16px}.magazine .new-ingredient-grid{gap:5px!important}}
+/* HOK EDITORIAL MASTER V2 — approved Jeongjo one-column visual system */
+.magazine{--detail-gutter:64px;--detail-section-gap:62px;width:100%!important;max-width:1000px!important;padding-bottom:0!important}
+.magazine>.section{width:100%!important;max-width:none!important;margin:0!important;padding:var(--detail-section-gap) var(--detail-gutter)!important;box-sizing:border-box}
+.magazine>.detail-hero{margin:0!important;width:100%!important}
+.magazine>.intro{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:44px;padding-top:65px!important;padding-bottom:65px!important}
+.magazine>.legacy-editorial-story{display:flex!important;flex-direction:column;gap:0!important;width:100%!important;max-width:100%!important;margin:0!important;padding:0 var(--detail-gutter)!important;border-top:0!important;border-bottom:0!important;align-items:stretch!important}
+.magazine>.legacy-editorial-story>.photo{height:auto!important;min-height:0!important;max-height:none!important;width:100%!important;margin:0!important;overflow:hidden}
+.magazine>.legacy-editorial-story>.photo img{display:block;width:100%!important;height:auto!important;min-height:0!important;max-height:470px!important;aspect-ratio:16/9;object-fit:cover;object-position:center}
+.magazine>.legacy-editorial-story>.words{width:100%!important;max-width:none!important;min-width:0;padding:31px 0 44px!important;display:block!important}
+.magazine>.legacy-editorial-story .words .heading{margin:12px 0 20px!important}
+.magazine>.legacy-editorial-story .words .copy{max-width:760px}
+.magazine>.scent-visual{padding-top:55px!important;padding-bottom:72px!important}
+.magazine>.scent-visual .new-ingredient-grid{gap:12px!important;margin-top:32px!important}
+.magazine>.notes{padding-top:63px!important;padding-bottom:64px!important}
+.magazine>.interlude{padding:70px var(--detail-gutter) 76px!important;margin:0!important;min-height:0!important}
+.magazine>.interlude blockquote{font-size:clamp(23px,2.8vw,30px);line-height:1.7}
+.magazine>.heritage{padding-top:63px!important;padding-bottom:69px!important}
+.magazine>.heritage .heading{margin:14px 0 28px!important}
+.magazine .heritage-story-layout{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;width:100%;margin:0 0 35px!important}
+.magazine .heritage-story-layout>.heritage-story-photo{display:block;width:100%;margin:0!important;min-width:0;overflow:hidden}
+.magazine .heritage-story-photo img{display:block;width:100%!important;height:auto!important;max-height:480px!important;aspect-ratio:16/9;object-fit:cover;object-position:center 46%}
+.magazine .heritage-story-copy{width:100%;max-width:760px;padding:26px 0 0!important;margin:0!important}
+.magazine .heritage-story-copy .heritage-enlead{margin:0 0 12px!important}
+.magazine .heritage-grid{width:100%;gap:24px!important;margin-top:32px!important}
+.magazine>.product-focus{display:flex!important;flex-direction:column!important;align-items:stretch!important;width:100%;gap:0!important;padding-top:64px!important;padding-bottom:66px!important}
+.magazine>.product-focus>.product-focus-packshot{display:block;width:100%!important;min-width:0;margin:0!important;overflow:hidden}
+.magazine>.product-focus .product-focus-packshot img{display:block;width:100%!important;height:auto!important;max-height:480px!important;aspect-ratio:16/9;object-fit:cover;object-position:center}
+.magazine>.product-focus>div{width:100%!important;max-width:none!important;margin:0!important;padding:28px 0 0!important;min-width:0}
+.magazine>.product-focus>div .copy{max-width:760px}
+.magazine>.product-focus .detail{max-width:760px;margin-top:20px}
+.magazine>.product-specs{padding-top:62px!important;padding-bottom:55px!important}
+.magazine>.product-specs .spec{grid-template-columns:165px minmax(0,1fr)}
+.magazine>.endline{width:100%;padding:25px var(--detail-gutter) 28px!important;margin:0!important;border-top:0!important;line-height:1.8}
+@media(max-width:750px){
+ .magazine{--detail-gutter:20px;--detail-section-gap:47px}
+ .magazine>.intro{grid-template-columns:minmax(0,1fr);gap:22px;padding-top:49px!important;padding-bottom:48px!important}
+ .magazine>.legacy-editorial-story>.photo img,.magazine .heritage-story-photo img,.magazine>.product-focus .product-focus-packshot img{aspect-ratio:4/3;max-height:370px!important}
+ .magazine>.legacy-editorial-story>.words{padding:26px 0 30px!important}
+ .magazine>.scent-visual{padding-top:45px!important;padding-bottom:53px!important}
+ .magazine>.notes{padding-top:48px!important;padding-bottom:54px!important}
+ .magazine>.interlude{padding:55px var(--detail-gutter) 61px!important}
+ .magazine>.heritage{padding-top:48px!important;padding-bottom:54px!important}
+ .magazine .heritage-story-copy{padding-top:23px!important}
+ .magazine .heritage-grid{grid-template-columns:minmax(0,1fr);gap:19px!important;margin-top:28px!important}
+ .magazine>.product-focus{padding-top:50px!important;padding-bottom:54px!important}
+ .magazine>.product-focus>div{padding-top:24px!important}
+ .magazine>.product-specs{padding-top:49px!important;padding-bottom:48px!important}
+ .magazine>.product-specs .spec{grid-template-columns:104px minmax(0,1fr);gap:12px}
+ .magazine>.endline{padding:23px var(--detail-gutter) 28px!important}
+}
+@media(max-width:400px){.magazine{--detail-gutter:16px}}
+
+/* Additional visual supplied for this fragrance; subordinate to the main product/heritage imagery */
+.magazine>.new-story-hero{width:calc(100% - (var(--detail-gutter) * 2))!important;margin:10px var(--detail-gutter) 0!important;height:clamp(200px,29vw,310px)!important;overflow:hidden;background:#f6f4f1}
+.magazine>.new-story-hero img{display:block;width:100%!important;height:100%!important;max-width:100%!important;object-fit:cover!important;object-position:center}
+.magazine>.scent-visual{padding-top:45px!important}
+@media(max-width:750px){.magazine>.new-story-hero{height:clamp(165px,52vw,245px)!important;margin-top:8px!important}.magazine>.scent-visual{padding-top:36px!important}}
 </style></head><body><main class="magazine">
 <figure class="detail-hero"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232609-image-9c29409e.webp" alt="장보고 오 드 퍼퓸 제품 대표컷" fetchpriority="high"></figure>
 <section class="section intro"><div><p class="eyebrow">THE STORY BEHIND THE SCENT</p><h2 class="heading">장보고, 바다를 향한 개척 정신을 담은 향.</h2></div><div><p class="copy">해상왕 장보고에게서 영감을 받은 오 드 퍼퓸입니다. 거대한 바다를 향해 나아간 그의 개척 정신과 자유로움, 그리고 불확실함 속에서도 자신의 길을 만들어 가던 용기를 향으로 담았습니다.</p><p class="copy">팔로산토와 세이지의 산뜻하고 맑은 허벌 우디 향으로 시작됩니다. 로즈가 중심을 잡고 시더우드와 샌달우드, 토바코, 헤이의 따뜻한 잔향이 이어지는 우디 계열의 향수입니다.</p></div></section>
@@ -188,9 +245,8 @@ html.embedded .detail-hero{display:none!important}html.embedded .editorial-campa
 <section class="section scent-visual"><p class="eyebrow">THE INGREDIENTS</p><h2 class="heading">바다의 자유를 품은 원료.</h2><p class="copy desc">세이지와 팔로산토, 로즈, 그리고 우디한 베이스 노트가 장보고 오 드 퍼퓸의 인상을 만들어냅니다.</p><div class="scent-gallery new-ingredient-grid"><figure><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090432-2-22be348a.webp" alt="장보고 향의 구성 이미지 1" loading="lazy" decoding="async"></figure><figure><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090433-3-e6cd4109.webp" alt="장보고 향의 구성 이미지 2" loading="lazy" decoding="async"></figure><figure><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-090433-4-796ef7dc.webp" alt="장보고 향의 구성 이미지 3" loading="lazy" decoding="async"></figure></div></section>
 <section class="section notes"><div class="notes-head"><div><p class="eyebrow">FRAGRANCE NOTES</p><h2 class="heading">바닷바람에서 깊은 나무의 잔향까지.</h2></div><p>Woody&lt;br&gt;Sage &amp; Tobacco</p></div><div class="note-row"><h3>Top Note</h3><p class="ingredients">팔로산토, 세이지</p><p class="effect">맑은 허벌 우디의 기운이 상쾌하게 시작됩니다.</p></div><div class="note-row"><h3>Middle Note</h3><p class="ingredients">로즈</p><p class="effect">단단하면서도 부드러운 플로럴 중심을 이룹니다.</p></div><div class="note-row"><h3>Base Note</h3><p class="ingredients">시더우드, 토바코, 헤이(건초), 샌달우드</p><p class="effect">묵직하고 따뜻한 나무 향이 오래 이어집니다.</p></div></section>
 <section class="interlude"><p class="eyebrow">A PORTRAIT IN SCENT</p><blockquote>바다의 정신을 담아.<br>수평선을 넘어 나아가다.</blockquote><p class="interlude-en">A spirit shaped by the open sea.</p></section>
-<section class="section heritage"><p class="eyebrow">THE HERITAGE</p><h2 class="heading">해상왕 장보고의 이야기.</h2><p class="heritage-enlead">History, interpreted through fragrance.</p><p class="copy lead">장보고의 용기와 개척 정신은 이 향수의 출발점입니다. 바다를 마주한 사람의 담대함과 새로운 길을 향한 의지를 향으로 해석했습니다.</p><div class="heritage-grid"><article><span class="heritage-en">BEYOND THE HORIZON</span><h3>개척의 정신.</h3><p>장보고가 드넓은 바다를 향해 나아가던 기개에서 향의 첫인상을 떠올렸습니다.</p><p>팔로산토와 세이지의 맑은 느낌을 수평선 너머로 나아가는 움직임에 비유했습니다.</p></article><article><span class="heritage-en">A COLLABORATION WITH GLIDERS WANGSAN</span><h3>글라이더스 왕산 협업.</h3><p>장보고 오 드 퍼퓸은 글라이더스 왕산과의 협업으로 탄생했습니다.</p><p>영종도를 거점으로 요트 투어, 세일링 교육과 해양 관련 활동을 전개하는 글라이더스 왕산의 오션 라이프스타일 철학을 연결했습니다.</p></article><article><span class="heritage-en">A VOYAGE INTO THE PRESENT</span><h3>오늘의 항해.</h3><p>과거의 해양 영웅이 남긴 정신과 오늘의 바다를 즐기는 문화를 이어봅니다.</p><p>향을 통해 더 넓은 세계를 향해 나아가는 용기를 떠올릴 수 있도록 구성했습니다.</p></article></div></section>
-<div class="legacy-heritage-gallery" aria-label="장보고 스토리 이미지 갤러리"><figure><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-023115-2-3d1fbe2a.webp" alt="장보고 브랜드 스토리 이미지 2" loading="lazy" decoding="async"></figure><figure><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-023116-3-d9245b29.webp" alt="장보고 브랜드 스토리 이미지 3" loading="lazy" decoding="async"></figure></div>
-<section class="section product-focus"><div><p class="eyebrow">EAU DE PARFUM</p><h2 class="heading">장보고 오 드 퍼퓸.</h2><p class="copy">세이지와 팔로산토의 맑은 시작, 로즈의 균형, 토바코와 샌달우드의 깊은 잔향을 담았습니다. 자신만의 수평선을 개척하는 이들의 일상에 어울리는 우디 향입니다.</p><div class="detail"><span>SCENT FAMILY</span><strong>Woody · Sage &amp; Tobacco</strong></div><div class="detail"><span>FOR EVERYONE</span><strong>Genderless · Autumn &amp; Winter</strong></div></div></section>
+<section class="section heritage"><p class="eyebrow">THE HERITAGE</p><h2 class="heading">해상왕 장보고의 이야기.</h2><div class="heritage-story-layout"><figure class="heritage-story-photo"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-023115-2-3d1fbe2a.webp" alt="장보고 브랜드 스토리 사진" loading="lazy" decoding="async"></figure><div class="heritage-story-copy"><p class="heritage-enlead">History, interpreted through fragrance.</p><p class="copy lead">장보고의 용기와 개척 정신은 이 향수의 출발점입니다. 바다를 마주한 사람의 담대함과 새로운 길을 향한 의지를 향으로 해석했습니다.</p></div></div><div class="heritage-grid"><article><span class="heritage-en">BEYOND THE HORIZON</span><h3>개척의 정신.</h3><p>장보고가 드넓은 바다를 향해 나아가던 기개에서 향의 첫인상을 떠올렸습니다.</p><p>팔로산토와 세이지의 맑은 느낌을 수평선 너머로 나아가는 움직임에 비유했습니다.</p></article><article><span class="heritage-en">A COLLABORATION WITH GLIDERS WANGSAN</span><h3>글라이더스 왕산 협업.</h3><p>장보고 오 드 퍼퓸은 글라이더스 왕산과의 협업으로 탄생했습니다.</p><p>영종도를 거점으로 요트 투어, 세일링 교육과 해양 관련 활동을 전개하는 글라이더스 왕산의 오션 라이프스타일 철학을 연결했습니다.</p></article><article><span class="heritage-en">A VOYAGE INTO THE PRESENT</span><h3>오늘의 항해.</h3><p>과거의 해양 영웅이 남긴 정신과 오늘의 바다를 즐기는 문화를 이어봅니다.</p><p>향을 통해 더 넓은 세계를 향해 나아가는 용기를 떠올릴 수 있도록 구성했습니다.</p></article></div></section>
+<section class="section product-focus"><figure class="product-focus-packshot"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261124-023116-3-d9245b29.webp" alt="장보고 향수 브랜드 에디토리얼 사진" loading="lazy" decoding="async"></figure><div><p class="eyebrow">EAU DE PARFUM</p><h2 class="heading">장보고 오 드 퍼퓸.</h2><p class="copy">세이지와 팔로산토의 맑은 시작, 로즈의 균형, 토바코와 샌달우드의 깊은 잔향을 담았습니다. 자신만의 수평선을 개척하는 이들의 일상에 어울리는 우디 향입니다.</p><div class="detail"><span>SCENT FAMILY</span><strong>Woody · Sage &amp; Tobacco</strong></div><div class="detail"><span>FOR EVERYONE</span><strong>Genderless · Autumn &amp; Winter</strong></div></div></section>
 <section class="section product-specs"><p class="eyebrow">PRODUCT INFORMATION</p><h2 class="heading">제품 정보.</h2><div class="specs"><div class="spec"><span>제품명</span><strong>장보고 오 드 퍼퓸</strong></div><div class="spec"><span>향 계열</span><strong>Woody · Sage &amp; Tobacco</strong></div><div class="spec"><span>향료 구성</span><strong>Top · Middle · Base Notes</strong></div><div class="spec"><span>타입</span><strong>Eau de Parfum · 50ml</strong></div><div class="spec"><span>추천 사용</span><strong>Genderless · Autumn &amp; Winter</strong></div><div class="spec"><span>지속 시간</span><strong>원본 자료 기준 7시간 이상. 사용 환경에 따라 달라질 수 있습니다.</strong></div></div><p class="caution">※ 전성분과 제조·판매 정보 및 최종 제품 표시사항은 실제 확정 자료에 따라 적용해야 합니다.</p></section>
 <div class="endline">한국의 인물과 이야기를 오늘의 향으로 다시 만납니다.</div>
 </main></body></html>
