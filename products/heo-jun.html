@@ -258,6 +258,41 @@ html.embedded .detail-hero{display:none!important}html.embedded .editorial-campa
  .magazine>.scent-visual{padding-top:44px!important}
  .magazine>.scent-visual .new-ingredient-grid{gap:7px!important}
 }
+
+/* HOK QA: align the bottoms of every three-column fragrance image */
+.magazine>.scent-visual .new-ingredient-grid{
+ display:grid!important;
+ grid-template-columns:repeat(3,minmax(0,1fr))!important;
+ align-items:stretch!important;
+ gap:12px!important;
+}
+.magazine>.scent-visual .new-ingredient-grid figure{
+ display:block!important;
+ width:100%!important;
+ min-width:0!important;
+ margin:0!important;
+ padding:0!important;
+ aspect-ratio:1/1!important;
+ height:auto!important;
+ overflow:hidden!important;
+ background:#fff!important;
+}
+.magazine>.scent-visual .new-ingredient-grid figure>img{
+ display:block!important;
+ width:100%!important;
+ height:100%!important;
+ min-height:0!important;
+ max-height:none!important;
+ aspect-ratio:1/1!important;
+ object-fit:cover!important;
+ object-position:center!important;
+}
+@media(max-width:750px){
+ .magazine>.scent-visual .new-ingredient-grid{gap:7px!important}
+}
+@media(max-width:400px){
+ .magazine>.scent-visual .new-ingredient-grid{gap:5px!important}
+}
 </style></head><body><main class="magazine">
 <figure class="detail-hero"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261122-232610-image-109f2355.webp" alt="허준 오 드 퍼퓸 제품 대표컷" fetchpriority="high"></figure>
 <section class="section intro"><div><p class="eyebrow">THE STORY BEHIND THE SCENT</p><h2 class="heading">허준, 고요한 균형을 향으로 기록하다.</h2></div><div><p class="copy">조선의 의학자 허준의 정신에서 영감을 받은 허브 우디 오 드 퍼퓸입니다. 몸과 마음의 균형을 중시하는 태도와 사람을 향한 관심을 팔로산토와 허브, 로즈와 우드가 조화되는 향으로 풀어냈습니다.</p><p class="copy">상쾌하고 따뜻한 팔로산토와 베르가못, 민트가 첫인상을 만들고, 제라늄과 로즈, ISO E Super가 부드럽게 이어집니다. 시더우드와 패출리, 먹의 차분한 인상이 오래도록 여운을 남깁니다.</p></div></section>
